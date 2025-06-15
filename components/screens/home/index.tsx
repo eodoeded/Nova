@@ -18,7 +18,7 @@ export default function Home() {
       <Spacer />
       <FadeIn.Item>
         <p>
-          Currently finishing a BA in Graphic Design & Communication. Previous work at Arm (brand rollout) and Pragmatic [internal tooling, visual systems]. I build the parts of brand that survive implementation.
+          Currently working at Pragmatic Semiconductor while finishing a BA in Graphic Design & Communication. Previously at Arm [brand rollout]. I build brands that survive implementation.
         </p>
       </FadeIn.Item>
       <FadeIn.Item>
