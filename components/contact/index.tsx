@@ -10,9 +10,9 @@ export const Contact = () => {
         <Link href="https://www.linkedin.com/in/maxmcisted" className="hover:opacity-50 transition-opacity">
           LinkedIn
         </Link>
-        <Link href="mailto:mcistedm@gmail.com" className="hover:opacity-50 transition-opacity">
+        <a href="mailto:mcistedm@gmail.com" className="hover:opacity-50 transition-opacity">
           Email
-        </Link>
+        </a>
       </div>
     </div>
   );
