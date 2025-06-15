@@ -14,6 +14,7 @@ export type Post = {
   time: {
     created: string;
     updated: string;
+    role?: string;
   };
 
   media?: {
@@ -53,4 +54,4 @@ export type Post = {
     pinterest?: string;
     others?: string[];
   };
-};
+}; 
