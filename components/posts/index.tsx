@@ -28,13 +28,23 @@ export const Posts = ({ category }: PostProps) => {
       </NextViewTransition>
 
       {posts.map((post) => {
+        const content = (
+          <div className="flex w-full justify-between py-2">
+            <p>{post.title}</p>
+            <p className="mt-0 text-muted">{post.time.role}</p>
+          </div>
+        );
+
         return (
           <React.Fragment key={post.slug}>
             <Seperator />
-            <NextViewTransition href={`/${category}/${post.slug}`} className="flex w-full justify-between py-2">
-              <p>{post.title}</p>
-              <p className="mt-0 text-muted">{post.time.role}</p>
-            </NextViewTransition>
+            {category === "projects" ? (
+              content
+            ) : (
+              <NextViewTransition href={`/${category}/${post.slug}`}>
+                {content}
+              </NextViewTransition>
+            )}
           </React.Fragment>
         );
       })}

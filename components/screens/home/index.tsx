@@ -1,8 +1,8 @@
 import * as FadeIn from "@/components/motion/staggers/fade";
 import { Posts } from "@/components/posts";
 import { Footer } from "@/components/footer";
-import { DeployButton } from "@/components/deploy";
 import { Spacer } from "@/components/spacer";
+import { Contact } from "@/components/contact";
 
 export default function Home() {
   return (
@@ -25,13 +25,12 @@ export default function Home() {
         <Posts category="projects" />
       </FadeIn.Item>
       <FadeIn.Item>
-        <Posts category="examples" />
+        <Contact />
       </FadeIn.Item>
       <Spacer />
       <FadeIn.Item>
         <Footer />
       </FadeIn.Item>
-      <DeployButton />
     </FadeIn.Container>
   );
 }
