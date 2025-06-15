@@ -1,6 +1,5 @@
 import { formatter } from "@/lib/formatter";
 import { getPosts } from "@/lib/mdx";
-import Image from "next/image";
 
 import { Link as NextViewTransition } from "next-view-transitions";
 import React from "react";
@@ -31,18 +30,7 @@ export const Posts = ({ category }: PostProps) => {
       {posts.map((post) => {
         const content = (
           <div className="flex w-full justify-between py-2">
-            <div className="flex items-center gap-2">
-              {category === "projects" && (
-                <Image
-                  src="/key.svg"
-                  alt="Locked"
-                  width={16}
-                  height={16}
-                  className="opacity-50"
-                />
-              )}
-              <p className="hover:opacity-50 transition-opacity cursor-pointer">{post.title}</p>
-            </div>
+            <p className="hover:opacity-50 transition-opacity cursor-pointer">{post.title}</p>
             <p className="mt-0 text-muted">{post.time.role}</p>
           </div>
         );
