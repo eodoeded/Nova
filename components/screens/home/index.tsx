@@ -10,8 +10,8 @@ export default function Home() {
       <FadeIn.Item>
         <div className="flex justify-between">
           <div>
-            <h1>Sylph</h1>
-            <h2>Next.js Portfolio Starter</h2>
+            <h1>Max McIsted</h1>
+            <h2>Brand Designer</h2>
           </div>
         </div>
       </FadeIn.Item>
@@ -22,7 +22,7 @@ export default function Home() {
         </p>
       </FadeIn.Item>
       <FadeIn.Item>
-        <Posts category="guides" />
+        <Posts category="projects" />
       </FadeIn.Item>
       <FadeIn.Item>
         <Posts category="examples" />

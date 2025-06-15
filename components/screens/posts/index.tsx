@@ -22,7 +22,7 @@ export const Layout = ({ post, route }: Props) => {
   };
 
   const PublishedTime = () => {
-    return <div>Published {formatter.date(new Date(post.time.created))}</div>;
+    return <div>{post.time.role}</div>;
   };
   const UpdateTime = () => {
     return <div>Updated {formatter.date(new Date(post.time.updated))}</div>;

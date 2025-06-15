@@ -14,6 +14,7 @@ export type Post = {
   time: {
     created: string;
     updated: string;
+    role?: string;
   };
 
   media?: {
