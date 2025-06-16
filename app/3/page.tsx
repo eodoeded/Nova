@@ -1,93 +1,43 @@
-import * as FadeIn from "@/components/motion/staggers/fade";
-import MDXImage from "@/components/image";
-import { ImageGroup } from "@/components/image-group";
+import type { Post } from "@/types";
 
-import React from "react";
+import { Layout } from "@/components/screens/posts";
+import { getPosts } from "@/lib/mdx";
+import { OpenGraph } from "@/lib/og";
 
-export const metadata = {
-  title: "Android Brand Design Case Study",
-  description: "A case study on the brand design and evolution of Android.",
-};
+import { notFound } from "next/navigation";
+
+const route = "projects";
+
+const Posts = getPosts(route);
+
+interface PageProps {
+  params: Post;
+}
+
+export function generateMetadata({ params }: PageProps) {
+  const post = Posts.find((post: { slug: string }) => post.slug === params.slug);
+  const title = post ? post.title : "Android Brand Design Case Study";
+  const image = `${process.env.NEXT_PUBLIC_SITE_URL}api/og?title=${encodeURIComponent(title)}`;
+
+  return {
+    ...OpenGraph.openGraph,
+    title,
+    openGraph: {
+      title,
+      images: [image],
+    },
+    twitter: {
+      images: [image],
+    },
+  };
+}
 
 export default function Page() {
-  return (
-    <FadeIn.Container>
-      <FadeIn.Item>
-        <div className="flex flex-col">
-          <h1>Android Brand Design</h1>
-          <h2>A deep dive into the visual identity and strategic evolution of the Android brand.</h2>
-        </div>
-      </FadeIn.Item>
+  const post = Posts.find((post: { slug: string }) => post.slug === "android-brand-design");
 
-      <FadeIn.Item>
-        <MDXImage src="https://github.com/maxmcisted7/Nova/assets/107080351/b98f23f6-4763-44f2-bd54-d92237e817ec" alt="Android wordmark and bot head" variant="full" />
-      </FadeIn.Item>
+  if (!post) {
+    notFound();
+  }
 
-      <FadeIn.Item>
-        <p>
-          Android, one of the world's most ubiquitous operating systems, underwent a significant brand evolution to better reflect its expansive ecosystem and connect with a global audience. This case study explores the strategic decisions and design implementations that shaped the modern Android brand identity.
-        </p>
-      </FadeIn.Item>
-
-      <FadeIn.Item>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
-          <div className="flex flex-col">
-            <h3 className="text-5xl font-bold text-green-700">13%</h3>
-            <p className="text-muted">Lift in Gen Z consideration</p>
-          </div>
-          <div className="flex flex-col">
-            <h3 className="text-5xl font-bold text-green-700">Record High</h3>
-            <p className="text-muted">Global brand trust</p>
-          </div>
-          <div className="flex flex-col">
-            <h3 className="text-5xl font-bold text-green-700">53K+</h3>
-            <p className="text-muted">Custom Bots created</p>
-          </div>
-        </div>
-      </FadeIn.Item>
-
-      <FadeIn.Item>
-        <p>
-          <h3 className="text-2xl font-bold">Brand Design</h3>
-          A new wordmark designed to bring Google and Android closer together, (after 20 years!) finally defined Android's relationship with Google to lift consideration of the brand. This transformation aimed to create a more cohesive and recognizable identity across all platforms and products.
-        </p>
-      </FadeIn.Item>
-
-      <FadeIn.Item>
-        <ImageGroup>
-          <MDXImage src="https://github.com/maxmcisted7/Nova/assets/107080351/ef61df6d-55e1-4566-8805-4f36a537f7a8" alt="Android branding elements" fill />
-          <MDXImage src="https://github.com/maxmcisted7/Nova/assets/107080351/d3568858-a536-4c4f-9e79-51d08e503386" alt="Android developers and auto" fill />
-        </ImageGroup>
-      </FadeIn.Item>
-
-      <FadeIn.Item>
-        <p>
-          The redesign focused on creating a flexible visual system that could adapt to various applications, from consumer-facing devices to developer tools. The updated visual language emphasizes clarity, consistency, and a playful spirit, embodying the core values of the Android ecosystem.
-        </p>
-      </FadeIn.Item>
-
-      <FadeIn.Item>
-        <MDXImage src="https://github.com/maxmcisted7/Nova/assets/107080351/012674e2-6d2c-461d-84e1-285642a42dd7" alt="Android Bot characters" variant="full" />
-      </FadeIn.Item>
-
-      <FadeIn.Item>
-        <p>
-          Central to the new brand identity is the evolution of the Android robot, affectionately known as Bugdroid. The refreshed design gives Bugdroid more personality and versatility, allowing it to be expressed in various forms and contexts while remaining instantly recognizable.
-        </p>
-      </FadeIn.Item>
-
-      <FadeIn.Item>
-        <ImageGroup>
-          <MDXImage src="https://github.com/maxmcisted7/Nova/assets/107080351/9515904f-9e76-42f8-a006-25f0a2d48259" alt="Android Bot creation screen" fill />
-          <MDXImage src="https://github.com/maxmcisted7/Nova/assets/107080351/e05b5f88-4c80-4966-a364-c7117e651e70" alt="Android Bot 3D rigging" fill />
-        </ImageGroup>
-      </FadeIn.Item>
-
-      <FadeIn.Item>
-        <p>
-          The comprehensive brand rollout included guidelines for typography, color palettes, and animation principles, ensuring that the Android brand is consistently represented across all touchpoints. This meticulous attention to detail has resulted in a brand that is both modern and timeless.
-        </p>
-      </FadeIn.Item>
-    </FadeIn.Container>
-  );
+  return <Layout post={post} route={route} />;
 } 
