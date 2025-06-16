@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 
 interface ImageGroupProps {
   children: React.ReactNode;
@@ -6,7 +6,7 @@ interface ImageGroupProps {
 
 export const ImageGroup = ({ children }: ImageGroupProps) => {
   return (
-    <div className="my-6 flex flex-col gap-6 md:flex-row">
+    <div className="my-6 flex h-[25rem] flex-col gap-6 md:flex-row">
       {children}
     </div>
   );

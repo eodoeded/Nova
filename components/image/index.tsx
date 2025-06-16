@@ -11,9 +11,10 @@ interface MDXImageProps extends ImageProps {
   alt: string;
   caption?: string;
   variant?: "default" | "full";
+  fill?: boolean;
 }
 
-export default function MDXImage({ caption, alt, variant = "default", ...props }: MDXImageProps) {
+export default function MDXImage({ caption, alt, variant = "default", fill = false, ...props }: MDXImageProps) {
   const [isImageLoading, setImageLoading] = React.useState(true);
   const href = props.src.toString();
 
@@ -22,19 +23,20 @@ export default function MDXImage({ caption, alt, variant = "default", ...props }
       <div className={cn(
         "relative w-full overflow-hidden rounded-large border border-border",
         {
-          "max-h-96": variant === "default",
+          "max-h-96": variant === "default" && !fill,
+          "h-full": fill,
         }
       )}>
         <Image
           unoptimized
           alt={alt}
-          width={1000}
-          height={1000}
+          width={fill ? undefined : 1000}
+          height={fill ? undefined : 1000}
           sizes="100vw"
           style={{
-            objectFit: "contain",
+            objectFit: fill ? "cover" : "contain",
             width: "100%",
-            height: "auto",
+            height: fill ? "100%" : "auto",
             objectPosition: "center",
             WebkitFilter: isImageLoading ? "blur(8px)" : "none",
             transition: "all 0.5s ease",
