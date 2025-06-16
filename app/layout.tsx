@@ -3,12 +3,11 @@ import "@/styles/main.css";
 import type { Metadata } from "next";
 
 import { Providers } from "@/components/providers";
-import { OpenGraph } from "@/lib/og";
 
 import clsx from "clsx";
 import { Inter } from "next/font/google";
-import { ViewTransitions } from "next-view-transitions/next";
-import { getOG } from "@/lib/og";
+import { ViewTransitions } from "next-view-transitions";
+import { OpenGraph } from "@/lib/og";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
@@ -22,13 +21,8 @@ export const metadata: Metadata = {
     shortcut: "/circle.svg",
     apple: "/circle.svg",
   },
-  openGraph: getOG(),
-  twitter: {
-    card: "summary_large_image",
-    title: "Max McIsted",
-    description: "Max McIsted's personal website",
-    images: [getOG().images[0]],
-  },
+  openGraph: OpenGraph.openGraph,
+  twitter: OpenGraph.twitter,
 };
 
 const inter = Inter({
