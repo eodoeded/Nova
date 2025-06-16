@@ -7,7 +7,7 @@ import { OpenGraph } from "@/lib/og";
 
 import clsx from "clsx";
 import { Inter } from "next/font/google";
-import { ViewTransitions } from "next-view-transitions/client";
+import { ViewTransitions } from "next-view-transitions/next";
 import { getOG } from "@/lib/og";
 
 export const metadata: Metadata = {

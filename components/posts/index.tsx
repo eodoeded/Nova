@@ -1,4 +1,3 @@
-import { formatter } from "@/lib/formatter";
 import { getPosts } from "@/lib/mdx";
 
 import { Link as NextViewTransition } from "next-view-transitions";
@@ -31,7 +30,6 @@ export const Posts = ({ category }: PostProps) => {
         const content = (
           <div className="flex w-full justify-between py-2">
             <p className={category === "projects" ? "text-muted" : "hover:opacity-50 transition-opacity cursor-pointer"}>{post.title}</p>
-            <p className="mt-0 text-muted">{post.time.role}</p>
           </div>
         );
 
