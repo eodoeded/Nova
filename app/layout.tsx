@@ -6,7 +6,6 @@ import { Providers } from "@/components/providers";
 
 import clsx from "clsx";
 import { Inter } from "next/font/google";
-import { ViewTransitions } from "next-view-transitions";
 import { OpenGraph } from "@/lib/og";
 
 export const metadata: Metadata = {
@@ -39,11 +38,9 @@ export default function RootLayout({
     <html lang="en" className={clsx(inter.className)} suppressHydrationWarning>
       <body>
         <Providers>
-          <ViewTransitions>
-            <main className="mx-auto max-w-screen-sm overflow-x-hidden px-6 py-24 md:overflow-x-visible ">
-              <article className="article">{children}</article>
-            </main>
-          </ViewTransitions>
+          <main className="mx-auto max-w-screen-sm overflow-x-hidden px-6 py-24 md:overflow-x-visible ">
+            <article className="article">{children}</article>
+          </main>
         </Providers>
       </body>
     </html>

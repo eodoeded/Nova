@@ -1,6 +1,6 @@
 import { getPosts } from "@/lib/mdx";
 
-import { Link as NextViewTransition } from "next-view-transitions";
+import Link from "next/link";
 import React from "react";
 
 interface PostProps {
@@ -20,11 +20,11 @@ export const Posts = ({ category }: PostProps) => {
 
   return (
     <div className="mt-6 flex flex-col">
-      <NextViewTransition href={`/${category}`} className="flex justify-between">
+      <Link href={`/${category}`} className="flex justify-between">
         <h2 className="py-2 text-muted capitalize">
           {category} {posts.length > 0 && `(${posts.length})`}
         </h2>
-      </NextViewTransition>
+      </Link>
 
       {posts.map((post) => {
         const content = (
@@ -39,9 +39,9 @@ export const Posts = ({ category }: PostProps) => {
             {category === "projects" ? (
               content
             ) : (
-              <NextViewTransition href={`/${category}/${post.slug}`}>
+              <Link href={`/${category}/${post.slug}`}>
                 {content}
-              </NextViewTransition>
+              </Link>
             )}
           </React.Fragment>
         );
