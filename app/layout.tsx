@@ -3,11 +3,17 @@ import "@/styles/main.css";
 import type { Metadata } from "next";
 
 import { Providers } from "@/components/providers";
+import { OpenGraph } from "@/lib/og";
 
 import clsx from "clsx";
 import { Inter } from "next/font/google";
-import { OpenGraph } from "@/lib/og";
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+// Layout component for the entire application
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: {
@@ -24,16 +30,11 @@ export const metadata: Metadata = {
   twitter: OpenGraph.twitter,
 };
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className={clsx(inter.className)} suppressHydrationWarning>
       <body>

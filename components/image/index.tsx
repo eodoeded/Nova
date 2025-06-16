@@ -2,10 +2,11 @@
 
 import type { ImageProps } from "next/image";
 
+import { cn } from "@/lib/cn";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import { cn } from "@/lib/cn";
 
 interface MDXImageProps extends ImageProps {
   alt: string;
@@ -20,13 +21,12 @@ export default function MDXImage({ caption, alt, variant = "default", fill = fal
 
   return (
     <motion.a className="my-6 flex cursor-pointer flex-col justify-end gap-2" href={href} whileHover={{ scale: 0.975, opacity: 0.9 }}>
-      <div className={cn(
-        "relative w-full overflow-hidden rounded-large border border-border",
-        {
+      <div
+        className={cn("relative w-full overflow-hidden rounded-large border border-border", {
           "max-h-96": variant === "default" && !fill,
           "h-full": fill,
-        }
-      )}>
+        })}
+      >
         <Image
           unoptimized
           alt={alt}

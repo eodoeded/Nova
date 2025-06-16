@@ -54,4 +54,4 @@ export type Post = {
     pinterest?: string;
     others?: string[];
   };
-}; 
+};

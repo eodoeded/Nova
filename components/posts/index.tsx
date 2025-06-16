@@ -29,20 +29,14 @@ export const Posts = ({ category }: PostProps) => {
       {posts.map((post) => {
         const content = (
           <div className="flex w-full justify-between py-2">
-            <p className={category === "projects" ? "text-muted" : "hover:opacity-50 transition-opacity cursor-pointer"}>{post.title}</p>
+            <p className={category === "projects" ? "text-muted" : "cursor-pointer transition-opacity hover:opacity-50"}>{post.title}</p>
           </div>
         );
 
         return (
           <React.Fragment key={post.slug}>
             <Seperator />
-            {category === "projects" ? (
-              content
-            ) : (
-              <Link href={`/${category}/${post.slug}`}>
-                {content}
-              </Link>
-            )}
+            {category === "projects" ? content : <Link href={`/${category}/${post.slug}`}>{content}</Link>}
           </React.Fragment>
         );
       })}

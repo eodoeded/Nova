@@ -5,10 +5,10 @@ import type { PluggableList } from "unified";
 import FootnoteBackReference from "@/components/footnote/back-reference";
 import FootnoteForwardReference from "@/components/footnote/forward-reference";
 import MDXImage from "@/components/image";
+import { ImageGroup } from "@/components/image-group";
 import Link from "@/components/link";
 import Preview from "@/components/preview";
 import { cn } from "@/lib/cn";
-import { ImageGroup } from "@/components/image-group";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 import React from "react";

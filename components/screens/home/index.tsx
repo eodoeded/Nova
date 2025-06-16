@@ -1,8 +1,8 @@
+import { Contact } from "@/components/contact";
+import { Footer } from "@/components/footer";
 import * as FadeIn from "@/components/motion/staggers/fade";
 import { Posts } from "@/components/posts";
-import { Footer } from "@/components/footer";
 import { Spacer } from "@/components/spacer";
-import { Contact } from "@/components/contact";
 
 export default function Home() {
   return (
@@ -18,7 +18,8 @@ export default function Home() {
       <Spacer />
       <FadeIn.Item>
         <p>
-          Currently working at Pragmatic Semiconductor while finishing a BA in Graphic Design & Communication. Previously at Arm [brand rollout]. I build brands that survive implementation.
+          Currently working at Pragmatic Semiconductor while finishing a BA in Graphic Design & Communication. Previously at Arm [brand rollout]. I build brands
+          that survive implementation.
         </p>
       </FadeIn.Item>
       <FadeIn.Item>

@@ -40,4 +40,4 @@ export default function Page() {
   }
 
   return <Layout post={post} route={route} />;
-} 
+}
