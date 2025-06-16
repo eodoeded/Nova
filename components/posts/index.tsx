@@ -36,7 +36,7 @@ export const Posts = ({ category }: PostProps) => {
         return (
           <React.Fragment key={post.slug}>
             <Seperator />
-            <Link href={`/${category}/${post.slug}`}>{content}</Link>
+            {category === "projects" ? content : <Link href={`/${category}/${post.slug}`}>{content}</Link>}
           </React.Fragment>
         );
       })}
