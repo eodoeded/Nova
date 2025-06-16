@@ -8,6 +8,7 @@ import MDXImage from "@/components/image";
 import Link from "@/components/link";
 import Preview from "@/components/preview";
 import { cn } from "@/lib/cn";
+import { ImageGroup } from "@/components/image-group";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 import React from "react";
@@ -31,6 +32,7 @@ const components: MDXComponents = {
   },
   Preview: ({ children, codeblock }) => <Preview codeblock={codeblock ? codeblock : undefined}>{children}</Preview>,
   Image: ({ caption, alt, ...props }) => <MDXImage {...props} caption={caption} alt={alt} />,
+  ImageGroup: ({ children }) => <ImageGroup>{children}</ImageGroup>,
   h2: ({ children, id }: React.HTMLAttributes<HTMLHeadingElement>) => {
     if (id?.includes("footnote-label")) {
       return null;
