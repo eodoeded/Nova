@@ -8,9 +8,13 @@ interface PostProps {
 }
 
 export const Posts = ({ category }: PostProps) => {
-  const posts = getPosts(category).sort((a, b) => {
-    return new Date(b.time.created).getTime() - new Date(a.time.created).getTime();
-  });
+  const posts = getPosts(category)
+    .filter((post) => post.slug !== "cv")
+    .sort((a, b) => {
+      const dateA = new Date(a.time.created).getTime();
+      const dateB = new Date(b.time.created).getTime();
+      return dateB - dateA;
+    });
 
   const Seperator = () => <div className="border-border border-t" />;
 

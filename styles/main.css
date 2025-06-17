@@ -66,6 +66,19 @@
   html {
     @apply text-default text-foreground bg-background;
 
+    /* Colors */
+    --link-color-light: #007bff; /* Example subtle blue for light mode */
+    --link-hover-color-light: #0056b3; /* Example subtle blue hover for light mode */
+    --link-color-dark: #79b8ff; /* Shiki blue for dark mode */
+    --link-hover-color-dark: #005dc5; /* Shiki blue hover for dark mode */
+    --link-color: var(--link-color-light);
+    --link-hover-color: var(--link-hover-color-light);
+
+    &.dark {
+      --link-color: var(--link-color-dark);
+      --link-hover-color: var(--link-hover-color-dark);
+    }
+
     h1,
     h2,
     h3,
@@ -87,7 +100,16 @@
     }
 
     a {
-      @apply transition hover:opacity-50;
+      @apply transition;
+
+      color: inherit; /* Inherit color from parent text */
+      text-decoration: none;
+
+      &:hover {
+        color: inherit; /* Inherit color from parent text */
+        text-decoration: none; /* No underline on hover */
+        opacity: 0.5; /* Lighten effect */
+      }
     }
 
     ol {
@@ -98,20 +120,33 @@
       @apply list-disc;
     }
 
-    kbd {
+    /* Adjusted kbd styling - this will be inherited by inline `code` tags without `data-theme` */
+
+    kbd,
+    code:not([data-theme]) {
       @apply mx-1;
 
-      display: inline-block;
-      min-width: 20px;
-      height: 20px;
-      min-height: 20px;
-      padding: 0 6px;
-      font-size: 12px;
-      line-height: 20px;
-      text-align: center;
-      background: var(--kbd-background);
-      border-radius: 4px;
-      box-shadow: 0 0 0 1px var(--kbd-border);
+      padding: 0.1em 0.3em; /* Tighter padding */
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.875em; /* Smaller font size to match getting-started */
+      color: var(--kbd-foreground); /* Readable foreground color */
+      white-space: nowrap; /* Keep content on one line */
+      background-color: var(--kbd-background); /* Subtle background for distinction */
+      border-radius: 0.2em; /* Rounded corners */
+      box-shadow: 0 0 0 1px var(--kbd-border); /* Subtle border */
+    }
+
+    /* Reset link styles within kbd/code tags if they are also links */
+
+    kbd a,
+    code:not([data-theme]) a {
+      color: inherit; /* Inherit color from kbd/code */
+      text-decoration: none; /* No underline */
+
+      &:hover {
+        text-decoration: none; /* No underline on hover */
+        opacity: 0.8; /* Subtle hover effect */
+      }
     }
   }
 
@@ -154,7 +189,9 @@
     }
 
     [data-highlight]::before {
-      @apply absolute inset-0 -inset-x-1 -z-10 bg-transparent transition scale-y-[1.1] content-[""] duration-500;
+      @apply absolute inset-0 -inset-x-1 -z-10 bg-transparent transition scale-y-[1.1] duration-500;
+
+      content: "";
     }
 
     [data-highlight="true"]::before {
@@ -223,14 +260,14 @@
   */
 
   html {
-    code[data-theme*=" "],
+    code[data-theme*=" "]::before,
     code[data-theme*=" "] span {
       color: var(--shiki-light);
       background-color: var(--shiki-light-bg);
     }
 
     &.dark {
-      code[data-theme*=" "],
+      code[data-theme*=" "]::before,
       code[data-theme*=" "] span {
         color: var(--shiki-dark);
         background-color: var(--shiki-dark-bg);
@@ -303,5 +340,13 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-base);
     }
+  }
+}
+
+@layer components {
+  .mdx-full-bleed {
+    width: 100vw; /* Occupy full viewport width */
+    margin-right: calc(50% - 50vw); /* Pull it to right edge */
+    margin-left: calc(50% - 50vw); /* Center element and pull it to left edge */
   }
 }

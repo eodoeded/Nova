@@ -4,6 +4,8 @@ export type Post = {
   content: string;
   tags?: string[];
   summary?: string;
+  hidden?: boolean;
+  type?: string;
 
   author?: {
     name?: string;

@@ -31,8 +31,17 @@ const components: MDXComponents = {
     );
   },
   Preview: ({ children, codeblock }) => <Preview codeblock={codeblock ? codeblock : undefined}>{children}</Preview>,
-  Image: ({ caption, alt, ...props }) => <MDXImage {...props} caption={caption} alt={alt} />,
-  ImageGroup: ({ children }) => <ImageGroup>{children}</ImageGroup>,
+  Image: ({ caption, alt, variant = "default", fill = false, className, ...props }) => (
+    <MDXImage
+      {...props}
+      caption={caption}
+      alt={alt}
+      className={cn(className, "my-6", {
+        "mdx-full-bleed": variant === "full",
+      })}
+    />
+  ),
+  ImageGroup: ({ children, className }) => <ImageGroup className={cn("mdx-full-bleed my-6 overflow-hidden", className)}>{children}</ImageGroup>,
   h2: ({ children, id }: React.HTMLAttributes<HTMLHeadingElement>) => {
     if (id?.includes("footnote-label")) {
       return null;

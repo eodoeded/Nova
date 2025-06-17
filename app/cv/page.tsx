@@ -16,7 +16,7 @@ interface PageProps {
 
 export function generateMetadata({ params }: PageProps) {
   const post = Posts.find((post: { slug: string }) => post.slug === params.slug);
-  const title = post ? post.title : "Arm Rebrand Case Study";
+  const title = post ? post.title : "Max McIsted - CV";
   const image = `${process.env.NEXT_PUBLIC_SITE_URL}api/og?title=${encodeURIComponent(title)}`;
 
   return {
@@ -33,7 +33,7 @@ export function generateMetadata({ params }: PageProps) {
 }
 
 export default function Page() {
-  const post = Posts.find((post: { slug: string }) => post.slug === "arm");
+  const post = Posts.find((post: { slug: string }) => post.slug === "cv");
 
   if (!post) {
     notFound();

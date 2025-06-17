@@ -2,7 +2,7 @@ import type { Post } from "@/types";
 
 import { TableOfContents } from "@/components/on-this-page";
 import { PostNavigation } from "@/components/post-navigation";
-import { formatter } from "@/lib/formatter";
+import { formatDate } from "@/lib/date";
 import { getPosts } from "@/lib/mdx";
 import { MDX } from "@/mdx-components";
 
@@ -22,10 +22,10 @@ export const Layout = ({ post, route }: Props) => {
   };
 
   const PublishedTime = () => {
-    return <div>Published {formatter.date(new Date(post.time.created))}</div>;
+    return <div>Published {formatDate(post.time.created)}</div>;
   };
   const UpdateTime = () => {
-    return <div>Updated {formatter.date(new Date(post.time.updated))}</div>;
+    return <div>Updated {formatDate(post.time.updated)}</div>;
   };
 
   const ReadingTime = () => {
@@ -48,8 +48,8 @@ export const Layout = ({ post, route }: Props) => {
       </div>
 
       <MDX source={post.content} />
-      <PostNavigation posts={posts} />
-      <TableOfContents />
+      {post.type !== "cv" && <PostNavigation posts={posts} />}
+      {post.type === "cv" && <TableOfContents />}
     </React.Fragment>
   );
 };
