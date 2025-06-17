@@ -1,3 +1,5 @@
+"use client";
+
 import { getPosts } from "@/lib/mdx";
 
 import Link from "next/link";
