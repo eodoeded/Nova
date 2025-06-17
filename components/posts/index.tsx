@@ -1,6 +1,7 @@
 import { getPosts } from "@/lib/mdx";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 interface PostProps {
@@ -8,6 +9,9 @@ interface PostProps {
 }
 
 export const Posts = ({ category }: PostProps) => {
+  const pathname = usePathname();
+  const isProjectsPage = pathname === "/projects";
+  
   const posts = getPosts(category)
     .filter((post) => post.slug !== "cv")
     .sort((a, b) => {
@@ -22,13 +26,21 @@ export const Posts = ({ category }: PostProps) => {
     return null;
   }
 
+  const CategoryHeader = () => (
+    <h2 className="py-2 text-muted capitalize">
+      {category} {posts.length > 0 && `(${posts.length})`}
+    </h2>
+  );
+
   return (
     <div className="mt-6 flex flex-col">
-      <Link href={`/${category}`} className="flex justify-between">
-        <h2 className="py-2 text-muted capitalize">
-          {category} {posts.length > 0 && `(${posts.length})`}
-        </h2>
-      </Link>
+      {isProjectsPage ? (
+        <CategoryHeader />
+      ) : (
+        <Link href={`/${category}`} className="flex justify-between">
+          <CategoryHeader />
+        </Link>
+      )}
 
       {posts.map((post) => {
         const content = (
