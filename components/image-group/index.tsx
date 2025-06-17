@@ -8,5 +8,5 @@ interface ImageGroupProps {
 }
 
 export const ImageGroup = ({ children, className }: ImageGroupProps) => {
-  return <div className={cn("my-6 flex flex-col gap-4 md:flex-row md:flex-nowrap md:items-stretch md:gap-8", className)}>{children}</div>;
+  return <div className={cn("my-16 grid grid-cols-1 md:grid-cols-2 gap-8", className)}>{children}</div>;
 };

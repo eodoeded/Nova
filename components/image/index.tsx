@@ -18,10 +18,11 @@ export default function MDXImage({ caption, alt, variant = "default", fill = fal
   const [isImageLoading, setImageLoading] = React.useState(true);
 
   return (
-    <div className={cn("my-6 flex flex-col justify-end gap-2", className)}>
+    <div className={cn("my-16 flex flex-col justify-end gap-2", className)}>
       <div
-        className={cn("relative w-full overflow-hidden rounded-large border border-border", {
+        className={cn("relative w-full overflow-hidden rounded-[12px]", {
           "h-full": fill,
+          "w-screen -mx-4 md:-mx-8": variant === "full",
         })}
       >
         <Image
@@ -41,7 +42,7 @@ export default function MDXImage({ caption, alt, variant = "default", fill = fal
           {...props}
         />
       </div>
-      {caption && <sub className="pt-2 text-center">{caption}</sub>}
+      {caption && <sub className="pt-2 text-center text-muted">{caption}</sub>}
     </div>
   );
 }
