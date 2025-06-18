@@ -76,21 +76,21 @@ mcisted.com`;
 
       <FadeIn.Item>
         <p>
-          Designer building brand systems that survive implementation. Previously at Arm, now at Pragmatic Semiconductor.
+          Designer building brand systems that survive implementation. Previously at Arm, now at Pragmatic Semiconductor
         </p>
       </FadeIn.Item>
 
       <FadeIn.Item>
-        <div className="mt-16">
-          <h3 className="text-white dark:text-white font-semibold text-lg mb-8">Experience</h3>
+        <div className="mt-12">
+          <h3 className="text-white dark:text-white font-semibold text-base mb-8">Work</h3>
           
-          <div className="mb-12">
+          <div className="mb-10">
             <h4 className="text-white dark:text-white font-semibold text-sm mb-2">Pragmatic Semiconductor</h4>
             <p className="text-white dark:text-white text-sm mb-1">Brand Designer</p>
             <p className="text-muted text-sm">Jul 2025 – Present</p>
           </div>
 
-          <div className="mb-12">
+          <div className="mb-10">
             <h4 className="text-white dark:text-white font-semibold text-sm mb-2">Arm</h4>
             <p className="text-white dark:text-white text-sm mb-1">Design Intern</p>
             <p className="text-muted text-sm mb-4">Sep 2024 – May 2025</p>
@@ -103,10 +103,10 @@ mcisted.com`;
       </FadeIn.Item>
 
       <FadeIn.Item>
-        <div className="mt-16">
-          <h3 className="text-white dark:text-white font-semibold text-lg mb-8">Education</h3>
+        <div className="mt-12">
+          <h3 className="text-white dark:text-white font-semibold text-base mb-8">Education</h3>
           
-          <div className="mb-12">
+          <div className="mb-10">
             <h4 className="text-white dark:text-white font-semibold text-sm mb-2">Loughborough University</h4>
             <p className="text-white dark:text-white text-sm mb-1">BA Graphic Design & Visual Communication</p>
             <p className="text-muted text-sm">2021 – 2026 (expected)</p>
@@ -115,35 +115,30 @@ mcisted.com`;
       </FadeIn.Item>
 
       <FadeIn.Item>
-        <div className="mt-16">
-          <h3 className="text-white dark:text-white font-semibold text-lg mb-8">Skills</h3>
+        <div className="mt-12">
+          <h3 className="text-white dark:text-white font-semibold text-base mb-8">Skills</h3>
           
-          <ul className="text-muted text-sm space-y-1">
-            <li>– Brand systems</li>
-            <li>– Visual identity</li>
-            <li>– Technical brand writing</li>
-            <li>– Campaign design</li>
-            <li>– Cross-functional collaboration</li>
-            <li>– Documentation design</li>
-          </ul>
+          <p className="text-muted text-sm">
+            Brand systems · Visual identity · Technical brand writing · Campaign design · Cross-functional collaboration · Documentation design
+          </p>
         </div>
       </FadeIn.Item>
 
       <FadeIn.Item>
-        <div className="mt-16">
-          <h3 className="text-white dark:text-white font-semibold text-lg mb-8">Tools</h3>
+        <div className="mt-12">
+          <h3 className="text-white dark:text-white font-semibold text-base mb-8">Tools</h3>
           
-          <div className="mb-8">
+          <div className="mb-6">
             <h4 className="text-white dark:text-white font-semibold text-sm mb-2">Design</h4>
             <p className="text-muted text-sm">Figma · Illustrator · Photoshop · InDesign</p>
           </div>
 
-          <div className="mb-8">
+          <div className="mb-6">
             <h4 className="text-white dark:text-white font-semibold text-sm mb-2">Docs & Writing</h4>
             <p className="text-muted text-sm">Notion · Google Docs · Miro · Acrobat</p>
           </div>
 
-          <div className="mb-8">
+          <div className="mb-6">
             <h4 className="text-white dark:text-white font-semibold text-sm mb-2">Prototyping</h4>
             <p className="text-muted text-sm">Framer · Webflow · Keynote</p>
           </div>
@@ -151,8 +146,8 @@ mcisted.com`;
       </FadeIn.Item>
 
       <FadeIn.Item>
-        <div className="mt-16">
-          <h3 className="text-white dark:text-white font-semibold text-lg mb-8">Contact</h3>
+        <div className="mt-12">
+          <h3 className="text-white dark:text-white font-semibold text-base mb-8">Contact</h3>
           
           <div className="flex flex-col gap-2">
             <a href="https://www.linkedin.com/in/maxmcisted" className="text-muted transition-opacity hover:opacity-50">
@@ -174,7 +169,7 @@ mcisted.com`;
               onKeyDown={(e) => handleKeyDown(e, handleDownloadCV)}
               aria-label="Download CV as text file"
             >
-              Download CV (.txt)
+              Download as .txt
             </button>
           </div>
         </div>

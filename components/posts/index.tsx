@@ -22,9 +22,13 @@ export const Posts = ({ category }: PostProps) => {
       return dateB - dateA;
     });
 
+  // Debug logging
+  console.log('Posts component:', { category, postsCount: posts.length, posts: posts.map(p => p.title) });
+
   const Seperator = () => <div className="border-border border-t" />;
 
   if (posts.length === 0) {
+    console.log('No posts found for category:', category);
     return null;
   }
 
