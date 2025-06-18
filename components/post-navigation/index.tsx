@@ -1,6 +1,7 @@
 "use client";
 
 import type { Post } from "@/types/post";
+
 import { formatDate } from "@/lib/date";
 
 import Link from "next/link";
@@ -20,7 +21,7 @@ export const PostNavigation = ({ posts, currentSlug }: PostNavigationProps) => {
   }
 
   return (
-    <div className="mt-16 flex w-full justify-between border-t border-border pt-8">
+    <div className="mt-16 flex w-full justify-between border-border border-t pt-8">
       {previousPost && (
         <Link href={`/projects/${previousPost.slug}`} className="flex w-full flex-col gap-1 text-left">
           <span className="text-muted">Previous</span>

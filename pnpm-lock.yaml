@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      "@heroicons/react":
+        specifier: ^2.2.0
+        version: 2.2.0(react@18.3.1)
       "@mdx-js/loader":
         specifier: ^3.0.1
         version: 3.0.1(webpack@5.95.0)
@@ -73,6 +76,9 @@ importers:
       next-mdx-remote:
         specifier: ^5.0.0
         version: 5.0.0(@types/react@18.3.11)(react@18.3.1)
+      next-mdx-remote-client:
+        specifier: ^2.1.2
+        version: 2.1.2(@types/react@18.3.11)(acorn@8.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(unified@11.0.5)
       next-sitemap:
         specifier: ^4.2.3
         version: 4.2.3(next@14.2.15(@babel/core@7.25.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
@@ -202,6 +208,13 @@ packages:
       }
     engines: { node: ">=6.9.0" }
 
+  "@babel/code-frame@7.27.1":
+    resolution:
+      {
+        integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==,
+      }
+    engines: { node: ">=6.9.0" }
+
   "@babel/compat-data@7.25.8":
     resolution:
       {
@@ -299,6 +312,13 @@ packages:
     resolution:
       {
         integrity: sha512-AM6TzwYqGChO45oiuPqwL2t20/HdMC1rTPAesnBCgPCSF1x3oN9MVUwQV2iyz4xqWrctwK5RNC8LV22kaQCNYg==,
+      }
+    engines: { node: ">=6.9.0" }
+
+  "@babel/helper-validator-identifier@7.27.1":
+    resolution:
+      {
+        integrity: sha512-D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow==,
       }
     engines: { node: ">=6.9.0" }
 
@@ -578,6 +598,14 @@ packages:
         integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==,
       }
 
+  "@heroicons/react@2.2.0":
+    resolution:
+      {
+        integrity: sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==,
+      }
+    peerDependencies:
+      react: ">= 16 || ^19.0.0-rc"
+
   "@humanfs/core@0.19.0":
     resolution:
       {
@@ -678,10 +706,25 @@ packages:
         integrity: sha512-eIQ4QTrOWyL3LWEe/bu6Taqzq2HQvHcyTMaOrI95P2/LmJE7AsfPfgJGuFLPVqBUE1BC1rik3VIhU+s9u72arA==,
       }
 
+  "@mdx-js/mdx@3.1.0":
+    resolution:
+      {
+        integrity: sha512-/QxEhPAvGwbQmy1Px8F899L5Uc2KZ6JtXwlCgJmjSTBedwOZkByYcBG4GceIGPXRDsmfxhHazuS+hlOShRLeDw==,
+      }
+
   "@mdx-js/react@3.0.1":
     resolution:
       {
         integrity: sha512-9ZrPIU4MGf6et1m1ov3zKf+q9+deetI51zprKB1D/z3NOb+rUxxtEl3mCjW5wTGh6VhRdwPueh1oRzi6ezkA8A==,
+      }
+    peerDependencies:
+      "@types/react": ">=16"
+      react: ">=16"
+
+  "@mdx-js/react@3.1.0":
+    resolution:
+      {
+        integrity: sha512-QjHtSaoameoalGnKDT3FoIl4+9RwyTmo9ZJGBdLOks/YOiWHoRDI3PUwEzOE7kEmGcV3AFcp9K6dYu9rEuKLAQ==,
       }
     peerDependencies:
       "@types/react": ">=16"
@@ -2438,6 +2481,18 @@ packages:
       }
     engines: { node: ">= 0.4" }
 
+  esast-util-from-estree@2.0.0:
+    resolution:
+      {
+        integrity: sha512-4CyanoAudUSBAn5K13H4JhsMH6L9ZP7XbLVe/dKybkxMO7eDyLsT8UHl9TRNrU2Gr9nz+FovfSIjuXWJ81uVwQ==,
+      }
+
+  esast-util-from-js@2.0.1:
+    resolution:
+      {
+        integrity: sha512-8Ja+rNJ0Lt56Pcf3TAmpBZjmx8ZcK5Ts4cAzIOjsjevg9oSXJnl6SUQ2EevU8tv3h6ZLWmoKL5H4fgWvdvfETw==,
+      }
+
   escalade@3.2.0:
     resolution:
       {
@@ -2664,6 +2719,12 @@ packages:
     resolution:
       {
         integrity: sha512-hFtqIDZTIUZ9BXLb8y4pYGyk6+wekIivNVTcmvk8NoOh+VeRn5y6cEHzbURrWbfp1fIqdVipilzj+lfaadNZmg==,
+      }
+
+  estree-util-scope@1.0.0:
+    resolution:
+      {
+        integrity: sha512-2CAASclonf+JFWBNJPndcOpA8EMJwa0Q8LUFJEKqXLW6+qBvbFZuF5gItbQOs/umBUkjviCSDCbBwU2cXbmrhQ==,
       }
 
   estree-util-to-js@2.0.0:
@@ -4315,6 +4376,16 @@ packages:
         integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==,
       }
 
+  next-mdx-remote-client@2.1.2:
+    resolution:
+      {
+        integrity: sha512-isNeqjdW+aeJR8cUAReb4niGr4UYU8zOIzSpKNEHoQUqnABrns6j5QwkMdAOLhQa+efoVSZzqygnQAhLkjSqKg==,
+      }
+    engines: { node: ">=18.18.0" }
+    peerDependencies:
+      react: ^19.1.0
+      react-dom: ^19.1.0
+
   next-mdx-remote@5.0.0:
     resolution:
       {
@@ -4887,6 +4958,30 @@ packages:
         integrity: sha512-2813WXSxCPsDvgrYq+cPBI4gGqgmtKlo62rpI0mwnhrMfZJIqbDfOeidr9Y36OruDesQGmYA9DkVRmvsBbv2DA==,
       }
 
+  recma-build-jsx@1.0.0:
+    resolution:
+      {
+        integrity: sha512-8GtdyqaBcDfva+GUKDr3nev3VpKAhup1+RvkMvUxURHpW7QyIvk9F5wz7Vzo06CEMSilw6uArgRqhpiUcWp8ew==,
+      }
+
+  recma-jsx@1.0.0:
+    resolution:
+      {
+        integrity: sha512-5vwkv65qWwYxg+Atz95acp8DMu1JDSqdGkA2Of1j6rCreyFUE/gp15fC8MnGEuG1W68UKjM6x6+YTWIh7hZM/Q==,
+      }
+
+  recma-parse@1.0.0:
+    resolution:
+      {
+        integrity: sha512-OYLsIGBB5Y5wjnSnQW6t3Xg7q3fQ7FWbw/vcXtORTnyaSFscOtABg+7Pnz6YZ6c27fG1/aN8CjfwoUEUIdwqWQ==,
+      }
+
+  recma-stringify@1.0.0:
+    resolution:
+      {
+        integrity: sha512-cjwII1MdIIVloKvC9ErQ+OgAtwHBmcZ0Bg4ciz78FtbT8In39aAYbaA7zvxQ61xVMSPE8WxhLwLbhif4Js2C+g==,
+      }
+
   reflect.getprototypeof@1.0.6:
     resolution:
       {
@@ -4928,6 +5023,12 @@ packages:
     peerDependencies:
       shiki: ^1.3.0
 
+  rehype-recma@1.0.0:
+    resolution:
+      {
+        integrity: sha512-lqA4rGUf1JmacCNWWZx0Wv1dHqMwxzsDWYMTowuplHF3xH0N/MmrZ/G3BDZnzAkRmxDadujCjaKM2hqYdCBOGw==,
+      }
+
   rehype-slug@6.0.0:
     resolution:
       {
@@ -4939,6 +5040,14 @@ packages:
       {
         integrity: sha512-U92vJgBPkbw4Zfu/IiW2oTZLSL3Zpv+uI7My2eq8JxKgqraFdU8YUGicEJCEgSbeaG+QDFqIcwwfMTOEelPxuA==,
       }
+
+  remark-mdx-remove-esm@1.2.0:
+    resolution:
+      {
+        integrity: sha512-BOZDeA9EuHDxQsvX7y4ovdlP8dk2/ToDGjOTrT5gs57OqTZuH4J1Tn8XjUFa221xvfXxiKaWrKT04waQ+tYydg==,
+      }
+    peerDependencies:
+      unified: ^11
 
   remark-mdx@3.0.1:
     resolution:
@@ -5085,6 +5194,13 @@ packages:
       }
     engines: { node: ">=10" }
     hasBin: true
+
+  serialize-error@12.0.0:
+    resolution:
+      {
+        integrity: sha512-ZYkZLAvKTKQXWuh5XpBw7CdbSzagarX39WyZ2H07CDLC5/KfsRGlIXV8d4+tfqX1M7916mRqR1QfNHSij+c9Pw==,
+      }
+    engines: { node: ">=18" }
 
   serialize-javascript@6.0.2:
     resolution:
@@ -5619,6 +5735,13 @@ packages:
       }
     engines: { node: ">= 0.8.0" }
 
+  type-fest@4.41.0:
+    resolution:
+      {
+        integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==,
+      }
+    engines: { node: ">=16" }
+
   typed-array-buffer@1.0.2:
     resolution:
       {
@@ -5716,6 +5839,12 @@ packages:
         integrity: sha512-kfCqZK5YVY5yEa89tvpl7KnBBHu2c6CzMkqHUrlOqaRgGOMp0sMvwWOVrbAtj03KhovQB7i96Gda72v/EFE0vw==,
       }
 
+  unist-util-remove@4.0.0:
+    resolution:
+      {
+        integrity: sha512-b4gokeGId57UVRX/eVKej5gXqGlc9+trkORhFJpu9raqZkZhU0zm8Doi05+HaiBsMEIJowL+2WtQ5ItjsngPXg==,
+      }
+
   unist-util-stringify-position@4.0.0:
     resolution:
       {
@@ -5803,6 +5932,12 @@ packages:
     resolution:
       {
         integrity: sha512-jhPSqlj8hTSkTXOqyxbUeZAFFVq/iwu/jukcApEqc/7DOidaAth6rDc0Zgg0vWpzUnWkwFP7aK28l6nBmxMqdQ==,
+      }
+
+  vfile-matter@5.0.1:
+    resolution:
+      {
+        integrity: sha512-o6roP82AiX0XfkyTHyRCMXgHfltUNlXSEqCIS80f+mbAyiQBE2fxtDVMtseyytGx75sihiJFo/zR6r/4LTs2Cw==,
       }
 
   vfile-message@4.0.2:
@@ -5986,6 +6121,12 @@ snapshots:
       "@babel/highlight": 7.25.7
       picocolors: 1.1.1
 
+  "@babel/code-frame@7.27.1":
+    dependencies:
+      "@babel/helper-validator-identifier": 7.27.1
+      js-tokens: 4.0.0
+      picocolors: 1.1.1
+
   "@babel/compat-data@7.25.8": {}
 
   "@babel/core@7.25.8":
@@ -6073,6 +6214,8 @@ snapshots:
   "@babel/helper-string-parser@7.25.7": {}
 
   "@babel/helper-validator-identifier@7.25.7": {}
+
+  "@babel/helper-validator-identifier@7.27.1": {}
 
   "@babel/helper-validator-option@7.25.7": {}
 
@@ -6246,6 +6389,10 @@ snapshots:
 
   "@floating-ui/utils@0.2.8": {}
 
+  "@heroicons/react@2.2.0(react@18.3.1)":
+    dependencies:
+      react: 18.3.1
+
   "@humanfs/core@0.19.0": {}
 
   "@humanfs/node@0.16.5":
@@ -6336,7 +6483,43 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  "@mdx-js/mdx@3.1.0(acorn@8.13.0)":
+    dependencies:
+      "@types/estree": 1.0.6
+      "@types/estree-jsx": 1.0.5
+      "@types/hast": 3.0.4
+      "@types/mdx": 2.0.13
+      collapse-white-space: 2.1.0
+      devlop: 1.1.0
+      estree-util-is-identifier-name: 3.0.0
+      estree-util-scope: 1.0.0
+      estree-walker: 3.0.3
+      hast-util-to-jsx-runtime: 2.3.2
+      markdown-extensions: 2.0.0
+      recma-build-jsx: 1.0.0
+      recma-jsx: 1.0.0(acorn@8.13.0)
+      recma-stringify: 1.0.0
+      rehype-recma: 1.0.0
+      remark-mdx: 3.0.1
+      remark-parse: 11.0.0
+      remark-rehype: 11.1.1
+      source-map: 0.7.4
+      unified: 11.0.5
+      unist-util-position-from-estree: 2.0.0
+      unist-util-stringify-position: 4.0.0
+      unist-util-visit: 5.0.0
+      vfile: 6.0.3
+    transitivePeerDependencies:
+      - acorn
+      - supports-color
+
   "@mdx-js/react@3.0.1(@types/react@18.3.11)(react@18.3.1)":
+    dependencies:
+      "@types/mdx": 2.0.13
+      "@types/react": 18.3.11
+      react: 18.3.1
+
+  "@mdx-js/react@3.1.0(@types/react@18.3.11)(react@18.3.1)":
     dependencies:
       "@types/mdx": 2.0.13
       "@types/react": 18.3.11
@@ -7489,6 +7672,20 @@ snapshots:
       is-date-object: 1.0.5
       is-symbol: 1.0.4
 
+  esast-util-from-estree@2.0.0:
+    dependencies:
+      "@types/estree-jsx": 1.0.5
+      devlop: 1.1.0
+      estree-util-visit: 2.0.0
+      unist-util-position-from-estree: 2.0.0
+
+  esast-util-from-js@2.0.1:
+    dependencies:
+      "@types/estree-jsx": 1.0.5
+      acorn: 8.13.0
+      esast-util-from-estree: 2.0.0
+      vfile-message: 4.0.2
+
   escalade@3.2.0: {}
 
   escape-string-regexp@1.0.5: {}
@@ -7718,6 +7915,11 @@ snapshots:
       estree-walker: 3.0.3
 
   estree-util-is-identifier-name@3.0.0: {}
+
+  estree-util-scope@1.0.0:
+    dependencies:
+      "@types/estree": 1.0.6
+      devlop: 1.1.0
 
   estree-util-to-js@2.0.0:
     dependencies:
@@ -8898,6 +9100,23 @@ snapshots:
 
   neo-async@2.6.2: {}
 
+  next-mdx-remote-client@2.1.2(@types/react@18.3.11)(acorn@8.13.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(unified@11.0.5):
+    dependencies:
+      "@babel/code-frame": 7.27.1
+      "@mdx-js/mdx": 3.1.0(acorn@8.13.0)
+      "@mdx-js/react": 3.1.0(@types/react@18.3.11)(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      remark-mdx-remove-esm: 1.2.0(unified@11.0.5)
+      serialize-error: 12.0.0
+      vfile: 6.0.3
+      vfile-matter: 5.0.1
+    transitivePeerDependencies:
+      - "@types/react"
+      - acorn
+      - supports-color
+      - unified
+
   next-mdx-remote@5.0.0(@types/react@18.3.11)(react@18.3.1):
     dependencies:
       "@babel/code-frame": 7.25.7
@@ -9252,6 +9471,36 @@ snapshots:
 
   reading-time-estimator@1.11.0: {}
 
+  recma-build-jsx@1.0.0:
+    dependencies:
+      "@types/estree": 1.0.6
+      estree-util-build-jsx: 3.0.1
+      vfile: 6.0.3
+
+  recma-jsx@1.0.0(acorn@8.13.0):
+    dependencies:
+      acorn-jsx: 5.3.2(acorn@8.13.0)
+      estree-util-to-js: 2.0.0
+      recma-parse: 1.0.0
+      recma-stringify: 1.0.0
+      unified: 11.0.5
+    transitivePeerDependencies:
+      - acorn
+
+  recma-parse@1.0.0:
+    dependencies:
+      "@types/estree": 1.0.6
+      esast-util-from-js: 2.0.1
+      unified: 11.0.5
+      vfile: 6.0.3
+
+  recma-stringify@1.0.0:
+    dependencies:
+      "@types/estree": 1.0.6
+      estree-util-to-js: 2.0.0
+      unified: 11.0.5
+      vfile: 6.0.3
+
   reflect.getprototypeof@1.0.6:
     dependencies:
       call-bind: 1.0.7
@@ -9295,6 +9544,14 @@ snapshots:
       unified: 11.0.5
       unist-util-visit: 5.0.0
 
+  rehype-recma@1.0.0:
+    dependencies:
+      "@types/estree": 1.0.6
+      "@types/hast": 3.0.4
+      hast-util-to-estree: 3.1.0
+    transitivePeerDependencies:
+      - supports-color
+
   rehype-slug@6.0.0:
     dependencies:
       "@types/hast": 3.0.4
@@ -9311,6 +9568,15 @@ snapshots:
       remark-parse: 11.0.0
       remark-stringify: 11.0.0
       unified: 11.0.5
+    transitivePeerDependencies:
+      - supports-color
+
+  remark-mdx-remove-esm@1.2.0(unified@11.0.5):
+    dependencies:
+      "@types/mdast": 4.0.4
+      mdast-util-mdxjs-esm: 2.0.1
+      unified: 11.0.5
+      unist-util-remove: 4.0.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9413,6 +9679,10 @@ snapshots:
   semver@6.3.1: {}
 
   semver@7.6.3: {}
+
+  serialize-error@12.0.0:
+    dependencies:
+      type-fest: 4.41.0
 
   serialize-javascript@6.0.2:
     dependencies:
@@ -9808,6 +10078,8 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
+  type-fest@4.41.0: {}
+
   typed-array-buffer@1.0.2:
     dependencies:
       call-bind: 1.0.7
@@ -9890,6 +10162,12 @@ snapshots:
       unist-util-is: 5.2.1
       unist-util-visit-parents: 5.1.3
 
+  unist-util-remove@4.0.0:
+    dependencies:
+      "@types/unist": 3.0.3
+      unist-util-is: 6.0.0
+      unist-util-visit-parents: 6.0.1
+
   unist-util-stringify-position@4.0.0:
     dependencies:
       "@types/unist": 3.0.3
@@ -9947,6 +10225,11 @@ snapshots:
       vfile: 6.0.3
 
   vfile-matter@5.0.0:
+    dependencies:
+      vfile: 6.0.3
+      yaml: 2.6.0
+
+  vfile-matter@5.0.1:
     dependencies:
       vfile: 6.0.3
       yaml: 2.6.0

@@ -43,3 +43,8 @@ export function getPosts(directory: string): Post[] {
     .map((file) => readFile(path.join(process.cwd(), "app", "(posts)", directory, "posts", file)))
     .filter((post): post is Post => post !== null && !post.hidden);
 }
+
+export function getPost(directory: string, slug: string): Post | undefined {
+  const posts = getPosts(directory);
+  return posts.find((post) => post.slug === slug);
+}
