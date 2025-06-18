@@ -3,15 +3,14 @@
 import { getPosts } from "@/lib/mdx";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
 
 interface PostProps {
   category: string;
+  pathname?: string;
 }
 
-export const Posts = ({ category }: PostProps) => {
-  const pathname = usePathname();
+export const Posts = ({ category, pathname = "" }: PostProps) => {
   const isProjectsPage = pathname === "/projects";
   
   const posts = getPosts(category)
