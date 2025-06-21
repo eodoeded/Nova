@@ -1,8 +1,7 @@
 "use client";
 
 import { Link } from "next-view-transitions";
-import React from "react";
-import { ThemeToggle } from "../theme-toggle";
+import { AppThemeSwitcher } from "../theme";
 
 export const Footer = ({ showBuildInfo = true }) => {
   return (
@@ -19,7 +18,7 @@ export const Footer = ({ showBuildInfo = true }) => {
             </p>
           )}
         </div>
-        <ThemeToggle />
+        <AppThemeSwitcher />
       </div>
     </footer>
   );
