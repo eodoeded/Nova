@@ -1,4 +1,5 @@
 import "@/styles/main.css";
+import { ThemeProvider } from "next-themes";
 
 import type { Metadata } from "next";
 
@@ -36,14 +37,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={clsx(inter.className)} suppressHydrationWarning>
-      <body>
-        <Providers>
-          <main className="relative py-24 md:overflow-x-visible">
-            <article className="article mx-auto max-w-screen-sm px-4 md:px-6">{children}</article>
-          </main>
-        </Providers>
-      </body>
-    </html>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <Providers>
+        <main className="relative py-24 md:overflow-x-visible">
+          <article className="article mx-auto max-w-screen-sm px-4 md:px-6">{children}</article>
+        </main>
+      </Providers>
+    </ThemeProvider>
   );
 }
