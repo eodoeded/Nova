@@ -1,6 +1,7 @@
 "use client";
 
 import { Footer } from "@/components/footer";
+import Link from "next/link";
 
 export default function CV() {
   return (
@@ -8,7 +9,11 @@ export default function CV() {
       {/* Header */}
       <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 border-b border-neutral-200 dark:border-neutral-800 pb-4 mb-8">
         <div>
-          <h1 className="text-xl font-semibold tracking-tight">Max McIsted</h1>
+          <Link href="/" className="group">
+            <h1 className="text-xl font-semibold tracking-tight transition-colors group-hover:text-neutral-600 dark:group-hover:text-neutral-300">
+              Max McIsted
+            </h1>
+          </Link>
           <p className="text-sm text-neutral-500 dark:text-neutral-400">Brand Designer</p>
         </div>
         <div className="flex items-baseline gap-4 text-sm">
