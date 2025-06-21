@@ -10,11 +10,11 @@ export default function CV() {
       <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 border-b border-neutral-200 dark:border-neutral-800 pb-4 mb-8">
         <div>
           <Link href="/" className="group">
-            <h1 className="text-xl font-semibold tracking-tight transition-colors group-hover:text-neutral-600 dark:group-hover:text-neutral-300">
+            <h1 className="transition-colors group-hover:text-neutral-600 dark:group-hover:text-neutral-300">
               Max McIsted
             </h1>
           </Link>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">Brand Designer</p>
+          <h2>Brand Designer</h2>
         </div>
         <div className="flex items-baseline gap-4 text-sm">
           <a href="https://linkedin.com/in/maxmcisted" className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
