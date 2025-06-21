@@ -1,96 +1,91 @@
 "use client";
 
-import { FiLinkedin, FiMail, FiDownload } from "react-icons/fi";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function CV() {
   return (
-    <main className="mx-auto max-w-2xl px-4 py-16 flex flex-col gap-8">
-      {/* Intro Block */}
-      <section className="flex flex-col gap-2">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <div className="flex items-center gap-2 text-lg font-semibold tracking-tight">
-            <span>Max McIsted</span>
-            <span className="hidden sm:inline">·</span>
-            <span className="text-base font-normal text-neutral-500">Brand Designer</span>
-          </div>
-          <div className="flex gap-3 text-sm">
-            <a href="https://linkedin.com/in/maxmcisted" className="flex items-center gap-1 px-2 py-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" target="_blank" rel="noopener noreferrer"><FiLinkedin className="inline" />LinkedIn</a>
-            <a href="mailto:cv@mcisted.com" className="flex items-center gap-1 px-2 py-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition font-mono"><FiMail className="inline" />Email</a>
-            <a href="/max-mcisted-cv.txt" download className="flex items-center gap-1 px-2 py-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition font-mono"><FiDownload className="inline" />Download</a>
-          </div>
-        </div>
-        <div className="text-sm text-neutral-500 mt-1">Designer building brand systems that survive implementation. Previously at Arm, now at Pragmatic Semiconductor.</div>
-      </section>
-
-      {/* Experience */}
-      <section className="flex flex-col gap-4 py-4">
-        <h2 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Experience</h2>
-        <div className="flex flex-col gap-3">
+    <>
+      <main className="mx-auto max-w-screen-sm px-4 md:px-6 flex flex-col gap-8 py-24">
+        {/* Header */}
+        <section className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 border-b border-neutral-200 dark:border-neutral-800 pb-8">
           <div>
-            <div className="flex items-center justify-between">
-              <span className="font-medium">Pragmatic Semiconductor</span>
-              <span className="text-xs text-neutral-500">Jul 2025 – Present</span>
-            </div>
-            <div className="text-sm text-neutral-500 font-normal">Brand Designer</div>
+            <h1 className="text-xl font-semibold tracking-tight">Max McIsted</h1>
+            <h2 className="text-base text-neutral-500 dark:text-neutral-400">Brand Designer</h2>
           </div>
-          <div>
-            <div className="flex items-center justify-between">
-              <span className="font-medium">Arm</span>
-              <span className="text-xs text-neutral-500">Sep 2024 – May 2025</span>
-            </div>
-            <div className="text-sm text-neutral-500 font-normal">Design Intern</div>
-            <ul className="list-disc pl-5 mt-1 text-sm text-neutral-500">
-              <li>Worked on global rebrand across internal, campaign, and product comms</li>
-              <li>Delivered brand systems for documentation, print, and web</li>
-            </ul>
+          <div className="flex gap-4 text-sm font-mono text-neutral-600 dark:text-neutral-300">
+            <a href="https://linkedin.com/in/maxmcisted" className="hover:text-black dark:hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:cv@mcisted.com" className="hover:text-black dark:hover:text-white transition-colors">Email</a>
+            <a href="/max-mcisted-cv.txt" download className="hover:text-black dark:hover:text-white transition-colors">Download</a>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Education */}
-      <section className="flex flex-col gap-2 py-4">
-        <h2 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Education</h2>
-        <div className="flex items-center justify-between">
-          <span className="font-medium">Loughborough University</span>
-          <span className="text-xs text-neutral-500">2021–2026 (expected)</span>
-        </div>
-        <div className="text-sm text-neutral-500 font-normal">BA Graphic Design & Visual Communication</div>
-      </section>
+        {/* Experience */}
+        <section className="flex flex-col gap-4">
+          <h3 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Experience</h3>
+          <div className="flex flex-col gap-6 text-sm">
+            <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
+              <div className="font-medium">Pragmatic Semiconductor</div>
+              <div className="text-neutral-500 text-xs">Jul 2025 – Present</div>
+              <div className="col-span-2 text-neutral-600 dark:text-neutral-400">Brand Designer</div>
+            </div>
+            <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
+              <div className="font-medium">Arm</div>
+              <div className="text-neutral-500 text-xs">Sep 2024 – May 2025</div>
+              <div className="col-span-2 text-neutral-600 dark:text-neutral-400">Design Intern</div>
+              <ul className="list-disc pl-5 col-span-2 text-neutral-600 dark:text-neutral-400 mt-1 space-y-1">
+                <li>Worked on global rebrand across internal, campaign, and product comms</li>
+                <li>Delivered brand systems for documentation, print, and web</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-      {/* Skills */}
-      <section className="flex flex-col gap-2 py-4">
-        <h2 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Skills</h2>
-        <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-neutral-700 dark:text-neutral-300">
-          <li>Brand systems</li>
-          <li>Visual identity</li>
-          <li>Campaign design</li>
-          <li>Technical brand writing</li>
-          <li>Documentation</li>
-          <li>Cross-functional collaboration</li>
-        </ul>
-      </section>
+        {/* Education */}
+        <section className="flex flex-col gap-3">
+          <h3 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Education</h3>
+          <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 text-sm">
+            <div className="font-medium">Loughborough University</div>
+            <div className="text-neutral-500 text-xs">2021–2026 (expected)</div>
+            <div className="col-span-2 text-neutral-600 dark:text-neutral-400">BA Graphic Design & Visual Communication</div>
+          </div>
+        </section>
 
-      {/* Tools */}
-      <section className="flex flex-col gap-2 py-4">
-        <h2 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Tools</h2>
-        <div className="text-sm text-neutral-700 dark:text-neutral-300">
-          <span className="font-medium">Design:</span> Figma, Illustrator, Photoshop, InDesign<br />
-          <span className="font-medium">Docs:</span> Notion, Google Docs, Miro, Acrobat<br />
-          <span className="font-medium">Prototyping:</span> Framer, Webflow, Keynote
-        </div>
-      </section>
+        {/* Skills */}
+        <section className="flex flex-col gap-3">
+          <h3 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Skills</h3>
+          <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-neutral-800 dark:text-neutral-300">
+            <li>Brand systems</li>
+            <li>Campaign design</li>
+            <li>Documentation</li>
+            <li>Visual identity</li>
+            <li>Technical brand writing</li>
+            <li>Cross-functional collaboration</li>
+          </ul>
+        </section>
 
-      {/* Contact */}
-      <section className="flex flex-col gap-2 py-4">
-        <h2 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Contact</h2>
-        <div className="grid grid-cols-3 gap-3">
-          <a href="https://linkedin.com/in/maxmcisted" className="flex items-center justify-center gap-1 px-2 py-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" target="_blank" rel="noopener noreferrer"><FiLinkedin className="inline" />LinkedIn</a>
-          <a href="mailto:cv@mcisted.com" className="flex items-center justify-center gap-1 px-2 py-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition font-mono"><FiMail className="inline" />Email</a>
-          <a href="/max-mcisted-cv.txt" download className="flex items-center justify-center gap-1 px-2 py-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition font-mono"><FiDownload className="inline" />Download CV</a>
-        </div>
-      </section>
+        {/* Tools */}
+        <section className="flex flex-col gap-3">
+          <h3 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Tools</h3>
+          <div className="text-sm text-neutral-800 dark:text-neutral-300 font-mono leading-relaxed">
+            <div><span className="font-semibold text-neutral-600 dark:text-neutral-400">Design:</span> Figma, Illustrator, Photoshop, InDesign</div>
+            <div><span className="font-semibold text-neutral-600 dark:text-neutral-400">Docs:</span>   Notion, Google Docs, Miro, Acrobat</div>
+            <div><span className="font-semibold text-neutral-600 dark:text-neutral-400">Proto:</span>  Framer, Webflow, Keynote</div>
+          </div>
+        </section>
 
-      {/* Trigger Vercel Redeploy */}
-    </main>
+        {/* Contact */}
+        <section className="flex flex-col gap-3 pt-4 border-t border-neutral-200 dark:border-neutral-800">
+           <h3 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Contact</h3>
+          <div className="flex gap-4 text-sm text-neutral-600 dark:text-neutral-300">
+            <a href="https://linkedin.com/in/maxmcisted" className="hover:text-black dark:hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:cv@mcisted.com" className="hover:text-black dark:hover:text-white transition-colors">Email</a>
+            <a href="/max-mcisted-cv.txt" download className="hover:text-black dark:hover:text-white transition-colors">Download CV (.txt)</a>
+          </div>
+        </section>
+      </main>
+      <div className="fixed bottom-6 right-6 z-50">
+        <ThemeToggle />
+      </div>
+    </>
   );
 }
