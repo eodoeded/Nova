@@ -7,7 +7,7 @@ export default function CV() {
   return (
     <>
       {/* Header */}
-      <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 border-b border-neutral-200 dark:border-neutral-800 pb-4 mb-8">
+      <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-8">
         <div>
           <Link href="/" className="group">
             <h1 className="transition-colors group-hover:text-neutral-600 dark:group-hover:text-neutral-300">
