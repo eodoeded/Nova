@@ -89,6 +89,8 @@ export default function CV() {
           <a href="/max-mcisted-cv.txt" download className="flex items-center justify-center gap-1 px-2 py-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-800 transition font-mono"><FiDownload className="inline" />Download CV</a>
         </div>
       </section>
+
+      {/* Trigger Vercel Redeploy */}
     </main>
   );
 }
