@@ -5,7 +5,7 @@ import Link from "next/link";
 export const Contact = () => {
   return (
     <div className="mt-6">
-      <h2 className="text-muted mb-2 capitalize">Links</h2>
+      <h2 className="py-2 text-muted capitalize">Links</h2>
       <div className="border-border flex flex-col border-t">
         <Link
           href="mailto:contact@mcisted.com"
