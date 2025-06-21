@@ -7,7 +7,6 @@ import { OpenGraph } from "@/lib/og";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/footer";
 import Image from "next/image";
-import Screenshot from "@/../Screenshot 2025-06-16 at 08.28.50.png";
 
 const route = "projects";
 
@@ -41,11 +40,12 @@ export default function Three() {
       {/* Hero Image */}
       <div className="mb-8">
         <Image
-          src={Screenshot}
+          src="https://raw.githubusercontent.com/maxmcisted7/Nova/main/Screenshot%202025-06-16%20at%2008.28.50.png"
           alt="All sports brand identity hero image"
+          width={1200}
+          height={675}
           className="w-full h-auto"
           priority
-          placeholder="blur"
         />
       </div>
 
