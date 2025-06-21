@@ -1,7 +1,6 @@
 "use client";
 
 import { Footer } from "@/components/footer";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function CV() {
   return (
@@ -16,7 +15,6 @@ export default function CV() {
           <a href="https://linkedin.com/in/maxmcisted" className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="mailto:cv@mcisted.com" className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors">Email</a>
           <a href="/max-mcisted-cv.txt" download className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors">Download</a>
-          <ThemeToggle />
         </div>
       </header>
 
