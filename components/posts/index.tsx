@@ -39,25 +39,21 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
 
   return (
     <div className="mt-6 flex flex-col">
-      {isProjectsPage ? (
+      <Link href={`/${category}`}>
         <CategoryHeader />
-      ) : (
-        <Link href={`/${category}`} className="flex justify-between">
-          <CategoryHeader />
-        </Link>
-      )}
+      </Link>
 
       {posts.map((post) => {
         const content = (
           <div className="flex w-full justify-between py-2">
-            <p className={category === "projects" ? "text-muted" : "cursor-pointer transition-opacity hover:opacity-50"}>{post.title}</p>
+            <p className="cursor-pointer transition-opacity hover:opacity-50">{post.title}</p>
           </div>
         );
 
         return (
           <React.Fragment key={post.slug}>
             <Seperator />
-            {category === "projects" ? content : <Link href={`/${category}/${post.slug}`}>{content}</Link>}
+            <Link href={`/${category}/${post.slug}`}>{content}</Link>
           </React.Fragment>
         );
       })}
