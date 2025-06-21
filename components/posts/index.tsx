@@ -1,5 +1,3 @@
-"use client";
-
 import { getPosts } from "@/lib/mdx";
 
 import Link from "next/link";
@@ -39,21 +37,25 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
 
   return (
     <div className="mt-6 flex flex-col">
-      <Link href={`/${category}`}>
+      {isProjectsPage ? (
         <CategoryHeader />
-      </Link>
+      ) : (
+        <Link href={`/${category}`} className="flex justify-between">
+          <CategoryHeader />
+        </Link>
+      )}
 
       {posts.map((post) => {
         const content = (
           <div className="flex w-full justify-between py-2">
-            <p className="cursor-pointer transition-opacity hover:opacity-50">{post.title}</p>
+            <p className={category === "projects" ? "text-muted" : "cursor-pointer transition-opacity hover:opacity-50"}>{post.title}</p>
           </div>
         );
 
         return (
           <React.Fragment key={post.slug}>
             <Seperator />
-            <Link href={`/${category}/${post.slug}`}>{content}</Link>
+            {category === "projects" ? content : <Link href={`/${category}/${post.slug}`}>{content}</Link>}
           </React.Fragment>
         );
       })}
