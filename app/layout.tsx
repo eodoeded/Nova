@@ -37,12 +37,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <Providers>
-        <main className="relative py-24 md:overflow-x-visible">
-          <article className="article mx-auto max-w-screen-sm px-4 md:px-6">{children}</article>
-        </main>
-      </Providers>
-    </ThemeProvider>
+    <html lang="en" className={clsx(inter.className)} suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Providers>
+            <main className="relative py-24 md:overflow-x-visible">
+              <article className="article mx-auto max-w-screen-sm px-4 md:px-6">
+                {children}
+              </article>
+            </main>
+          </Providers>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
