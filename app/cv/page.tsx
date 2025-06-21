@@ -1,27 +1,29 @@
 "use client";
 
+import { Footer } from "@/components/footer";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function CV() {
   return (
     <>
-      <main className="mx-auto max-w-screen-sm px-4 md:px-6 flex flex-col gap-8 py-24">
-        {/* Header */}
-        <section className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 border-b border-neutral-200 dark:border-neutral-800 pb-8">
-          <div>
-            <h1 className="text-xl font-semibold tracking-tight">Max McIsted</h1>
-            <h2 className="text-base text-neutral-500 dark:text-neutral-400">Brand Designer</h2>
-          </div>
-          <div className="flex gap-4 text-sm font-mono text-neutral-600 dark:text-neutral-300">
-            <a href="https://linkedin.com/in/maxmcisted" className="hover:text-black dark:hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="mailto:cv@mcisted.com" className="hover:text-black dark:hover:text-white transition-colors">Email</a>
-            <a href="/max-mcisted-cv.txt" download className="hover:text-black dark:hover:text-white transition-colors">Download</a>
-          </div>
-        </section>
+      {/* Header */}
+      <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 border-b border-neutral-200 dark:border-neutral-800 pb-4 mb-8">
+        <div>
+          <h1 className="text-xl font-semibold tracking-tight">Max McIsted</h1>
+          <p className="text-base text-neutral-500 dark:text-neutral-400">Brand Designer</p>
+        </div>
+        <div className="flex items-baseline gap-4 text-sm">
+          <a href="https://linkedin.com/in/maxmcisted" className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:cv@mcisted.com" className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors">Email</a>
+          <a href="/max-mcisted-cv.txt" download className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors">Download</a>
+          <ThemeToggle />
+        </div>
+      </header>
 
+      <div className="flex flex-col gap-12">
         {/* Experience */}
         <section className="flex flex-col gap-4">
-          <h3 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Experience</h3>
+          <h2 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Experience</h2>
           <div className="flex flex-col gap-6 text-sm">
             <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
               <div className="font-medium">Pragmatic Semiconductor</div>
@@ -42,7 +44,7 @@ export default function CV() {
 
         {/* Education */}
         <section className="flex flex-col gap-3">
-          <h3 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Education</h3>
+          <h2 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Education</h2>
           <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 text-sm">
             <div className="font-medium">Loughborough University</div>
             <div className="text-neutral-500 text-xs">2021–2026 (expected)</div>
@@ -52,7 +54,7 @@ export default function CV() {
 
         {/* Skills */}
         <section className="flex flex-col gap-3">
-          <h3 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Skills</h3>
+          <h2 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Skills</h2>
           <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-neutral-800 dark:text-neutral-300">
             <li>Brand systems</li>
             <li>Campaign design</li>
@@ -65,27 +67,15 @@ export default function CV() {
 
         {/* Tools */}
         <section className="flex flex-col gap-3">
-          <h3 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Tools</h3>
+          <h2 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Tools</h2>
           <div className="text-sm text-neutral-800 dark:text-neutral-300 font-mono leading-relaxed">
             <div><span className="font-semibold text-neutral-600 dark:text-neutral-400">Design:</span> Figma, Illustrator, Photoshop, InDesign</div>
             <div><span className="font-semibold text-neutral-600 dark:text-neutral-400">Docs:</span>   Notion, Google Docs, Miro, Acrobat</div>
             <div><span className="font-semibold text-neutral-600 dark:text-neutral-400">Proto:</span>  Framer, Webflow, Keynote</div>
           </div>
         </section>
-
-        {/* Contact */}
-        <section className="flex flex-col gap-3 pt-4 border-t border-neutral-200 dark:border-neutral-800">
-           <h3 className="uppercase tracking-wider text-xs text-neutral-400 font-semibold">Contact</h3>
-          <div className="flex gap-4 text-sm text-neutral-600 dark:text-neutral-300">
-            <a href="https://linkedin.com/in/maxmcisted" className="hover:text-black dark:hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="mailto:cv@mcisted.com" className="hover:text-black dark:hover:text-white transition-colors">Email</a>
-            <a href="/max-mcisted-cv.txt" download className="hover:text-black dark:hover:text-white transition-colors">Download CV (.txt)</a>
-          </div>
-        </section>
-      </main>
-      <div className="fixed bottom-6 right-6 z-50">
-        <ThemeToggle />
       </div>
+      <Footer />
     </>
   );
 }
