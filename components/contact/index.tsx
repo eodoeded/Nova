@@ -20,7 +20,7 @@ export const Contact = () => {
         >
           <p className="transition-opacity hover:opacity-50">LinkedIn</p>
         </Link>
-        <div className="border-border flex justify-between border-b py-2 text-neutral-500">
+        <div className="flex justify-between py-2 text-neutral-500">
           <p>CV</p>
         </div>
       </div>
