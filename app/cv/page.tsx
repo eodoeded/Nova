@@ -71,14 +71,14 @@ export default function CV() {
         {/* Tools */}
         <section className="flex flex-col gap-3">
           <h3 className="uppercase tracking-wider text-sm text-neutral-400 font-semibold">Tools</h3>
-          <div className="text-sm text-neutral-800 dark:text-neutral-300 font-mono leading-relaxed">
+          <div className="text-sm text-neutral-800 dark:text-neutral-300 leading-relaxed">
             <div><span className="font-semibold text-neutral-600 dark:text-neutral-400">Design:</span> Figma, Illustrator, Photoshop, InDesign</div>
             <div><span className="font-semibold text-neutral-600 dark:text-neutral-400">Docs:</span>   Notion, Google Docs, Miro, Acrobat</div>
             <div><span className="font-semibold text-neutral-600 dark:text-neutral-400">Proto:</span>  Framer, Webflow, Keynote</div>
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer showBuildInfo={false} />
     </>
   );
 }
