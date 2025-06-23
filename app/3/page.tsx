@@ -57,21 +57,23 @@ export default function Three() {
       </FadeIn.Item>
       {/* 2nd Image Section (split) */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center mb-12 gap-4">
-          <Image
-            src="/preview.png"
-            alt="Nova split 1"
-            width={960}
-            height={1080}
-            className="rounded-lg object-cover w-[42.5vw] max-w-[calc(50%-0.5rem)] h-auto shadow-xl"
-          />
-          <Image
-            src="/preview.png"
-            alt="Nova split 2"
-            width={960}
-            height={1080}
-            className="rounded-lg object-cover w-[42.5vw] max-w-[calc(50%-0.5rem)] h-auto shadow-xl"
-          />
+        <div className="w-full flex justify-center mb-12">
+          <div className="flex w-[85vw] max-w-6xl gap-4">
+            <Image
+              src="/preview.png"
+              alt="Nova split 1"
+              width={960}
+              height={1080}
+              className="rounded-lg object-cover w-1/2 h-auto shadow-xl"
+            />
+            <Image
+              src="/preview.png"
+              alt="Nova split 2"
+              width={960}
+              height={1080}
+              className="rounded-lg object-cover w-1/2 h-auto shadow-xl"
+            />
+          </div>
         </div>
       </FadeIn.Item>
       {/* 3rd Image Section */}
@@ -100,21 +102,23 @@ export default function Three() {
       </FadeIn.Item>
       {/* 5th Image Section (split) */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center mb-12 gap-4">
-          <Image
-            src="/preview.png"
-            alt="Nova split 3"
-            width={960}
-            height={1080}
-            className="rounded-lg object-cover w-[42.5vw] max-w-[calc(50%-0.5rem)] h-auto shadow-xl"
-          />
-          <Image
-            src="/preview.png"
-            alt="Nova split 4"
-            width={960}
-            height={1080}
-            className="rounded-lg object-cover w-[42.5vw] max-w-[calc(50%-0.5rem)] h-auto shadow-xl"
-          />
+        <div className="w-full flex justify-center mb-12">
+          <div className="flex w-[85vw] max-w-6xl gap-4">
+            <Image
+              src="/preview.png"
+              alt="Nova split 3"
+              width={960}
+              height={1080}
+              className="rounded-lg object-cover w-1/2 h-auto shadow-xl"
+            />
+            <Image
+              src="/preview.png"
+              alt="Nova split 4"
+              width={960}
+              height={1080}
+              className="rounded-lg object-cover w-1/2 h-auto shadow-xl"
+            />
+          </div>
         </div>
       </FadeIn.Item>
       {/* 6th Image Section */}
