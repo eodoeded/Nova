@@ -64,14 +64,14 @@ export default function Three() {
               alt="Nova split 1"
               width={960}
               height={1080}
-              className="rounded-lg object-cover flex-1 h-full shadow-xl"
+              className="rounded-lg object-cover w-1/2 h-full shadow-xl"
             />
             <Image
               src="/preview.png"
               alt="Nova split 2"
               width={960}
               height={1080}
-              className="rounded-lg object-cover flex-1 h-full shadow-xl"
+              className="rounded-lg object-cover w-1/2 h-full shadow-xl"
             />
           </div>
         </div>
@@ -109,14 +109,14 @@ export default function Three() {
               alt="Nova split 3"
               width={960}
               height={1080}
-              className="rounded-lg object-cover flex-1 h-full shadow-xl"
+              className="rounded-lg object-cover w-1/2 h-full shadow-xl"
             />
             <Image
               src="/preview.png"
               alt="Nova split 4"
               width={960}
               height={1080}
-              className="rounded-lg object-cover flex-1 h-full shadow-xl"
+              className="rounded-lg object-cover w-1/2 h-full shadow-xl"
             />
           </div>
         </div>
