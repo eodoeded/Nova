@@ -45,9 +45,9 @@ export default function Three() {
           <Image
             src="/preview.png"
             alt="Nova showcase 1"
-            width={1600}
-            height={900}
-            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+            width={1920}
+            height={1080}
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
@@ -57,16 +57,16 @@ export default function Three() {
           <Image
             src="/preview.png"
             alt="Nova split 1"
-            width={800}
-            height={900}
-            className="rounded-lg object-cover w-[37vw] max-w-[600px] h-auto shadow-xl"
+            width={960}
+            height={1080}
+            className="rounded-lg object-cover w-[42vw] max-w-[850px] h-auto shadow-xl"
           />
           <Image
             src="/preview.png"
             alt="Nova split 2"
-            width={800}
-            height={900}
-            className="rounded-lg object-cover w-[37vw] max-w-[600px] h-auto shadow-xl"
+            width={960}
+            height={1080}
+            className="rounded-lg object-cover w-[42vw] max-w-[850px] h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
@@ -76,9 +76,9 @@ export default function Three() {
           <Image
             src="/preview.png"
             alt="Nova showcase 2"
-            width={1600}
-            height={900}
-            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+            width={1920}
+            height={1080}
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
@@ -88,9 +88,9 @@ export default function Three() {
           <Image
             src="/preview.png"
             alt="Nova showcase 3"
-            width={1600}
-            height={900}
-            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+            width={1920}
+            height={1080}
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
@@ -100,16 +100,16 @@ export default function Three() {
           <Image
             src="/preview.png"
             alt="Nova split 3"
-            width={800}
-            height={900}
-            className="rounded-lg object-cover w-[37vw] max-w-[600px] h-auto shadow-xl"
+            width={960}
+            height={1080}
+            className="rounded-lg object-cover w-[42vw] max-w-[850px] h-auto shadow-xl"
           />
           <Image
             src="/preview.png"
             alt="Nova split 4"
-            width={800}
-            height={900}
-            className="rounded-lg object-cover w-[37vw] max-w-[600px] h-auto shadow-xl"
+            width={960}
+            height={1080}
+            className="rounded-lg object-cover w-[42vw] max-w-[850px] h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
@@ -119,9 +119,9 @@ export default function Three() {
           <Image
             src="/preview.png"
             alt="Nova showcase 4"
-            width={1600}
-            height={900}
-            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+            width={1920}
+            height={1080}
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
@@ -131,9 +131,9 @@ export default function Three() {
           <Image
             src="/preview.png"
             alt="Nova showcase 5"
-            width={1600}
-            height={900}
-            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+            width={1920}
+            height={1080}
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
@@ -143,9 +143,9 @@ export default function Three() {
           <Image
             src="/preview.png"
             alt="Nova showcase 6"
-            width={1600}
-            height={900}
-            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+            width={1920}
+            height={1080}
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
