@@ -24,7 +24,7 @@ export default function Three() {
         </p>
       </FadeIn.Item>
       <Spacer />
-      {/* Hero Video */}
+      {/* Hero Video (full width) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <video
@@ -36,6 +36,149 @@ export default function Three() {
             poster="/preview.png"
             className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
             style={{ background: '#111', opacity: 1 }}
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Full width image */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center mb-12">
+          <Image
+            src="https://placehold.co/1600x900/png"
+            alt="Placeholder full width 1"
+            width={1600}
+            height={900}
+            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Split image */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center gap-6 mb-12">
+          <Image
+            src="https://placehold.co/800x900/png"
+            alt="Placeholder split 1a"
+            width={800}
+            height={900}
+            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+          />
+          <Image
+            src="https://placehold.co/800x900/png"
+            alt="Placeholder split 1b"
+            width={800}
+            height={900}
+            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Split image */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center gap-6 mb-12">
+          <Image
+            src="https://placehold.co/800x900/png"
+            alt="Placeholder split 2a"
+            width={800}
+            height={900}
+            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+          />
+          <Image
+            src="https://placehold.co/800x900/png"
+            alt="Placeholder split 2b"
+            width={800}
+            height={900}
+            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Full width image */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center mb-12">
+          <Image
+            src="https://placehold.co/1600x900/png"
+            alt="Placeholder full width 2"
+            width={1600}
+            height={900}
+            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Split image */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center gap-6 mb-12">
+          <Image
+            src="https://placehold.co/800x900/png"
+            alt="Placeholder split 3a"
+            width={800}
+            height={900}
+            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+          />
+          <Image
+            src="https://placehold.co/800x900/png"
+            alt="Placeholder split 3b"
+            width={800}
+            height={900}
+            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Split image */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center gap-6 mb-12">
+          <Image
+            src="https://placehold.co/800x900/png"
+            alt="Placeholder split 4a"
+            width={800}
+            height={900}
+            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+          />
+          <Image
+            src="https://placehold.co/800x900/png"
+            alt="Placeholder split 4b"
+            width={800}
+            height={900}
+            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Full width image */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center mb-12">
+          <Image
+            src="https://placehold.co/1600x900/png"
+            alt="Placeholder full width 3"
+            width={1600}
+            height={900}
+            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Split image */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center gap-6 mb-12">
+          <Image
+            src="https://placehold.co/800x900/png"
+            alt="Placeholder split 5a"
+            width={800}
+            height={900}
+            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+          />
+          <Image
+            src="https://placehold.co/800x900/png"
+            alt="Placeholder split 5b"
+            width={800}
+            height={900}
+            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Full width image */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center mb-12">
+          <Image
+            src="https://placehold.co/1600x900/png"
+            alt="Placeholder full width 4"
+            width={1600}
+            height={900}
+            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
