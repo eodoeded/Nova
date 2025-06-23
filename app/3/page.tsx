@@ -28,7 +28,7 @@ export default function Three() {
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <video
-            src={"/arm_batch1_spotify%2016x9%20v01%20(2).mp4"}
+            src={"/hero.mp4"}
             autoPlay
             loop
             muted
