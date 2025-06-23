@@ -26,18 +26,19 @@ export default function CV() {
       <div className="flex flex-col gap-12">
         {/* Experience */}
         <section className="flex flex-col gap-4">
-          <h2 className="py-2 text-sm text-muted capitalize">experience</h2>
-          <div className="flex flex-col gap-6 text-sm">
+          <div className="border-border border-t" />
+          <h2 className="text-default text-foreground font-normal">experience</h2>
+          <div className="flex flex-col gap-6 text-default text-foreground font-normal">
             <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
-              <div className="font-medium text-muted">Pragmatic Semiconductor</div>
-              <div className="text-neutral-500 text-sm">Jul 2025 – Present</div>
-              <div className="col-span-2 text-neutral-600">Brand Designer</div>
+              <div>Pragmatic Semiconductor</div>
+              <div>Jul 2025 – Present</div>
+              <div className="col-span-2">Brand Designer</div>
             </div>
             <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
-              <div className="font-medium text-muted">Arm</div>
-              <div className="text-neutral-500 text-sm">Sep 2024 – May 2025</div>
-              <div className="col-span-2 text-neutral-600">Design Intern</div>
-              <ul className="list-disc pl-5 col-span-2 text-neutral-600 mt-1 space-y-1">
+              <div>Arm</div>
+              <div>Sep 2024 – May 2025</div>
+              <div className="col-span-2">Design Intern</div>
+              <ul className="list-disc pl-5 col-span-2">
                 <li>Worked on global rebrand across internal, campaign, and product comms</li>
                 <li>Delivered brand systems for documentation, print, and web</li>
               </ul>
@@ -47,18 +48,20 @@ export default function CV() {
 
         {/* Education */}
         <section className="flex flex-col gap-3">
-          <h2 className="py-2 text-sm text-muted capitalize">education</h2>
-          <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 text-sm">
-            <div className="font-medium text-muted">Loughborough University</div>
-            <div className="text-neutral-500 text-sm">2021–2026 (expected)</div>
-            <div className="col-span-2 text-neutral-600">BA Graphic Design & Visual Communication</div>
+          <div className="border-border border-t" />
+          <h2 className="text-default text-foreground font-normal">education</h2>
+          <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 text-default text-foreground font-normal">
+            <div>Loughborough University</div>
+            <div>2021–2026 (expected)</div>
+            <div className="col-span-2">BA Graphic Design & Visual Communication</div>
           </div>
         </section>
 
         {/* Skills */}
         <section className="flex flex-col gap-3">
-          <h2 className="py-2 text-sm text-muted capitalize">skills</h2>
-          <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-neutral-600">
+          <div className="border-border border-t" />
+          <h2 className="text-default text-foreground font-normal">skills</h2>
+          <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-default text-foreground font-normal">
             <li>Brand systems</li>
             <li>Campaign design</li>
             <li>Documentation</li>
@@ -70,11 +73,12 @@ export default function CV() {
 
         {/* Tools */}
         <section className="flex flex-col gap-3">
-          <h2 className="py-2 text-sm text-muted capitalize">tools</h2>
-          <div className="text-sm text-neutral-600 leading-relaxed">
-            <div><span className="font-medium text-neutral-600">Design:</span> Figma, Illustrator, Photoshop, InDesign</div>
-            <div><span className="font-medium text-neutral-600">Docs:</span>   Notion, Google Docs, Miro, Acrobat</div>
-            <div><span className="font-medium text-neutral-600">Proto:</span>  Framer, Webflow, Keynote</div>
+          <div className="border-border border-t" />
+          <h2 className="text-default text-foreground font-normal">tools</h2>
+          <div className="text-default text-foreground font-normal leading-relaxed">
+            <div><span>Design:</span> Figma, Illustrator, Photoshop, InDesign</div>
+            <div><span>Docs:</span>   Notion, Google Docs, Miro, Acrobat</div>
+            <div><span>Proto:</span>  Framer, Webflow, Keynote</div>
           </div>
         </section>
       </div>
