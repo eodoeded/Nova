@@ -3,25 +3,26 @@
 import { Footer } from "@/components/footer";
 import Link from "next/link";
 
+function CVFooterLinks() {
+  return (
+    <div className="flex flex-col gap-1 text-sm">
+      <a href="https://linkedin.com/in/maxmcisted" className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:cv@mcisted.com" className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors">Email</a>
+      <a href="/max-mcisted-cv.txt" download className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors">Download</a>
+    </div>
+  );
+}
+
 export default function CV() {
   return (
     <>
-      {/* Header */}
-      <header className="flex flex-col sm:flex-row sm:justify-between gap-2 mb-12">
+      {/* Homepage header, copied exactly */}
+      <div className="flex justify-between">
         <div>
-          <Link href="/" className="group">
-            <h1 className="transition-colors group-hover:text-neutral-600 dark:group-hover:text-neutral-300">
-              Max McIsted
-            </h1>
-          </Link>
-          <h2 className="leading-tight">Brand Designer</h2>
+          <h1>Max McIsted</h1>
+          <h2>Brand Designer</h2>
         </div>
-        <div className="flex items-baseline gap-4 text-sm">
-          <a href="https://linkedin.com/in/maxmcisted" className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="mailto:cv@mcisted.com" className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors">Email</a>
-          <a href="/max-mcisted-cv.txt" download className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors">Download</a>
-        </div>
-      </header>
+      </div>
 
       <div className="flex flex-col gap-12">
         {/* Experience */}
@@ -78,7 +79,11 @@ export default function CV() {
           </div>
         </section>
       </div>
-      <Footer showBuildInfo={false} />
+      {/* Footer with left-side links for CV page */}
+      <div className="flex w-full items-center justify-between border-border border-t pt-2 mt-12">
+        <CVFooterLinks />
+        <Footer showBuildInfo={false} />
+      </div>
     </>
   );
 }
