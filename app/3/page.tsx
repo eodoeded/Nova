@@ -33,8 +33,9 @@ export default function Three() {
             loop
             muted
             playsInline
+            poster="/preview.png"
             className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
-            style={{ background: '#111' }}
+            style={{ background: '#111', opacity: 1 }}
           />
         </div>
       </FadeIn.Item>
