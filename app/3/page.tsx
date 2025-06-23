@@ -57,7 +57,7 @@ export default function Three() {
       </FadeIn.Item>
       {/* 2nd Image Section (split) */}
       <FadeIn.Item>
-        <div className="mb-12">
+        <div className="mb-12 mx-auto">
           <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4 mx-auto">
             <Image
               src="/preview.png"
@@ -102,7 +102,7 @@ export default function Three() {
       </FadeIn.Item>
       {/* 5th Image Section (split) */}
       <FadeIn.Item>
-        <div className="mb-12">
+        <div className="mb-12 mx-auto">
           <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4 mx-auto">
             <Image
               src="/preview.png"
