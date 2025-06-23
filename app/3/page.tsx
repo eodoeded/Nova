@@ -24,7 +24,7 @@ export default function Three() {
         </p>
       </FadeIn.Item>
       <Spacer />
-      {/* Hero Video (full width) */}
+      {/* Hero Video */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <video
@@ -39,143 +39,110 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* Full width image */}
+      {/* 1st Image Section */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
-            src="https://placehold.co/1600x900/png"
-            alt="Placeholder full width 1"
+            src="/preview.png"
+            alt="Nova showcase 1"
             width={1600}
             height={900}
             className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
-      {/* Split image */}
+      {/* 2nd Image Section (split) */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center gap-6 mb-12">
+        <div className="w-full flex justify-center mb-12 gap-4">
           <Image
-            src="https://placehold.co/800x900/png"
-            alt="Placeholder split 1a"
+            src="/circle.svg"
+            alt="Nova split 1"
             width={800}
             height={900}
-            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[37vw] max-w-[600px] h-auto shadow-xl"
           />
           <Image
-            src="https://placehold.co/800x900/png"
-            alt="Placeholder split 1b"
+            src="/key.svg"
+            alt="Nova split 2"
             width={800}
             height={900}
-            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[37vw] max-w-[600px] h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
-      {/* Split image */}
-      <FadeIn.Item>
-        <div className="w-full flex justify-center gap-6 mb-12">
-          <Image
-            src="https://placehold.co/800x900/png"
-            alt="Placeholder split 2a"
-            width={800}
-            height={900}
-            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
-          />
-          <Image
-            src="https://placehold.co/800x900/png"
-            alt="Placeholder split 2b"
-            width={800}
-            height={900}
-            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
-          />
-        </div>
-      </FadeIn.Item>
-      {/* Full width image */}
+      {/* 3rd Image Section */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
-            src="https://placehold.co/1600x900/png"
-            alt="Placeholder full width 2"
+            src="/circle.svg"
+            alt="Nova showcase 2"
             width={1600}
             height={900}
             className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
-      {/* Split image */}
-      <FadeIn.Item>
-        <div className="w-full flex justify-center gap-6 mb-12">
-          <Image
-            src="https://placehold.co/800x900/png"
-            alt="Placeholder split 3a"
-            width={800}
-            height={900}
-            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
-          />
-          <Image
-            src="https://placehold.co/800x900/png"
-            alt="Placeholder split 3b"
-            width={800}
-            height={900}
-            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
-          />
-        </div>
-      </FadeIn.Item>
-      {/* Split image */}
-      <FadeIn.Item>
-        <div className="w-full flex justify-center gap-6 mb-12">
-          <Image
-            src="https://placehold.co/800x900/png"
-            alt="Placeholder split 4a"
-            width={800}
-            height={900}
-            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
-          />
-          <Image
-            src="https://placehold.co/800x900/png"
-            alt="Placeholder split 4b"
-            width={800}
-            height={900}
-            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
-          />
-        </div>
-      </FadeIn.Item>
-      {/* Full width image */}
+      {/* 4th Image Section */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
-            src="https://placehold.co/1600x900/png"
-            alt="Placeholder full width 3"
+            src="/key.svg"
+            alt="Nova showcase 3"
             width={1600}
             height={900}
             className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
-      {/* Split image */}
+      {/* 5th Image Section (split) */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center gap-6 mb-12">
+        <div className="w-full flex justify-center mb-12 gap-4">
           <Image
-            src="https://placehold.co/800x900/png"
-            alt="Placeholder split 5a"
+            src="/preview.png"
+            alt="Nova split 3"
             width={800}
             height={900}
-            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[37vw] max-w-[600px] h-auto shadow-xl"
           />
           <Image
-            src="https://placehold.co/800x900/png"
-            alt="Placeholder split 5b"
+            src="/circle.svg"
+            alt="Nova split 4"
             width={800}
             height={900}
-            className="rounded-lg object-cover w-[36vw] max-w-2xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[37vw] max-w-[600px] h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
-      {/* Full width image */}
+      {/* 6th Image Section */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
-            src="https://placehold.co/1600x900/png"
-            alt="Placeholder full width 4"
+            src="/preview.png"
+            alt="Nova showcase 4"
+            width={1600}
+            height={900}
+            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* 7th Image Section */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center mb-12">
+          <Image
+            src="/circle.svg"
+            alt="Nova showcase 5"
+            width={1600}
+            height={900}
+            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* 8th Image Section */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center mb-12">
+          <Image
+            src="/key.svg"
+            alt="Nova showcase 6"
             width={1600}
             height={900}
             className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
