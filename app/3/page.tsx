@@ -1,83 +1,106 @@
-import type { Post } from "@/types";
-
-import { Layout } from "@/components/screens/posts";
-import { getPosts } from "@/lib/mdx";
-import { OpenGraph } from "@/lib/og";
-
-import { notFound } from "next/navigation";
 import { Footer } from "@/components/footer";
 import Image from "next/image";
-
-const route = "projects";
-
-const Posts = getPosts(route);
-
-interface PageProps {
-  params: Post;
-}
-
-export function generateMetadata({ params }: PageProps) {
-  const post = Posts.find((post: { slug: string }) => post.slug === params.slug);
-  const title = post ? post.title : "Arm Rebrand Case Study";
-  const image = `${process.env.NEXT_PUBLIC_SITE_URL}api/og?title=${encodeURIComponent(title)}`;
-
-  return {
-    ...OpenGraph.openGraph,
-    title,
-    openGraph: {
-      title,
-      images: [image],
-    },
-    twitter: {
-      images: [image],
-    },
-  };
-}
+import { Contact } from "@/components/contact";
+import * as FadeIn from "@/components/motion/staggers/fade";
+import { Spacer } from "@/components/spacer";
 
 export default function Three() {
   return (
-    <>
-      {/* Hero Image */}
-      <div className="mb-8">
-        <Image
-          src="https://raw.githubusercontent.com/maxmcisted7/Nova/main/Screenshot%202025-06-16%20at%2008.28.50.png"
-          alt="All sports brand identity hero image"
-          width={1200}
-          height={675}
-          className="w-full h-auto"
-          priority
-        />
-      </div>
-
-      {/* Title Section */}
-      <section className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          All sports
-        </h1>
-        <p className="mt-2 text-lg text-neutral-500 dark:text-neutral-400">
-          Brand identity and campaign visuals for a sportswear reinvention.
-        </p>
-      </section>
-
-      {/* Body Copy Section */}
-      <section className="prose prose-neutral dark:prose-invert max-w-none">
+    <FadeIn.Container>
+      {/* Header (from homepage) */}
+      <FadeIn.Item>
+        <div className="flex justify-between">
+          <div>
+            <h1>Nova</h1>
+            <h2>Systemic Brand for a New Era</h2>
+          </div>
+        </div>
+      </FadeIn.Item>
+      <Spacer />
+      {/* Summary (from homepage, adapted) */}
+      <FadeIn.Item>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur.
+          Nova is a fictional technology company reimagined for the future. This case study explores the creation of a systemic brand identity, from strategy to launch, with a focus on expressive visuals and scalable systems.
         </p>
-        <p>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
-          omnis iste natus error sit voluptatem accusantium doloremque
-          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-          veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-        </p>
-      </section>
-
-      <Footer />
-    </>
+      </FadeIn.Item>
+      <Spacer />
+      {/* Hero Video */}
+      <FadeIn.Item>
+        <div className="w-full flex justify-center mb-12">
+          <video
+            src={"/arm_batch1_spotify 16x9 v01 (2).mp4"}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+            style={{ background: '#111' }}
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Section 1: Brand Strategy */}
+      <FadeIn.Item>
+        <section className="mb-16">
+          <h2 className="text-xl font-medium mb-2">Brand Strategy</h2>
+          <p>
+            Nova's brand was built on the idea of adaptability and clarity. The strategy phase included workshops, competitor analysis, and the development of a flexible design system that could scale across digital and physical touchpoints.
+          </p>
+          <div className="w-full flex justify-center mt-8">
+            <Image
+              src="/circle.svg"
+              alt="Brand system diagram"
+              width={600}
+              height={600}
+              className="w-[60vw] max-w-2xl h-auto"
+            />
+          </div>
+        </section>
+      </FadeIn.Item>
+      {/* Section 2: Visual Identity */}
+      <FadeIn.Item>
+        <section className="mb-16">
+          <h2 className="text-xl font-medium mb-2">Visual Identity</h2>
+          <p>
+            The visual identity leverages bold geometry, a monochrome palette, and expressive motion. Key brand marks and iconography were designed to be instantly recognizable and highly adaptable.
+          </p>
+          <div className="w-full flex justify-center mt-8">
+            <Image
+              src="/key.svg"
+              alt="Nova key icon"
+              width={300}
+              height={300}
+              className="w-[40vw] max-w-lg h-auto"
+            />
+          </div>
+        </section>
+      </FadeIn.Item>
+      {/* Section 3: Applications */}
+      <FadeIn.Item>
+        <section className="mb-16">
+          <h2 className="text-xl font-medium mb-2">Applications</h2>
+          <p>
+            The Nova system was applied to web, mobile, print, and environmental graphics. Each touchpoint was designed to maximize clarity and impact, with imagery and layouts that extend beyond the grid for a dynamic, immersive feel.
+          </p>
+          <div className="w-full flex justify-center mt-8">
+            <Image
+              src="/preview.png"
+              alt="Nova application example"
+              width={1600}
+              height={900}
+              className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+            />
+          </div>
+        </section>
+      </FadeIn.Item>
+      {/* Contact & Footer (from homepage) */}
+      <Spacer />
+      <FadeIn.Item>
+        <Contact />
+      </FadeIn.Item>
+      <Spacer />
+      <FadeIn.Item>
+        <Footer />
+      </FadeIn.Item>
+    </FadeIn.Container>
   );
 }
