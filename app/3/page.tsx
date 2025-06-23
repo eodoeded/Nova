@@ -38,7 +38,7 @@ export default function Three() {
             muted
             playsInline
             poster="/preview.png"
-            className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
             style={{ background: '#111', opacity: 1 }}
           />
         </div>
@@ -63,14 +63,14 @@ export default function Three() {
             alt="Nova split 1"
             width={960}
             height={1080}
-            className="rounded-lg object-cover w-[42vw] max-w-[850px] h-auto shadow-xl"
+            className="rounded-lg object-cover w-[42.5vw] max-w-[calc(50%-0.5rem)] h-auto shadow-xl"
           />
           <Image
             src="/preview.png"
             alt="Nova split 2"
             width={960}
             height={1080}
-            className="rounded-lg object-cover w-[42vw] max-w-[850px] h-auto shadow-xl"
+            className="rounded-lg object-cover w-[42.5vw] max-w-[calc(50%-0.5rem)] h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
@@ -106,14 +106,14 @@ export default function Three() {
             alt="Nova split 3"
             width={960}
             height={1080}
-            className="rounded-lg object-cover w-[42vw] max-w-[850px] h-auto shadow-xl"
+            className="rounded-lg object-cover w-[42.5vw] max-w-[calc(50%-0.5rem)] h-auto shadow-xl"
           />
           <Image
             src="/preview.png"
             alt="Nova split 4"
             width={960}
             height={1080}
-            className="rounded-lg object-cover w-[42vw] max-w-[850px] h-auto shadow-xl"
+            className="rounded-lg object-cover w-[42.5vw] max-w-[calc(50%-0.5rem)] h-auto shadow-xl"
           />
         </div>
       </FadeIn.Item>
