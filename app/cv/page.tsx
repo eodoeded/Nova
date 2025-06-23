@@ -23,22 +23,22 @@ export default function CV() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-16 max-w-xl mx-auto">
         {/* Experience */}
         <section className="flex flex-col gap-4">
           <div className="border-border border-t" />
-          <h2 className="text-default text-foreground font-normal">experience</h2>
+          <h2 className="text-default text-muted font-normal uppercase tracking-wide">experience</h2>
           <div className="flex flex-col gap-6 text-default text-foreground font-normal">
             <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
-              <div>Pragmatic Semiconductor</div>
-              <div>Jul 2025 – Present</div>
-              <div className="col-span-2">Brand Designer</div>
+              <div className="text-foreground">Pragmatic Semiconductor</div>
+              <div className="text-muted">Jul 2025 – Present</div>
+              <div className="col-span-2 text-muted">Brand Designer</div>
             </div>
             <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
-              <div>Arm</div>
-              <div>Sep 2024 – May 2025</div>
-              <div className="col-span-2">Design Intern</div>
-              <ul className="list-disc pl-5 col-span-2">
+              <div className="text-foreground">Arm</div>
+              <div className="text-muted">Sep 2024 – May 2025</div>
+              <div className="col-span-2 text-muted">Design Intern</div>
+              <ul className="list-disc pl-5 col-span-2 text-default text-foreground mt-1 space-y-1">
                 <li>Worked on global rebrand across internal, campaign, and product comms</li>
                 <li>Delivered brand systems for documentation, print, and web</li>
               </ul>
@@ -47,20 +47,20 @@ export default function CV() {
         </section>
 
         {/* Education */}
-        <section className="flex flex-col gap-3">
+        <section className="flex flex-col gap-4 mt-12">
           <div className="border-border border-t" />
-          <h2 className="text-default text-foreground font-normal">education</h2>
+          <h2 className="text-default text-muted font-normal uppercase tracking-wide">education</h2>
           <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 text-default text-foreground font-normal">
-            <div>Loughborough University</div>
-            <div>2021–2026 (expected)</div>
-            <div className="col-span-2">BA Graphic Design & Visual Communication</div>
+            <div className="text-foreground">Loughborough University</div>
+            <div className="text-muted">2021–2026 (expected)</div>
+            <div className="col-span-2 text-muted">BA Graphic Design & Visual Communication</div>
           </div>
         </section>
 
         {/* Skills */}
-        <section className="flex flex-col gap-3">
+        <section className="flex flex-col gap-4 mt-12">
           <div className="border-border border-t" />
-          <h2 className="text-default text-foreground font-normal">skills</h2>
+          <h2 className="text-default text-muted font-normal uppercase tracking-wide">skills</h2>
           <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-default text-foreground font-normal">
             <li>Brand systems</li>
             <li>Campaign design</li>
@@ -72,18 +72,18 @@ export default function CV() {
         </section>
 
         {/* Tools */}
-        <section className="flex flex-col gap-3">
+        <section className="flex flex-col gap-4 mt-12">
           <div className="border-border border-t" />
-          <h2 className="text-default text-foreground font-normal">tools</h2>
+          <h2 className="text-default text-muted font-normal uppercase tracking-wide">tools</h2>
           <div className="text-default text-foreground font-normal leading-relaxed">
-            <div><span>Design:</span> Figma, Illustrator, Photoshop, InDesign</div>
-            <div><span>Docs:</span>   Notion, Google Docs, Miro, Acrobat</div>
-            <div><span>Proto:</span>  Framer, Webflow, Keynote</div>
+            <div><span className="text-muted">Design:</span> Figma, Illustrator, Photoshop, InDesign</div>
+            <div><span className="text-muted">Docs:</span>   Notion, Google Docs, Miro, Acrobat</div>
+            <div><span className="text-muted">Proto:</span>  Framer, Webflow, Keynote</div>
           </div>
         </section>
       </div>
       {/* Footer with left-side links for CV page */}
-      <div className="flex w-full items-center justify-between pt-2 mt-12">
+      <div className="flex w-full items-center justify-between pt-2 mt-16">
         <CVFooterLinks />
         <Footer showBuildInfo={false} />
       </div>
