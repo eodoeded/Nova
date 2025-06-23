@@ -3,15 +3,19 @@ import Image from "next/image";
 import { Contact } from "@/components/contact";
 import * as FadeIn from "@/components/motion/staggers/fade";
 import { Spacer } from "@/components/spacer";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export default function Three() {
   return (
     <FadeIn.Container>
+      <FadeIn.Item>
+        <Breadcrumb />
+      </FadeIn.Item>
       {/* Header (from homepage) */}
       <FadeIn.Item>
         <div className="flex justify-between">
           <div>
-            <h1>Nova</h1>
+            <h1>3</h1>
             <h2>Systemic Brand for a New Era</h2>
           </div>
         </div>
