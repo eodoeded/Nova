@@ -47,7 +47,7 @@ export default function Three() {
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
-            src="/preview.png"
+            src="/Group 1010102663.png"
             alt="Nova showcase 1"
             width={1920}
             height={1080}
