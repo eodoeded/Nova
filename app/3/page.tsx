@@ -55,14 +55,14 @@ export default function Three() {
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12 gap-4">
           <Image
-            src="/circle.svg"
+            src="/preview.png"
             alt="Nova split 1"
             width={800}
             height={900}
             className="rounded-lg object-cover w-[37vw] max-w-[600px] h-auto shadow-xl"
           />
           <Image
-            src="/key.svg"
+            src="/preview.png"
             alt="Nova split 2"
             width={800}
             height={900}
@@ -74,7 +74,7 @@ export default function Three() {
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
-            src="/circle.svg"
+            src="/preview.png"
             alt="Nova showcase 2"
             width={1600}
             height={900}
@@ -86,7 +86,7 @@ export default function Three() {
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
-            src="/key.svg"
+            src="/preview.png"
             alt="Nova showcase 3"
             width={1600}
             height={900}
@@ -105,7 +105,7 @@ export default function Three() {
             className="rounded-lg object-cover w-[37vw] max-w-[600px] h-auto shadow-xl"
           />
           <Image
-            src="/circle.svg"
+            src="/preview.png"
             alt="Nova split 4"
             width={800}
             height={900}
@@ -129,7 +129,7 @@ export default function Three() {
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
-            src="/circle.svg"
+            src="/preview.png"
             alt="Nova showcase 5"
             width={1600}
             height={900}
@@ -141,7 +141,7 @@ export default function Three() {
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
-            src="/key.svg"
+            src="/preview.png"
             alt="Nova showcase 6"
             width={1600}
             height={900}
