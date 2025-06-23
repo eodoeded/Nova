@@ -58,7 +58,7 @@ export default function Three() {
       {/* 2nd Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4 mx-auto">
             <Image
               src="/preview.png"
               alt="Nova split 1"
@@ -103,7 +103,7 @@ export default function Three() {
       {/* 5th Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4 mx-auto">
             <Image
               src="/preview.png"
               alt="Nova split 3"
