@@ -58,13 +58,13 @@ export default function Three() {
       {/* 2nd Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="grid grid-cols-2 w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+          <div className="grid grid-cols-2 w-[85vw] max-w-6xl aspect-[16/9]">
             <div className="relative">
               <Image
                 src="/preview.png"
                 alt="Nova split 1"
                 fill
-                className="rounded-lg object-cover shadow-xl"
+                className="object-cover"
               />
             </div>
             <div className="relative">
@@ -72,7 +72,7 @@ export default function Three() {
                 src="/preview.png"
                 alt="Nova split 2"
                 fill
-                className="rounded-lg object-cover shadow-xl"
+                className="object-cover"
               />
             </div>
           </div>
@@ -105,13 +105,13 @@ export default function Three() {
       {/* 5th Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="grid grid-cols-2 w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+          <div className="grid grid-cols-2 w-[85vw] max-w-6xl aspect-[16/9]">
             <div className="relative">
               <Image
                 src="/preview.png"
                 alt="Nova split 3"
                 fill
-                className="rounded-lg object-cover shadow-xl"
+                className="object-cover"
               />
             </div>
             <div className="relative">
@@ -119,7 +119,7 @@ export default function Three() {
                 src="/preview.png"
                 alt="Nova split 4"
                 fill
-                className="rounded-lg object-cover shadow-xl"
+                className="object-cover"
               />
             </div>
           </div>
