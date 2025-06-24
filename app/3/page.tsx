@@ -58,7 +58,7 @@ export default function Three() {
       {/* 2nd Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+          <div className="flex w-[calc(85vw+1rem)] max-w-[calc(1536px+1rem)] aspect-[16/9] gap-4">
             <div className="flex-1 relative">
               <Image
                 src="/preview.png"
@@ -107,7 +107,7 @@ export default function Three() {
       {/* 5th Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+          <div className="flex w-[calc(85vw+1rem)] max-w-[calc(1536px+1rem)] aspect-[16/9] gap-4">
             <div className="flex-1 relative">
               <Image
                 src="/preview.png"
