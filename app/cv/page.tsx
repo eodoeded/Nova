@@ -23,12 +23,11 @@ export default function CV() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-16">
-        {/* Experience */}
-        <section className="flex flex-col gap-4">
-          <div className="border-border border-t" />
-          <h2 className="py-2 text-muted capitalize">Projects</h2>
-          <div className="flex flex-col gap-6 text-default text-foreground font-normal">
+      <div className="flex flex-col">
+        {/* Projects */}
+        <section className="flex flex-col gap-2">
+          <h2 className="py-2 mb-3 text-muted capitalize">Projects</h2>
+          <div className="flex flex-col gap-4 text-default text-foreground font-normal">
             <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
               <div className="text-foreground">Pragmatic Semiconductor</div>
               <div className="text-muted">Jul 2025 – Present</div>
@@ -46,10 +45,12 @@ export default function CV() {
           </div>
         </section>
 
+        {/* Divider: Projects → Education */}
+        <div className="border-t border-border w-full my-8" />
+
         {/* Education */}
-        <section className="flex flex-col gap-4 mt-12">
-          <div className="border-border border-t" />
-          <h2 className="py-2 text-muted capitalize">Education</h2>
+        <section className="flex flex-col gap-2">
+          <h2 className="py-2 mb-3 text-muted capitalize">Education</h2>
           <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 text-default text-foreground font-normal">
             <div className="text-foreground">Loughborough University</div>
             <div className="text-muted">2021–2026 (expected)</div>
@@ -57,10 +58,12 @@ export default function CV() {
           </div>
         </section>
 
+        {/* Divider: Education → Skills */}
+        <div className="border-t border-border w-full my-8" />
+
         {/* Skills */}
-        <section className="flex flex-col gap-4 mt-12">
-          <div className="border-border border-t" />
-          <h2 className="py-2 text-muted capitalize">Skills</h2>
+        <section className="flex flex-col gap-2">
+          <h2 className="py-2 mb-3 text-muted capitalize">Skills</h2>
           <ul className="list-disc pl-5 text-default text-foreground font-normal space-y-1">
             <li>Brand systems</li>
             <li>Campaign design</li>
@@ -71,10 +74,12 @@ export default function CV() {
           </ul>
         </section>
 
+        {/* Divider: Skills → Tools */}
+        <div className="border-t border-border w-full my-8" />
+
         {/* Tools */}
-        <section className="flex flex-col gap-4 mt-12">
-          <div className="border-border border-t" />
-          <h2 className="py-2 text-muted capitalize">Tools</h2>
+        <section className="flex flex-col gap-2">
+          <h2 className="py-2 mb-3 text-muted capitalize">Tools</h2>
           <div className="text-default text-foreground font-normal leading-relaxed">
             <div><span className="text-muted">Design:</span> Figma, Illustrator, Photoshop, InDesign</div>
             <div><span className="text-muted">Docs:</span>   Notion, Google Docs, Miro, Acrobat</div>
