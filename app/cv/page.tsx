@@ -1,6 +1,5 @@
 "use client";
 
-import { Footer } from "@/components/footer";
 import Link from "next/link";
 
 function CVFooterLinks() {
@@ -15,91 +14,44 @@ function CVFooterLinks() {
 
 export default function CV() {
   return (
-    <>
-      {/* Homepage header, copied exactly */}
-      <div className="flex justify-between">
-        <div>
-          <Link href="/" className="text-white hover:opacity-50 transition-opacity">
-            <h1 className="mb-0">Max McIsted</h1>
-          </Link>
-          <h2 className="mt-0">Brand Designer</h2>
-        </div>
+    <div className="max-w-screen-sm px-4 md:px-6 mx-auto flex flex-col items-start">
+      {/* Name and role, homepage style */}
+      <Link href="/" className="text-white hover:opacity-50 transition-opacity">
+        <h1 className="mb-0">Max McIsted</h1>
+      </Link>
+      <h2 className="mt-0 text-muted font-normal">Brand Designer</h2>
+      {/* Bio, homepage style */}
+      <p className="mt-2 mb-4 text-default text-foreground">
+        Currently at Pragmatic Semiconductor. Previously at Arm. Builds brands that survive implementation.
+      </p>
+      {/* Divider */}
+      <div className="border-t border-border w-full my-4" />
+      {/* Roles */}
+      <div className="w-full flex flex-col gap-1 text-default text-foreground">
+        <div>Pragmatic Semiconductor · Brand Designer · 2025–</div>
+        <div>Arm · Design Intern · 2024–25</div>
       </div>
-
-      <div className="flex flex-col">
-        {/* Projects */}
-        <section className="flex flex-col gap-1">
-          <h2 className="mb-1 text-muted capitalize">Experience</h2>
-          <div className="border-t border-border w-full mb-2" />
-          <div className="flex flex-col gap-1 text-default text-foreground font-normal">
-            <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
-              <div className="text-foreground">Pragmatic Semiconductor</div>
-              <div className="text-muted">Jul 2025 – Present</div>
-              <div className="col-span-2 text-muted">Brand Designer</div>
-            </div>
-            <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
-              <div className="text-foreground">Arm</div>
-              <div className="text-muted">Sep 2024 – May 2025</div>
-              <div className="col-span-2 text-muted">Design Intern</div>
-              <ul className="list-disc pl-5 col-span-2 text-default text-foreground mt-1 space-y-1">
-                <li>Worked on global rebrand across internal, campaign, and product comms</li>
-                <li>Delivered brand systems for documentation, print, and web</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Divider: Projects → Education */}
-        <div className="border-t border-border w-full my-2" />
-
-        {/* Education */}
-        <section className="flex flex-col gap-1 mt-4">
-          <h2 className="mb-1 text-muted capitalize">Education</h2>
-          <div className="border-t border-border w-full mb-2" />
-          <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 text-default text-foreground font-normal">
-            <div className="text-foreground">Loughborough University</div>
-            <div className="text-muted">2021–2026 (expected)</div>
-            <div className="col-span-2 text-muted">BA Graphic Design & Visual Communication</div>
-          </div>
-        </section>
-
-        {/* Divider: Education → Skills */}
-        <div className="border-t border-border w-full my-2" />
-
-        {/* Skills */}
-        <section className="flex flex-col gap-1 mt-4">
-          <h2 className="mb-1 text-muted capitalize">Skills</h2>
-          <div className="border-t border-border w-full mb-2" />
-          <ul className="list-disc pl-5 text-default text-foreground font-normal">
-            <li>Brand systems</li>
-            <li>Campaign design</li>
-            <li>Documentation</li>
-            <li>Visual identity</li>
-            <li>Technical brand writing</li>
-            <li>Cross-functional collaboration</li>
-          </ul>
-        </section>
-
-        {/* Divider: Skills → Tools */}
-        <div className="border-t border-border w-full my-2" />
-
-        {/* Tools */}
-        <section className="flex flex-col gap-1 mt-4">
-          <h2 className="mb-1 text-muted capitalize">Tools</h2>
-          <div className="border-t border-border w-full mb-2" />
-          <div className="text-default text-foreground font-normal leading-relaxed">
-            <div><span className="text-muted">Design:</span> Figma, Illustrator, Photoshop, InDesign</div>
-            <div><span className="text-muted">Docs:</span>   Notion, Google Docs, Miro, Acrobat</div>
-            <div><span className="text-muted">Proto:</span>  Framer, Webflow, Keynote</div>
-          </div>
-        </section>
-
-        {/* Footer with left-side links for CV page */}
-        <footer className="border-border flex w-full items-center justify-between border-t pt-6 mt-16">
-          <CVFooterLinks />
-          <Footer showBuildInfo={false} />
-        </footer>
+      {/* Divider */}
+      <div className="border-t border-border w-full my-4" />
+      {/* Education */}
+      <div className="w-full flex flex-col gap-1 text-default text-foreground">
+        <div>Loughborough University · BA Graphic Design & Visual Communication · 2021–26</div>
       </div>
-    </>
+      {/* Divider */}
+      <div className="border-t border-border w-full my-4" />
+      {/* Skills/Tools combined, inline */}
+      <div className="w-full flex flex-col gap-1 text-default text-foreground">
+        <div>Brand systems / Technical brand writing / Campaign execution</div>
+        <div>Figma / Illustrator / InDesign / Framer</div>
+      </div>
+      {/* Divider */}
+      <div className="border-t border-border w-full my-4" />
+      {/* Links, inline */}
+      <div className="w-full flex flex-row gap-x-4 text-sm">
+        <a href="mailto:cv@mcisted.com" className="text-white hover:opacity-50 transition-opacity">Email</a>
+        <a href="https://linkedin.com/in/maxmcisted" className="text-white hover:opacity-50 transition-opacity" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="/max-mcisted-cv.txt" className="text-white hover:opacity-50 transition-opacity">CV</a>
+      </div>
+    </div>
   );
 }
