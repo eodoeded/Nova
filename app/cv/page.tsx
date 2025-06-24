@@ -14,7 +14,7 @@ function CVFooterLinks() {
 
 export default function CV() {
   return (
-    <article className="max-w-screen-sm px-4 md:px-6 mx-auto">
+    <>
       {/* Homepage header, copied exactly */}
       <div className="flex justify-between">
         <div>
@@ -88,6 +88,6 @@ export default function CV() {
           <Footer showBuildInfo={false} />
         </div>
       </div>
-    </article>
+    </>
   );
 }
