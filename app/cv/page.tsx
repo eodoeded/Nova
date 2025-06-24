@@ -5,9 +5,9 @@ import { Footer } from "@/components/footer";
 function CVFooterLinks() {
   return (
     <div className="flex flex-col gap-1 text-sm">
-      <a href="https://linkedin.com/in/maxmcisted" className="text-neutral-600 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="mailto:cv@mcisted.com" className="text-neutral-600 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors">Email</a>
-      <a href="/max-mcisted-cv.txt" download className="text-neutral-600 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors">Download</a>
+      <a href="https://linkedin.com/in/maxmcisted" className="text-white hover:opacity-50 transition-opacity" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:cv@mcisted.com" className="text-white hover:opacity-50 transition-opacity">Email</a>
+      <a href="/max-mcisted-cv.txt" download className="text-white hover:opacity-50 transition-opacity">Download</a>
     </div>
   );
 }
@@ -61,7 +61,7 @@ export default function CV() {
         <section className="flex flex-col gap-4 mt-12">
           <div className="border-border border-t" />
           <h2 className="text-default text-muted font-normal uppercase tracking-wide">skills</h2>
-          <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-default text-foreground font-normal">
+          <ul className="list-disc pl-5 text-default text-foreground font-normal space-y-1">
             <li>Brand systems</li>
             <li>Campaign design</li>
             <li>Documentation</li>
