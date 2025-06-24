@@ -31,7 +31,7 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
 
   const CategoryHeader = () => (
     <h2 className="py-2 text-muted capitalize">
-      {category === "projects" ? "Previously" : category}
+      {category}
     </h2>
   );
 
