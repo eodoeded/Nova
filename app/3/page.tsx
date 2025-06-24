@@ -58,22 +58,22 @@ export default function Three() {
       {/* 2nd Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="flex w-[calc(85vw+1rem)] max-w-[calc(1536px+1rem)] aspect-[16/9] gap-4">
-            <div className="flex-1 relative">
+          <div className="relative flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+            <div className="relative w-1/2 h-full">
               <Image
                 src="/preview.png"
                 alt="Nova split 1"
                 fill
-                className="rounded-lg object-cover w-full h-full shadow-xl"
+                className="rounded-lg object-cover shadow-xl"
                 sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
-            <div className="flex-1 relative">
+            <div className="relative w-1/2 h-full">
               <Image
                 src="/preview.png"
                 alt="Nova split 2"
                 fill
-                className="rounded-lg object-cover w-full h-full shadow-xl"
+                className="rounded-lg object-cover shadow-xl"
                 sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
@@ -107,22 +107,22 @@ export default function Three() {
       {/* 5th Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="flex w-[calc(85vw+1rem)] max-w-[calc(1536px+1rem)] aspect-[16/9] gap-4">
-            <div className="flex-1 relative">
+          <div className="relative flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+            <div className="relative w-1/2 h-full">
               <Image
                 src="/preview.png"
                 alt="Nova split 3"
                 fill
-                className="rounded-lg object-cover w-full h-full shadow-xl"
+                className="rounded-lg object-cover shadow-xl"
                 sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
-            <div className="flex-1 relative">
+            <div className="relative w-1/2 h-full">
               <Image
                 src="/preview.png"
                 alt="Nova split 4"
                 fill
-                className="rounded-lg object-cover w-full h-full shadow-xl"
+                className="rounded-lg object-cover shadow-xl"
                 sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
