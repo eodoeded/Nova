@@ -58,23 +58,23 @@ export default function Three() {
       {/* 2nd Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="relative w-[85vw] max-w-6xl aspect-[16/9]">
-            <div className="absolute top-0 left-0 h-full w-[calc(50%-0.5rem)]" style={{ right: 'calc(50% + 0.5rem)' }}>
+          <div className="flex w-[85vw] max-w-6xl h-auto gap-4">
+            <div className="relative w-1/2">
               <Image
                 src="/preview.png"
                 alt="Nova split 1"
-                fill
-                className="rounded-lg object-cover shadow-xl"
-                sizes="(max-width: 1536px) 50vw, 768px"
+                width={960}
+                height={1080}
+                className="rounded-lg object-cover w-full h-auto shadow-xl"
               />
             </div>
-            <div className="absolute top-0 right-0 h-full w-[calc(50%-0.5rem)]" style={{ left: 'calc(50% + 0.5rem)' }}>
+            <div className="relative w-1/2">
               <Image
                 src="/preview.png"
                 alt="Nova split 2"
-                fill
-                className="rounded-lg object-cover shadow-xl"
-                sizes="(max-width: 1536px) 50vw, 768px"
+                width={960}
+                height={1080}
+                className="rounded-lg object-cover w-full h-auto shadow-xl"
               />
             </div>
           </div>
@@ -107,23 +107,23 @@ export default function Three() {
       {/* 5th Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="relative w-[85vw] max-w-6xl aspect-[16/9]">
-            <div className="absolute top-0 left-0 h-full w-[calc(50%-0.5rem)]" style={{ right: 'calc(50% + 0.5rem)' }}>
+          <div className="flex w-[85vw] max-w-6xl h-auto gap-4">
+            <div className="relative w-1/2">
               <Image
                 src="/preview.png"
                 alt="Nova split 3"
-                fill
-                className="rounded-lg object-cover shadow-xl"
-                sizes="(max-width: 1536px) 50vw, 768px"
+                width={960}
+                height={1080}
+                className="rounded-lg object-cover w-full h-auto shadow-xl"
               />
             </div>
-            <div className="absolute top-0 right-0 h-full w-[calc(50%-0.5rem)]" style={{ left: 'calc(50% + 0.5rem)' }}>
+            <div className="relative w-1/2">
               <Image
                 src="/preview.png"
                 alt="Nova split 4"
-                fill
-                className="rounded-lg object-cover shadow-xl"
-                sizes="(max-width: 1536px) 50vw, 768px"
+                width={960}
+                height={1080}
+                className="rounded-lg object-cover w-full h-auto shadow-xl"
               />
             </div>
           </div>
