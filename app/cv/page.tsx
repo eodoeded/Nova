@@ -1,6 +1,7 @@
 "use client";
 
 import { Footer } from "@/components/footer";
+import Link from "next/link";
 
 function CVFooterLinks() {
   return (
@@ -18,7 +19,9 @@ export default function CV() {
       {/* Homepage header, copied exactly */}
       <div className="flex justify-between">
         <div>
-          <h1>Max McIsted</h1>
+          <Link href="/" className="text-white hover:opacity-50 transition-opacity">
+            <h1>Max McIsted</h1>
+          </Link>
           <h2>Brand Designer</h2>
         </div>
       </div>
