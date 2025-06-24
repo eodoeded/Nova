@@ -14,7 +14,7 @@ function CVFooterLinks() {
 
 export default function CV() {
   return (
-    <>
+    <article className="max-w-screen-sm px-4 md:px-6 mx-auto">
       {/* Homepage header, copied exactly */}
       <div className="flex justify-between">
         <div>
@@ -23,7 +23,7 @@ export default function CV() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-16 max-w-xl mx-auto">
+      <div className="flex flex-col gap-16">
         {/* Experience */}
         <section className="flex flex-col gap-4">
           <div className="border-border border-t" />
@@ -81,12 +81,13 @@ export default function CV() {
             <div><span className="text-muted">Proto:</span>  Framer, Webflow, Keynote</div>
           </div>
         </section>
+
+        {/* Footer with left-side links for CV page */}
+        <div className="flex w-full items-center justify-between pt-2 mt-16">
+          <CVFooterLinks />
+          <Footer showBuildInfo={false} />
+        </div>
       </div>
-      {/* Footer with left-side links for CV page */}
-      <div className="flex w-full items-center justify-between pt-2 mt-16">
-        <CVFooterLinks />
-        <Footer showBuildInfo={false} />
-      </div>
-    </>
+    </article>
   );
 }
