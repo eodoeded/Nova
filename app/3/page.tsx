@@ -58,8 +58,8 @@ export default function Three() {
       {/* 2nd Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="relative flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
-            <div className="relative w-1/2 h-full">
+          <div className="relative w-[85vw] max-w-6xl aspect-[16/9]">
+            <div className="absolute top-0 left-0 h-full w-[calc(50%-0.5rem)]" style={{ right: 'calc(50% + 0.5rem)' }}>
               <Image
                 src="/preview.png"
                 alt="Nova split 1"
@@ -68,7 +68,7 @@ export default function Three() {
                 sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
-            <div className="relative w-1/2 h-full">
+            <div className="absolute top-0 right-0 h-full w-[calc(50%-0.5rem)]" style={{ left: 'calc(50% + 0.5rem)' }}>
               <Image
                 src="/preview.png"
                 alt="Nova split 2"
@@ -107,8 +107,8 @@ export default function Three() {
       {/* 5th Image Section (split) */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="relative flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
-            <div className="relative w-1/2 h-full">
+          <div className="relative w-[85vw] max-w-6xl aspect-[16/9]">
+            <div className="absolute top-0 left-0 h-full w-[calc(50%-0.5rem)]" style={{ right: 'calc(50% + 0.5rem)' }}>
               <Image
                 src="/preview.png"
                 alt="Nova split 3"
@@ -117,7 +117,7 @@ export default function Three() {
                 sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
-            <div className="relative w-1/2 h-full">
+            <div className="absolute top-0 right-0 h-full w-[calc(50%-0.5rem)]" style={{ left: 'calc(50% + 0.5rem)' }}>
               <Image
                 src="/preview.png"
                 alt="Nova split 4"
