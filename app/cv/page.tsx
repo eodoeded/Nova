@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer";
 
 function CVFooterLinks() {
   return (
-    <div className="flex flex-col gap-1 text-sm">
+    <div className="flex flex-row gap-x-4 text-sm">
       <a href="https://linkedin.com/in/maxmcisted" className="text-white hover:opacity-50 transition-opacity" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:cv@mcisted.com" className="text-white hover:opacity-50 transition-opacity">Email</a>
       <a href="/max-mcisted-cv.txt" download className="text-white hover:opacity-50 transition-opacity">Download</a>
