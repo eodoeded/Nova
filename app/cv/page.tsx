@@ -29,7 +29,7 @@ export default function CV() {
       <div className="flex flex-col">
         {/* Projects */}
         <section className="flex flex-col gap-2">
-          <h2 className="py-2 mb-3 text-muted capitalize">Projects</h2>
+          <h2 className="py-2 mb-3 text-muted capitalize">Experience</h2>
           <div className="flex flex-col gap-4 text-default text-foreground font-normal">
             <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
               <div className="text-foreground">Pragmatic Semiconductor</div>

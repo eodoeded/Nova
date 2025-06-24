@@ -23,7 +23,7 @@ export default function Home() {
         </p>
       </FadeIn.Item>
       <FadeIn.Item>
-        <Posts category="projects" pathname="/" />
+        <Posts category="experience" pathname="/" />
       </FadeIn.Item>
       <FadeIn.Item>
         <Contact />

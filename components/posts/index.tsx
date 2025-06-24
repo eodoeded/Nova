@@ -9,7 +9,7 @@ interface PostProps {
 }
 
 export const Posts = ({ category, pathname = "" }: PostProps) => {
-  const isProjectsPage = pathname === "/projects";
+  const isExperiencePage = pathname === "/experience";
   
   const posts = getPosts(category)
     .filter((post) => post.slug !== "cv")
@@ -31,13 +31,13 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
 
   const CategoryHeader = () => (
     <h2 className="py-2 text-muted capitalize">
-      {category}
+      {category === "experience" ? "Experience" : category}
     </h2>
   );
 
   return (
     <div className="mt-6 flex flex-col">
-      {isProjectsPage ? (
+      {isExperiencePage ? (
         <CategoryHeader />
       ) : (
         <Link href={`/${category}`} className="flex justify-between">
@@ -46,9 +46,9 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
       )}
 
       {posts.map((post) => (
-          <React.Fragment key={post.slug}>
-            <Seperator />
-          {category === "projects" ? (
+        <React.Fragment key={post.slug}>
+          <Seperator />
+          {category === "experience" ? (
             <div className="flex w-full justify-between py-2">
               <p className="text-muted">{post.title}</p>
             </div>
@@ -57,7 +57,7 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
               <p className="transition-opacity group-hover:opacity-50">{post.title}</p>
             </Link>
           )}
-          </React.Fragment>
+        </React.Fragment>
       ))}
     </div>
   );
