@@ -47,7 +47,7 @@ export default function Three() {
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
-            src="/Group 1010102663.png"
+            src="/Group%2010102663.png"
             alt="Nova showcase 1"
             width={1920}
             height={1080}
@@ -57,22 +57,26 @@ export default function Three() {
       </FadeIn.Item>
       {/* 2nd Image Section (split) */}
       <FadeIn.Item>
-        <div className="mb-12 w-full">
-          <div className="grid grid-cols-2 w-[85vw] max-w-6xl aspect-[16/9] gap-4 mx-auto">
-            <Image
-              src="/preview.png"
-              alt="Nova split 1"
-              width={960}
-              height={1080}
-              className="rounded-lg object-cover w-full h-full shadow-xl"
-            />
-            <Image
-              src="/preview.png"
-              alt="Nova split 2"
-              width={960}
-              height={1080}
-              className="rounded-lg object-cover w-full h-full shadow-xl"
-            />
+        <div className="w-full flex justify-center mb-12">
+          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+            <div className="flex-1 relative">
+              <Image
+                src="/preview.png"
+                alt="Nova split 1"
+                fill
+                className="rounded-lg object-cover w-full h-full shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
+              />
+            </div>
+            <div className="flex-1 relative">
+              <Image
+                src="/preview.png"
+                alt="Nova split 2"
+                fill
+                className="rounded-lg object-cover w-full h-full shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
+              />
+            </div>
           </div>
         </div>
       </FadeIn.Item>
@@ -102,22 +106,26 @@ export default function Three() {
       </FadeIn.Item>
       {/* 5th Image Section (split) */}
       <FadeIn.Item>
-        <div className="mb-12 w-full">
-          <div className="grid grid-cols-2 w-[85vw] max-w-6xl aspect-[16/9] gap-4 mx-auto">
-            <Image
-              src="/preview.png"
-              alt="Nova split 3"
-              width={960}
-              height={1080}
-              className="rounded-lg object-cover w-full h-full shadow-xl"
-            />
-            <Image
-              src="/preview.png"
-              alt="Nova split 4"
-              width={960}
-              height={1080}
-              className="rounded-lg object-cover w-full h-full shadow-xl"
-            />
+        <div className="w-full flex justify-center mb-12">
+          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+            <div className="flex-1 relative">
+              <Image
+                src="/preview.png"
+                alt="Nova split 3"
+                fill
+                className="rounded-lg object-cover w-full h-full shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
+              />
+            </div>
+            <div className="flex-1 relative">
+              <Image
+                src="/preview.png"
+                alt="Nova split 4"
+                fill
+                className="rounded-lg object-cover w-full h-full shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
+              />
+            </div>
           </div>
         </div>
       </FadeIn.Item>
