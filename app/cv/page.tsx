@@ -83,11 +83,10 @@ export default function CV() {
         </section>
 
         {/* Footer with left-side links for CV page */}
-        <div className="border-border border-t mt-16" />
-        <div className="flex w-full items-center justify-between pt-2">
+        <footer className="border-border flex w-full items-center justify-between border-t pt-6 mt-16">
           <CVFooterLinks />
           <Footer showBuildInfo={false} />
-        </div>
+        </footer>
       </div>
     </>
   );
