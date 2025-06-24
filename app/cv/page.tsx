@@ -20,17 +20,17 @@ export default function CV() {
       <div className="flex justify-between">
         <div>
           <Link href="/" className="text-white hover:opacity-50 transition-opacity">
-            <h1>Max McIsted</h1>
+            <h1 className="mb-0">Max McIsted</h1>
           </Link>
-          <h2>Brand Designer</h2>
+          <h2 className="mt-0">Brand Designer</h2>
         </div>
       </div>
 
       <div className="flex flex-col">
         {/* Projects */}
-        <section className="flex flex-col gap-2">
+        <section className="flex flex-col gap-1">
           <h2 className="mb-1 text-muted capitalize">Experience</h2>
-          <div className="flex flex-col gap-4 text-default text-foreground font-normal">
+          <div className="flex flex-col gap-1 text-default text-foreground font-normal">
             <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1">
               <div className="text-foreground">Pragmatic Semiconductor</div>
               <div className="text-muted">Jul 2025 – Present</div>
@@ -52,7 +52,7 @@ export default function CV() {
         <div className="border-t border-border w-full my-2" />
 
         {/* Education */}
-        <section className="flex flex-col gap-2">
+        <section className="flex flex-col gap-1">
           <h2 className="mb-1 text-muted capitalize">Education</h2>
           <div className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 text-default text-foreground font-normal">
             <div className="text-foreground">Loughborough University</div>
@@ -65,9 +65,9 @@ export default function CV() {
         <div className="border-t border-border w-full my-2" />
 
         {/* Skills */}
-        <section className="flex flex-col gap-2">
+        <section className="flex flex-col gap-1">
           <h2 className="mb-1 text-muted capitalize">Skills</h2>
-          <ul className="list-disc pl-5 text-default text-foreground font-normal space-y-1">
+          <ul className="list-disc pl-5 text-default text-foreground font-normal">
             <li>Brand systems</li>
             <li>Campaign design</li>
             <li>Documentation</li>
@@ -81,7 +81,7 @@ export default function CV() {
         <div className="border-t border-border w-full my-2" />
 
         {/* Tools */}
-        <section className="flex flex-col gap-2">
+        <section className="flex flex-col gap-1">
           <h2 className="mb-1 text-muted capitalize">Tools</h2>
           <div className="text-default text-foreground font-normal leading-relaxed">
             <div><span className="text-muted">Design:</span> Figma, Illustrator, Photoshop, InDesign</div>
