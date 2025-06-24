@@ -31,7 +31,7 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
 
   const CategoryHeader = () => (
     <h2 className="py-2 text-muted capitalize">
-      {category}
+      {category === "projects" ? "Previously" : category}
     </h2>
   );
 
@@ -45,20 +45,20 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
         </Link>
       )}
 
-      {posts.map((post) => {
-        const content = (
-          <div className="flex w-full justify-between py-2">
-            <p className={category === "projects" ? "text-muted" : "cursor-pointer transition-opacity hover:opacity-50"}>{post.title}</p>
-          </div>
-        );
-
-        return (
+      {posts.map((post) => (
           <React.Fragment key={post.slug}>
             <Seperator />
-            {category === "projects" ? content : <Link href={`/${category}/${post.slug}`}>{content}</Link>}
+          {category === "projects" ? (
+            <div className="flex w-full justify-between py-2">
+              <p className="text-muted">{post.title}</p>
+            </div>
+          ) : (
+            <Link href={`/${category}/${post.slug}`} className="flex w-full justify-between py-2 group no-underline hover:none focus:outline-none active:outline-none">
+              <p className="transition-opacity group-hover:opacity-50">{post.title}</p>
+            </Link>
+          )}
           </React.Fragment>
-        );
-      })}
+      ))}
     </div>
   );
 };
