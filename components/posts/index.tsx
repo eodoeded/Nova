@@ -53,8 +53,8 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
               <p className="text-muted">{post.title}</p>
             </div>
           ) : (
-            <Link href={`/${category}/${post.slug}`} className="flex w-full justify-between py-2 group no-underline hover:none focus:outline-none active:outline-none">
-              <p className="transition-opacity group-hover:opacity-50">{post.title}</p>
+            <Link href={`/${category}/${post.slug}`} className="group no-underline hover:none focus:outline-none active:outline-none py-2">
+              <span className="transition-opacity group-hover:opacity-50">{post.title}</span>
             </Link>
           )}
         </React.Fragment>
