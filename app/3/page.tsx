@@ -43,14 +43,14 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* Split Images: Neoverse V-Series & Powering the world's tech */}
+      {/* Split Images: 2.svg & 3.svg */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
             <div className="relative flex-1">
               <Image
-                src="/neoverse-v-series.png"
-                alt="Neoverse V-Series"
+                src="/2.svg"
+                alt="Left Split Image"
                 fill
                 className="object-cover rounded-lg"
                 sizes="(max-width: 1536px) 50vw, 768px"
@@ -59,8 +59,8 @@ export default function Three() {
             </div>
             <div className="relative flex-1">
               <Image
-                src="/powering-the-world-3.png"
-                alt="Powering the world's tech"
+                src="/3.svg"
+                alt="Right Split Image"
                 fill
                 className="object-cover rounded-lg"
                 sizes="(max-width: 1536px) 50vw, 768px"
@@ -70,11 +70,11 @@ export default function Three() {
           </div>
         </div>
       </FadeIn.Item>
-      {/* Arc Fullsize Image (NEW, directly after split images) */}
+      {/* Arc Fullsize Image (4.svg, directly after split images) */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
-            src="/arc.png"
+            src="/4.svg"
             alt="Arm Arc fullsize"
             width={1920}
             height={1080}
