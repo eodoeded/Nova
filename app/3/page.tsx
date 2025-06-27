@@ -120,6 +120,18 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
+      {/* 5th Big Image (new 5.png image) */}
+      <FadeIn.Item>
+        <div className="mdx-full-bleed flex justify-center mb-12">
+          <Image
+            src="/5.png"
+            alt="Nova showcase 5"
+            width={1920}
+            height={1080}
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
+          />
+        </div>
+      </FadeIn.Item>
       {/* 5th Split Image Section (placeholder, adjust as needed) */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
@@ -150,7 +162,7 @@ export default function Three() {
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
             src="/preview.png"
-            alt="Nova showcase 5"
+            alt="Nova showcase 6"
             width={1920}
             height={1080}
             className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
@@ -162,7 +174,7 @@ export default function Three() {
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
             src="/preview.png"
-            alt="Nova showcase 6"
+            alt="Nova showcase 7"
             width={1920}
             height={1080}
             className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
