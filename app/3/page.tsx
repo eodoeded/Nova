@@ -70,7 +70,19 @@ export default function Three() {
           </div>
         </div>
       </FadeIn.Item>
-      {/* Arc Fullsize Image (NEW, directly after split images) */}
+      {/* 5th Big Image (5.png is now right after split images) */}
+      <FadeIn.Item>
+        <div className="mdx-full-bleed flex justify-center mb-12">
+          <Image
+            src="/5.png"
+            alt="Nova showcase 5"
+            width={1920}
+            height={1080}
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Arc Fullsize Image (arc.png is now after 5.png) */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
@@ -83,7 +95,6 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* 1st Big Image (REMOVED: the one that was originally here) */}
       {/* 2nd Big Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
@@ -114,18 +125,6 @@ export default function Three() {
           <Image
             src="/preview.png"
             alt="Nova showcase 4"
-            width={1920}
-            height={1080}
-            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
-          />
-        </div>
-      </FadeIn.Item>
-      {/* 5th Big Image (new 5.png image) */}
-      <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-12">
-          <Image
-            src="/5.png"
-            alt="Nova showcase 5"
             width={1920}
             height={1080}
             className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
