@@ -30,7 +30,7 @@ export default function Three() {
       <Spacer />
       {/* Hero Video */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center mb-12">
+        <div className="mdx-full-bleed flex justify-center mb-12">
           <video
             src={"/hero-fixed.mp4"}
             autoPlay
@@ -45,7 +45,7 @@ export default function Three() {
       </FadeIn.Item>
       {/* 1st Big Image */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center mb-12">
+        <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
             src="/Group%2010102663.png"
             alt="Nova showcase 1"
@@ -57,7 +57,7 @@ export default function Three() {
       </FadeIn.Item>
       {/* 2nd Split Image Section */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center mb-12">
+        <div className="mdx-full-bleed flex justify-center mb-12">
           <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
             <div className="relative flex-1">
               <Image
@@ -82,7 +82,7 @@ export default function Three() {
       </FadeIn.Item>
       {/* 3rd Big Image */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center mb-12">
+        <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
             src="/preview.png"
             alt="Nova showcase 2"
@@ -94,7 +94,7 @@ export default function Three() {
       </FadeIn.Item>
       {/* 4th Big Image */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center mb-12">
+        <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
             src="/preview.png"
             alt="Nova showcase 3"
@@ -106,7 +106,7 @@ export default function Three() {
       </FadeIn.Item>
       {/* 5th Split Image Section */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center mb-12">
+        <div className="mdx-full-bleed flex justify-center mb-12">
           <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
             <div className="relative flex-1">
               <Image
@@ -131,7 +131,7 @@ export default function Three() {
       </FadeIn.Item>
       {/* 6th Big Image */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center mb-12">
+        <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
             src="/preview.png"
             alt="Nova showcase 4"
@@ -143,7 +143,7 @@ export default function Three() {
       </FadeIn.Item>
       {/* 7th Big Image */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center mb-12">
+        <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
             src="/preview.png"
             alt="Nova showcase 5"
@@ -155,7 +155,7 @@ export default function Three() {
       </FadeIn.Item>
       {/* 8th Big Image */}
       <FadeIn.Item>
-        <div className="w-full flex justify-center mb-12">
+        <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
             src="/preview.png"
             alt="Nova showcase 6"
