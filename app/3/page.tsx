@@ -74,7 +74,7 @@ export default function Arm() {
       {/* Modular assets blurb (formerly Brand Strategy) */}
       <FadeIn.Item>
         <p>
-          Modular microchip assets used across product marketing
+         As a leader in semiconductor technology, Arm needed to reposition itself as a driving force in the AI-first world. The challenge was to evolve their brand into something modern, scalable, and premium—without alienating their legacy partners or losing their technical credibility.
         </p>
       </FadeIn.Item>
       {/* 5th Big Image (5.png) */}
