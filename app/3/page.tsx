@@ -32,7 +32,7 @@ export default function Three() {
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <video
-            src={"/hero-fixed.mp4"}
+            src="/hero-fixed.mp4"
             autoPlay
             loop
             muted
@@ -41,6 +41,33 @@ export default function Three() {
             className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
             style={{ background: "#111", opacity: 1 }}
           />
+        </div>
+      </FadeIn.Item>
+      {/* Split Images: Neoverse V-Series & Powering the world's tech */}
+      <FadeIn.Item>
+        <div className="mdx-full-bleed flex justify-center mb-12">
+          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+            <div className="relative flex-1">
+              <Image
+                src="/neoverse-v-series.png"
+                alt="Neoverse V-Series"
+                fill
+                className="object-cover rounded-lg shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
+                priority
+              />
+            </div>
+            <div className="relative flex-1">
+              <Image
+                src="/powering-the-world-3.png"
+                alt="Powering the world's tech"
+                fill
+                className="object-cover rounded-lg shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </FadeIn.Item>
       {/* 1st Big Image */}
@@ -55,32 +82,7 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* 2nd Split Image Section */}
-      <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-12">
-          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
-            <div className="relative flex-1">
-              <Image
-                src="/preview.png"
-                alt="Nova split 1"
-                fill
-                className="object-cover rounded-lg shadow-xl"
-                sizes="(max-width: 1536px) 50vw, 768px"
-              />
-            </div>
-            <div className="relative flex-1">
-              <Image
-                src="/preview.png"
-                alt="Nova split 2"
-                fill
-                className="object-cover rounded-lg shadow-xl"
-                sizes="(max-width: 1536px) 50vw, 768px"
-              />
-            </div>
-          </div>
-        </div>
-      </FadeIn.Item>
-      {/* 3rd Big Image */}
+      {/* 2nd Big Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
@@ -92,7 +94,7 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* 4th Big Image */}
+      {/* 3rd Big Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
@@ -104,7 +106,19 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* 5th Split Image Section */}
+      {/* 4th Big Image */}
+      <FadeIn.Item>
+        <div className="mdx-full-bleed flex justify-center mb-12">
+          <Image
+            src="/preview.png"
+            alt="Nova showcase 4"
+            width={1920}
+            height={1080}
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* 5th Split Image Section (placeholder, adjust as needed) */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
@@ -134,18 +148,6 @@ export default function Three() {
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
             src="/preview.png"
-            alt="Nova showcase 4"
-            width={1920}
-            height={1080}
-            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
-          />
-        </div>
-      </FadeIn.Item>
-      {/* 7th Big Image */}
-      <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-12">
-          <Image
-            src="/preview.png"
             alt="Nova showcase 5"
             width={1920}
             height={1080}
@@ -153,7 +155,7 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* 8th Big Image */}
+      {/* 7th Big Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
