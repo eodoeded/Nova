@@ -38,7 +38,7 @@ export default function Three() {
             muted
             playsInline
             poster="/preview.png"
-            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
             style={{ background: "#111", opacity: 1 }}
           />
         </div>
@@ -52,7 +52,7 @@ export default function Three() {
                 src="/neoverse-v-series.png"
                 alt="Neoverse V-Series"
                 fill
-                className="object-cover rounded-lg shadow-xl"
+                className="object-cover rounded-lg"
                 sizes="(max-width: 1536px) 50vw, 768px"
                 priority
               />
@@ -62,7 +62,7 @@ export default function Three() {
                 src="/powering-the-world-3.png"
                 alt="Powering the world's tech"
                 fill
-                className="object-cover rounded-lg shadow-xl"
+                className="object-cover rounded-lg"
                 sizes="(max-width: 1536px) 50vw, 768px"
                 priority
               />
@@ -78,7 +78,7 @@ export default function Three() {
             alt="Arm Arc fullsize"
             width={1920}
             height={1080}
-            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
             priority
           />
         </div>
@@ -92,7 +92,7 @@ export default function Three() {
             alt="Nova showcase 2"
             width={1920}
             height={1080}
-            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
           />
         </div>
       </FadeIn.Item>
@@ -104,7 +104,7 @@ export default function Three() {
             alt="Nova showcase 3"
             width={1920}
             height={1080}
-            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
           />
         </div>
       </FadeIn.Item>
@@ -116,7 +116,7 @@ export default function Three() {
             alt="Nova showcase 4"
             width={1920}
             height={1080}
-            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
           />
         </div>
       </FadeIn.Item>
@@ -129,7 +129,7 @@ export default function Three() {
                 src="/preview.png"
                 alt="Nova split 3"
                 fill
-                className="object-cover rounded-lg shadow-xl"
+                className="object-cover rounded-lg"
                 sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
@@ -138,7 +138,7 @@ export default function Three() {
                 src="/preview.png"
                 alt="Nova split 4"
                 fill
-                className="object-cover rounded-lg shadow-xl"
+                className="object-cover rounded-lg"
                 sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
@@ -153,7 +153,7 @@ export default function Three() {
             alt="Nova showcase 5"
             width={1920}
             height={1080}
-            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
           />
         </div>
       </FadeIn.Item>
@@ -165,7 +165,7 @@ export default function Three() {
             alt="Nova showcase 6"
             width={1920}
             height={1080}
-            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
           />
         </div>
       </FadeIn.Item>
@@ -218,7 +218,7 @@ export default function Three() {
               alt="Nova application example"
               width={1600}
               height={900}
-              className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+              className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto"
             />
           </div>
         </section>
