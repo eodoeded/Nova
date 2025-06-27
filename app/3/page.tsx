@@ -1,14 +1,48 @@
-"use client";
-
+import { Footer } from "@/components/footer";
 import Image from "next/image";
-import FadeIn from "@/components/fade-in";
+import { Contact } from "@/components/contact";
+import * as FadeIn from "@/components/motion/staggers/fade";
+import { Spacer } from "@/components/spacer";
+import { Breadcrumb } from "@/components/breadcrumb";
 
-export default function Page() {
+export default function Three() {
   return (
-    <main className="flex flex-col items-center w-full">
-      {/* Top Section or Hero */}
-      {/* ... (Insert any additional top/hero content here if needed) */}
-
+    <FadeIn.Container>
+      <FadeIn.Item>
+        <Breadcrumb />
+      </FadeIn.Item>
+      {/* Header */}
+      <FadeIn.Item>
+        <div className="flex justify-between">
+          <div>
+            <h1>3</h1>
+            <h2>Systemic Brand for a New Era</h2>
+          </div>
+        </div>
+      </FadeIn.Item>
+      <Spacer />
+      {/* Summary */}
+      <FadeIn.Item>
+        <p>
+          Nova is a fictional technology company reimagined for the future. This case study explores the creation of a systemic brand identity, from strategy to launch, with a focus on expressive ...
+        </p>
+      </FadeIn.Item>
+      <Spacer />
+      {/* Hero Video */}
+      <FadeIn.Item>
+        <div className="mdx-full-bleed flex justify-center mb-12">
+          <video
+            src="/hero-fixed.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/preview.png"
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
+            style={{ background: "#111", opacity: 1 }}
+          />
+        </div>
+      </FadeIn.Item>
       {/* Split Images: Neoverse V-Series & Powering the world's tech */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
@@ -36,8 +70,7 @@ export default function Page() {
           </div>
         </div>
       </FadeIn.Item>
-
-      {/* Fullsize Image: Arm Arc (arc.png) directly after split images */}
+      {/* Arc Fullsize Image (NEW, directly after split images) */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
@@ -50,7 +83,7 @@ export default function Page() {
           />
         </div>
       </FadeIn.Item>
-
+      {/* 1st Big Image (REMOVED: the one that was originally here) */}
       {/* 2nd Big Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
@@ -63,12 +96,11 @@ export default function Page() {
           />
         </div>
       </FadeIn.Item>
-
       {/* 3rd Big Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
-            src="/Group%2010102668.png"
+            src="/preview.png"
             alt="Nova showcase 3"
             width={1920}
             height={1080}
@@ -76,12 +108,11 @@ export default function Page() {
           />
         </div>
       </FadeIn.Item>
-
       {/* 4th Big Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
-            src="/Group%2010102666.png"
+            src="/preview.png"
             alt="Nova showcase 4"
             width={1920}
             height={1080}
@@ -89,15 +120,118 @@ export default function Page() {
           />
         </div>
       </FadeIn.Item>
-
-      {/* 5th Split Image Section */}
+      {/* 5th Split Image Section (placeholder, adjust as needed) */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
-            {/* Add split images here if needed */}
+            <div className="relative flex-1">
+              <Image
+                src="/preview.png"
+                alt="Nova split 3"
+                fill
+                className="object-cover rounded-lg shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
+              />
+            </div>
+            <div className="relative flex-1">
+              <Image
+                src="/preview.png"
+                alt="Nova split 4"
+                fill
+                className="object-cover rounded-lg shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
+              />
+            </div>
           </div>
         </div>
       </FadeIn.Item>
-    </main>
+      {/* 6th Big Image */}
+      <FadeIn.Item>
+        <div className="mdx-full-bleed flex justify-center mb-12">
+          <Image
+            src="/preview.png"
+            alt="Nova showcase 5"
+            width={1920}
+            height={1080}
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* 7th Big Image */}
+      <FadeIn.Item>
+        <div className="mdx-full-bleed flex justify-center mb-12">
+          <Image
+            src="/preview.png"
+            alt="Nova showcase 6"
+            width={1920}
+            height={1080}
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
+          />
+        </div>
+      </FadeIn.Item>
+      {/* Section: Brand Strategy */}
+      <FadeIn.Item>
+        <section className="mb-16">
+          <h2 className="text-xl font-medium mb-2">Brand Strategy</h2>
+          <p>
+            Nova's brand was built on the idea of adaptability and clarity. The strategy phase included workshops, competitor analysis, and the development of a flexible design system that could ...
+          </p>
+          <div className="w-full flex justify-center mt-8">
+            <Image
+              src="/circle.svg"
+              alt="Brand system diagram"
+              width={600}
+              height={600}
+              className="w-[60vw] max-w-2xl h-auto"
+            />
+          </div>
+        </section>
+      </FadeIn.Item>
+      {/* Section: Visual Identity */}
+      <FadeIn.Item>
+        <section className="mb-16">
+          <h2 className="text-xl font-medium mb-2">Visual Identity</h2>
+          <p>
+            The visual identity leverages bold geometry, a monochrome palette, and expressive motion. Key brand marks and iconography were designed to be instantly recognizable and highly adaptab...
+          </p>
+          <div className="w-full flex justify-center mt-8">
+            <Image
+              src="/key.svg"
+              alt="Nova key icon"
+              width={300}
+              height={300}
+              className="w-[40vw] max-w-lg h-auto"
+            />
+          </div>
+        </section>
+      </FadeIn.Item>
+      {/* Section: Applications */}
+      <FadeIn.Item>
+        <section className="mb-16">
+          <h2 className="text-xl font-medium mb-2">Applications</h2>
+          <p>
+            The Nova system was applied to web, mobile, print, and environmental graphics. Each touchpoint was designed to maximize clarity and impact, with imagery and layouts that extend beyond...
+          </p>
+          <div className="w-full flex justify-center mt-8">
+            <Image
+              src="/preview.png"
+              alt="Nova application example"
+              width={1600}
+              height={900}
+              className="rounded-lg object-cover w-[75vw] max-w-5xl h-auto shadow-xl"
+            />
+          </div>
+        </section>
+      </FadeIn.Item>
+      {/* Contact & Footer */}
+      <Spacer />
+      <FadeIn.Item>
+        <Contact />
+      </FadeIn.Item>
+      <Spacer />
+      <FadeIn.Item>
+        <Footer />
+      </FadeIn.Item>
+    </FadeIn.Container>
   );
 }
