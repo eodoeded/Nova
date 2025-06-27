@@ -10,12 +10,7 @@ export default function Arm() {
     <FadeIn.Container>
       {/* Breadcrumb at top */}
       <FadeIn.Item>
-        <Breadcrumb
-          items={[
-            { label: "mcisted.com", href: "/" },
-            { label: "arm", href: "/arm" },
-          ]}
-        />
+        <Breadcrumb />
       </FadeIn.Item>
       {/* Title and Subtitle */}
       <FadeIn.Item>
