@@ -95,6 +95,31 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
+      {/* Split Images: 6.png & 7.png (directly after arc.png) */}
+      <FadeIn.Item>
+        <div className="mdx-full-bleed flex justify-center mb-12">
+          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+            <div className="relative flex-1">
+              <Image
+                src="/6.png"
+                alt="Nova split 6"
+                fill
+                className="object-cover rounded-lg"
+                sizes="(max-width: 1536px) 50vw, 768px"
+              />
+            </div>
+            <div className="relative flex-1">
+              <Image
+                src="/7.png"
+                alt="Nova split 7"
+                fill
+                className="object-cover rounded-lg"
+                sizes="(max-width: 1536px) 50vw, 768px"
+              />
+            </div>
+          </div>
+        </div>
+      </FadeIn.Item>
       {/* 2nd Big Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
