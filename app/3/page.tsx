@@ -120,18 +120,19 @@ export default function Three() {
           </div>
         </div>
       </FadeIn.Item>
-      {/* 2nd Big Image */}
+      {/* 8th Big Image (8.png, fullsize, new) */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
-            src="/preview.png"
-            alt="Nova showcase 2"
+            src="/8.png"
+            alt="Nova showcase 8"
             width={1920}
             height={1080}
             className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
           />
         </div>
       </FadeIn.Item>
+      {/* 2nd Big Image (REMOVED) */}
       {/* 3rd Big Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
