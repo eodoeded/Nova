@@ -11,7 +11,7 @@ export default function Three() {
       <FadeIn.Item>
         <Breadcrumb />
       </FadeIn.Item>
-      {/* Header (from homepage) */}
+      {/* Header */}
       <FadeIn.Item>
         <div className="flex justify-between">
           <div>
@@ -21,7 +21,7 @@ export default function Three() {
         </div>
       </FadeIn.Item>
       <Spacer />
-      {/* Summary (from homepage, adapted) */}
+      {/* Summary */}
       <FadeIn.Item>
         <p>
           Nova is a fictional technology company reimagined for the future. This case study explores the creation of a systemic brand identity, from strategy to launch, with a focus on expressive design and clarity.
@@ -39,11 +39,11 @@ export default function Three() {
             playsInline
             poster="/preview.png"
             className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto shadow-xl"
-            style={{ background: '#111', opacity: 1 }}
+            style={{ background: "#111", opacity: 1 }}
           />
         </div>
       </FadeIn.Item>
-      {/* 1st Image Section */}
+      {/* 1st Big Image */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
@@ -55,32 +55,32 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* 2nd Image Section (split) */}
+      {/* 2nd Split Image Section */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="grid grid-cols-2 w-[85vw] max-w-6xl aspect-[16/9]">
-            <div className="relative w-full h-full">
+          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+            <div className="relative flex-1">
               <Image
                 src="/preview.png"
                 alt="Nova split 1"
                 fill
-                className="object-cover w-full h-full"
-                sizes="50vw"
+                className="object-cover rounded-lg shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
-            <div className="relative w-full h-full">
+            <div className="relative flex-1">
               <Image
                 src="/preview.png"
                 alt="Nova split 2"
                 fill
-                className="object-cover w-full h-full"
-                sizes="50vw"
+                className="object-cover rounded-lg shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
           </div>
         </div>
       </FadeIn.Item>
-      {/* 3rd Image Section */}
+      {/* 3rd Big Image */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
@@ -92,7 +92,7 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* 4th Image Section */}
+      {/* 4th Big Image */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
@@ -104,32 +104,32 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* 5th Image Section (split) */}
+      {/* 5th Split Image Section */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
-          <div className="grid grid-cols-2 w-[85vw] max-w-6xl aspect-[16/9]">
-            <div className="relative w-full h-full">
+          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+            <div className="relative flex-1">
               <Image
                 src="/preview.png"
                 alt="Nova split 3"
                 fill
-                className="object-cover w-full h-full"
-                sizes="50vw"
+                className="object-cover rounded-lg shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
-            <div className="relative w-full h-full">
+            <div className="relative flex-1">
               <Image
                 src="/preview.png"
                 alt="Nova split 4"
                 fill
-                className="object-cover w-full h-full"
-                sizes="50vw"
+                className="object-cover rounded-lg shadow-xl"
+                sizes="(max-width: 1536px) 50vw, 768px"
               />
             </div>
           </div>
         </div>
       </FadeIn.Item>
-      {/* 6th Image Section */}
+      {/* 6th Big Image */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
@@ -141,7 +141,7 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* 7th Image Section */}
+      {/* 7th Big Image */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
@@ -153,7 +153,7 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* 8th Image Section */}
+      {/* 8th Big Image */}
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <Image
@@ -165,7 +165,7 @@ export default function Three() {
           />
         </div>
       </FadeIn.Item>
-      {/* Section 1: Brand Strategy */}
+      {/* Section: Brand Strategy */}
       <FadeIn.Item>
         <section className="mb-16">
           <h2 className="text-xl font-medium mb-2">Brand Strategy</h2>
@@ -183,7 +183,7 @@ export default function Three() {
           </div>
         </section>
       </FadeIn.Item>
-      {/* Section 2: Visual Identity */}
+      {/* Section: Visual Identity */}
       <FadeIn.Item>
         <section className="mb-16">
           <h2 className="text-xl font-medium mb-2">Visual Identity</h2>
@@ -201,7 +201,7 @@ export default function Three() {
           </div>
         </section>
       </FadeIn.Item>
-      {/* Section 3: Applications */}
+      {/* Section: Applications */}
       <FadeIn.Item>
         <section className="mb-16">
           <h2 className="text-xl font-medium mb-2">Applications</h2>
@@ -219,7 +219,7 @@ export default function Three() {
           </div>
         </section>
       </FadeIn.Item>
-      {/* Contact & Footer (from homepage) */}
+      {/* Contact & Footer */}
       <Spacer />
       <FadeIn.Item>
         <Contact />
