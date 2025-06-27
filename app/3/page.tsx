@@ -5,27 +5,32 @@ import * as FadeIn from "@/components/motion/staggers/fade";
 import { Spacer } from "@/components/spacer";
 import { Breadcrumb } from "@/components/breadcrumb";
 
-export default function Three() {
+export default function Arm() {
   return (
     <FadeIn.Container>
       {/* Breadcrumb at top */}
       <FadeIn.Item>
-        <Breadcrumb />
+        <Breadcrumb
+          items={[
+            { label: "mcisted.com", href: "/" },
+            { label: "arm", href: "/arm" },
+          ]}
+        />
       </FadeIn.Item>
-      {/* Header */}
+      {/* Title and Subtitle */}
       <FadeIn.Item>
         <div className="flex justify-between">
           <div>
-            <h1>3</h1>
-            <h2>Systemic Brand for a New Era</h2>
+            <h1>Arm</h1>
+            <h2>Visual identity and brand systems</h2>
           </div>
         </div>
       </FadeIn.Item>
       <Spacer />
-      {/* Summary */}
+      {/* Intro */}
       <FadeIn.Item>
         <p>
-          Nova is a fictional technology company reimagined for the future. This case study explores the creation of a systemic brand identity, from strategy to launch, with a focus on expressive geometry and clarity for a new era of tech.
+          Arm is a British semiconductor giant reimagined for the future of AI. This branding pushed clarity and a new premium identity for the AI era of tech.
         </p>
       </FadeIn.Item>
       <Spacer />
@@ -71,14 +76,11 @@ export default function Three() {
           </div>
         </div>
       </FadeIn.Item>
-      {/* Section: Brand Strategy (text only, image removed) */}
+      {/* Modular assets blurb (formerly Brand Strategy) */}
       <FadeIn.Item>
-        <section className="mb-16">
-          <h2 className="text-xl font-medium mb-2">Brand Strategy</h2>
-          <p>
-            Nova's brand was built on the idea of adaptability and clarity. The strategy phase included workshops, competitor analysis, and the development of a flexible design system that could scale with the company's ambitions.
-          </p>
-        </section>
+        <p>
+          Modular microchip assets used across product marketing
+        </p>
       </FadeIn.Item>
       {/* 5th Big Image (5.png) */}
       <FadeIn.Item>
@@ -91,15 +93,6 @@ export default function Three() {
             className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
           />
         </div>
-      </FadeIn.Item>
-      {/* Section: Visual Identity (text only, image removed) */}
-      <FadeIn.Item>
-        <section className="mb-16">
-          <h2 className="text-xl font-medium mb-2">Visual Identity</h2>
-          <p>
-            The visual identity leverages bold geometry, a monochrome palette, and expressive motion. Key brand marks and iconography were designed to be instantly recognizable and highly adaptable across contexts.
-          </p>
-        </section>
       </FadeIn.Item>
       {/* Arc Fullsize Image */}
       <FadeIn.Item>
@@ -138,15 +131,6 @@ export default function Three() {
             </div>
           </div>
         </div>
-      </FadeIn.Item>
-      {/* Section: Applications (text only, image removed) */}
-      <FadeIn.Item>
-        <section className="mb-16">
-          <h2 className="text-xl font-medium mb-2">Applications</h2>
-          <p>
-            The Nova system was applied to web, mobile, print, and environmental graphics. Each touchpoint was designed to maximize clarity and impact, with imagery and layouts that extend beyond the expected.
-          </p>
-        </section>
       </FadeIn.Item>
       {/* 8th Big Image */}
       <FadeIn.Item>
