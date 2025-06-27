@@ -24,7 +24,7 @@ export default function Three() {
       {/* Summary (from homepage, adapted) */}
       <FadeIn.Item>
         <p>
-          Nova is a fictional technology company reimagined for the future. This case study explores the creation of a systemic brand identity, from strategy to launch, with a focus on expressive visuals and scalable systems.
+          Nova is a fictional technology company reimagined for the future. This case study explores the creation of a systemic brand identity, from strategy to launch, with a focus on expressive design and clarity.
         </p>
       </FadeIn.Item>
       <Spacer />
@@ -59,20 +59,22 @@ export default function Three() {
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <div className="grid grid-cols-2 w-[85vw] max-w-6xl aspect-[16/9]">
-            <div className="relative">
+            <div className="relative w-full h-full">
               <Image
                 src="/preview.png"
                 alt="Nova split 1"
                 fill
-                className="object-cover"
+                className="object-cover w-full h-full"
+                sizes="50vw"
               />
             </div>
-            <div className="relative">
+            <div className="relative w-full h-full">
               <Image
                 src="/preview.png"
                 alt="Nova split 2"
                 fill
-                className="object-cover"
+                className="object-cover w-full h-full"
+                sizes="50vw"
               />
             </div>
           </div>
@@ -106,20 +108,22 @@ export default function Three() {
       <FadeIn.Item>
         <div className="w-full flex justify-center mb-12">
           <div className="grid grid-cols-2 w-[85vw] max-w-6xl aspect-[16/9]">
-            <div className="relative">
+            <div className="relative w-full h-full">
               <Image
                 src="/preview.png"
                 alt="Nova split 3"
                 fill
-                className="object-cover"
+                className="object-cover w-full h-full"
+                sizes="50vw"
               />
             </div>
-            <div className="relative">
+            <div className="relative w-full h-full">
               <Image
                 src="/preview.png"
                 alt="Nova split 4"
                 fill
-                className="object-cover"
+                className="object-cover w-full h-full"
+                sizes="50vw"
               />
             </div>
           </div>
@@ -166,7 +170,7 @@ export default function Three() {
         <section className="mb-16">
           <h2 className="text-xl font-medium mb-2">Brand Strategy</h2>
           <p>
-            Nova's brand was built on the idea of adaptability and clarity. The strategy phase included workshops, competitor analysis, and the development of a flexible design system that could scale across digital and physical touchpoints.
+            Nova's brand was built on the idea of adaptability and clarity. The strategy phase included workshops, competitor analysis, and the development of a flexible design system that could scale.
           </p>
           <div className="w-full flex justify-center mt-8">
             <Image
@@ -202,7 +206,7 @@ export default function Three() {
         <section className="mb-16">
           <h2 className="text-xl font-medium mb-2">Applications</h2>
           <p>
-            The Nova system was applied to web, mobile, print, and environmental graphics. Each touchpoint was designed to maximize clarity and impact, with imagery and layouts that extend beyond the grid for a dynamic, immersive feel.
+            The Nova system was applied to web, mobile, print, and environmental graphics. Each touchpoint was designed to maximize clarity and impact, with imagery and layouts that extend beyond the expected.
           </p>
           <div className="w-full flex justify-center mt-8">
             <Image
