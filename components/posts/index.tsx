@@ -9,7 +9,11 @@ interface PostProps {
 
 export const Posts = ({ category, pathname = "" }: PostProps) => {
   const isExperiencePage = pathname === "/experience";
-  
+
+  // Pragmatic Semiconductor should not be clickable
+  // You may wish to refine this check if you want to match on a slug or other identifier
+  const NON_CLICKABLE_TITLES = ["Pragmatic Semiconductor"];
+
   const posts = getPosts(category)
     .filter((post) => post.slug !== "cv")
     .sort((a, b) => {
@@ -48,9 +52,15 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
         <React.Fragment key={post.slug}>
           <Seperator />
           {category === "experience" ? (
-            <Link href={`/${post.slug}`} className="flex w-full justify-between py-2 no-underline focus:outline-none active:outline-none">
-              <p className="text-white hover:opacity-50 transition-opacity">{post.title}</p>
-            </Link>
+            NON_CLICKABLE_TITLES.includes(post.title) ? (
+              <div className="flex w-full justify-between py-2">
+                <p className="text-muted">{post.title}</p>
+              </div>
+            ) : (
+              <Link href={`/${post.slug}`} className="flex w-full justify-between py-2 no-underline focus:outline-none active:outline-none">
+                <p className="text-white hover:opacity-50 transition-opacity">{post.title}</p>
+              </Link>
+            )
           ) : (
             <Link href={`/${category}/${post.slug}`} className="no-underline focus:outline-none active:outline-none py-2">
               <span className="hover:opacity-50 transition-opacity">{post.title}</span>
