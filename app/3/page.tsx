@@ -206,13 +206,31 @@ export default function Arm() {
 
       {/* 9th Big Image */}
       <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-12">
+        <div className="mdx-full-bleed flex justify-center mb-8">
           <Image
             src="/9.png"
             alt="Nova showcase 9"
             width={1920}
             height={1080}
             className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
+          />
+        </div>
+      </FadeIn.Item>
+
+      <TightSectionSpacer />
+
+      {/* 10th Video */}
+      <FadeIn.Item>
+        <div className="mdx-full-bleed flex justify-center mb-12">
+          <video
+            src="/10.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/preview.png"
+            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
+            style={{ background: "#111", opacity: 1 }}
           />
         </div>
       </FadeIn.Item>
