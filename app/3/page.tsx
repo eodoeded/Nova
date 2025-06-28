@@ -22,49 +22,11 @@ export default function Arm() {
         </div>
       </FadeIn.Item>
       <Spacer />
-      {/* Main Summary Section */}
+      {/* Opening statement */}
       <FadeIn.Item>
         <p>British semiconductor giant reimagined as an AI-first leader.</p>
       </FadeIn.Item>
       <Spacer />
-      {/* Deliverables */}
-      <FadeIn.Item>
-        <div>
-          <h3 className="font-semibold mb-1">Deliverables</h3>
-          <ul className="list-disc list-inside space-y-0.5">
-            <li>Visual Identity System</li>
-            <li>Brand Architecture</li>
-            <li>Brand Guidelines</li>
-            <li>Modular Asset Library</li>
-          </ul>
-        </div>
-      </FadeIn.Item>
-      <Spacer />
-      {/* Outputs */}
-      <FadeIn.Item>
-        <div>
-          <h3 className="font-semibold mb-1">Outputs</h3>
-          <ul className="list-disc list-inside space-y-0.5">
-            <li>AI-First Brand Narrative</li>
-            <li>Premium Aesthetic</li>
-            <li>Data-Driven Transformation</li>
-          </ul>
-        </div>
-      </FadeIn.Item>
-      <Spacer />
-      {/* Impact */}
-      <FadeIn.Item>
-        <div>
-          <h3 className="font-semibold mb-1">Impact</h3>
-          <ul className="list-disc list-inside space-y-0.5">
-            <li>+3.2 pts | Brand Equity Score (↑ 15.9%)</li>
-            <li>+98% | Unprompted Brand Awareness (4.8% → 9.5%)</li>
-            <li>+25% | 'Innovative' Brand Association (28% → 35%)</li>
-          </ul>
-        </div>
-      </FadeIn.Item>
-      <Spacer />
-      {/* Images */}
       {/* Hero Video */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
@@ -78,6 +40,18 @@ export default function Arm() {
             className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
             style={{ background: "#111", opacity: 1 }}
           />
+        </div>
+      </FadeIn.Item>
+      {/* Deliverables - before split images */}
+      <FadeIn.Item>
+        <div>
+          <h3 className="font-semibold mb-1">Deliverables</h3>
+          <ul className="list-disc list-inside space-y-0.5">
+            <li>Visual Identity System</li>
+            <li>Brand Architecture</li>
+            <li>Brand Guidelines</li>
+            <li>Modular Asset Library</li>
+          </ul>
         </div>
       </FadeIn.Item>
       {/* Split Images: Neoverse V-Series & Powering the world's tech */}
@@ -107,6 +81,17 @@ export default function Arm() {
           </div>
         </div>
       </FadeIn.Item>
+      {/* Outputs - before 5.png */}
+      <FadeIn.Item>
+        <div>
+          <h3 className="font-semibold mb-1">Outputs</h3>
+          <ul className="list-disc list-inside space-y-0.5">
+            <li>AI-First Brand Narrative</li>
+            <li>Premium Aesthetic</li>
+            <li>Data-Driven Transformation</li>
+          </ul>
+        </div>
+      </FadeIn.Item>
       {/* 5th Big Image (5.png) */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
@@ -130,6 +115,17 @@ export default function Arm() {
             className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
             priority
           />
+        </div>
+      </FadeIn.Item>
+      {/* Impact - after arc image */}
+      <FadeIn.Item>
+        <div>
+          <h3 className="font-semibold mb-1">Impact</h3>
+          <ul className="list-disc list-inside space-y-0.5">
+            <li>+3.2 pts | Brand Equity Score (↑ 15.9%)</li>
+            <li>+98% | Unprompted Brand Awareness (4.8% → 9.5%)</li>
+            <li>+25% | 'Innovative' Brand Association (28% → 35%)</li>
+          </ul>
         </div>
       </FadeIn.Item>
       {/* Split Images: 6.png & 7.png */}
