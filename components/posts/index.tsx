@@ -48,13 +48,12 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
         <React.Fragment key={post.slug}>
           <Seperator />
           {category === "experience" ? (
-            // Make experience posts clickable, linking to /slug
-            <Link href={`/${post.slug}`} className="flex w-full justify-between py-2 group no-underline hover:none focus:outline-none active:outline-none">
-              <p className="text-muted transition-opacity group-hover:opacity-50">{post.title}</p>
+            <Link href={`/${post.slug}`} className="flex w-full justify-between py-2 no-underline focus:outline-none active:outline-none">
+              <p className="text-white hover:opacity-50 transition-opacity">{post.title}</p>
             </Link>
           ) : (
-            <Link href={`/${category}/${post.slug}`} className="group no-underline hover:none focus:outline-none active:outline-none py-2">
-              <span className="transition-opacity group-hover:opacity-50">{post.title}</span>
+            <Link href={`/${category}/${post.slug}`} className="no-underline focus:outline-none active:outline-none py-2">
+              <span className="hover:opacity-50 transition-opacity">{post.title}</span>
             </Link>
           )}
         </React.Fragment>
