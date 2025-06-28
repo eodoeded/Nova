@@ -7,12 +7,11 @@ interface PostProps {
   pathname?: string;
 }
 
+// Titles that should NOT be clickable
+const NON_CLICKABLE_TITLES = ["Pragmatic Semiconductor"];
+
 export const Posts = ({ category, pathname = "" }: PostProps) => {
   const isExperiencePage = pathname === "/experience";
-
-  // Pragmatic Semiconductor should not be clickable
-  // You may wish to refine this check if you want to match on a slug or other identifier
-  const NON_CLICKABLE_TITLES = ["Pragmatic Semiconductor"];
 
   const posts = getPosts(category)
     .filter((post) => post.slug !== "cv")
@@ -23,12 +22,12 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
     });
 
   // Debug logging
-  console.log('Posts component:', { category, postsCount: posts.length, posts: posts.map(p => p.title) });
+  // console.log('Posts component:', { category, postsCount: posts.length, posts: posts.map(p => p.title) });
 
-  const Seperator = () => <div className="border-border border-t" />;
+  const Separator = () => <div className="border-border border-t" />;
 
   if (posts.length === 0) {
-    console.log('No posts found for category:', category);
+    // console.log('No posts found for category:', category);
     return null;
   }
 
@@ -50,21 +49,25 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
 
       {posts.map((post) => (
         <React.Fragment key={post.slug}>
-          <Seperator />
+          <Separator />
           {category === "experience" ? (
             NON_CLICKABLE_TITLES.includes(post.title) ? (
-              <div className="flex w-full justify-between py-2">
+              <div className="py-2">
                 <p className="text-muted">{post.title}</p>
               </div>
             ) : (
-              <Link href={`/${post.slug}`} className="flex w-full justify-between py-2 no-underline focus:outline-none active:outline-none">
-                <p className="text-white hover:opacity-50 transition-opacity">{post.title}</p>
-              </Link>
+              <div className="py-2">
+                <Link href={`/${post.slug}`} className="no-underline focus:outline-none active:outline-none">
+                  <p className="text-white hover:opacity-50 transition-opacity">{post.title}</p>
+                </Link>
+              </div>
             )
           ) : (
-            <Link href={`/${category}/${post.slug}`} className="no-underline focus:outline-none active:outline-none py-2">
-              <span className="hover:opacity-50 transition-opacity">{post.title}</span>
-            </Link>
+            <div className="py-2">
+              <Link href={`/${category}/${post.slug}`} className="no-underline focus:outline-none active:outline-none">
+                <span className="hover:opacity-50 transition-opacity">{post.title}</span>
+              </Link>
+            </div>
           )}
         </React.Fragment>
       ))}
