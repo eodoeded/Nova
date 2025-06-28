@@ -2,20 +2,27 @@ import { getPosts } from "@/lib/mdx";
 import Link from "next/link";
 import React from "react";
 
+interface Post {
+  title: string;
+  slug: string;
+  time: {
+    created: string;
+  };
+}
+
 interface PostProps {
   category: string;
   pathname?: string;
 }
 
-// Titles that should NOT be clickable
 const NON_CLICKABLE_TITLES = ["Pragmatic Semiconductor"];
 
 export const Posts = ({ category, pathname = "" }: PostProps) => {
   const isExperiencePage = pathname === "/experience" || pathname === "/";
 
-  const posts = getPosts(category)
-    .filter((post) => post.slug !== "cv")
-    .sort((a, b) => {
+  const posts: Post[] = getPosts(category)
+    .filter((post: Post) => post.slug !== "cv")
+    .sort((a: Post, b: Post) => {
       const dateA = new Date(a.time.created).getTime();
       const dateB = new Date(b.time.created).getTime();
       return dateB - dateA;
@@ -33,9 +40,7 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
     </h2>
   );
 
-  // helper for rendering a list section
-  const renderPostRow = (post: any, isFirst: boolean = false) => {
-    // If not clickable
+  const renderPostRow = (post: Post) => {
     if (NON_CLICKABLE_TITLES.includes(post.title)) {
       return (
         <div className="py-2">
@@ -43,7 +48,6 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
         </div>
       );
     }
-    // Clickable
     return (
       <div className="py-2">
         <Link
@@ -66,7 +70,7 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
         </Link>
       )}
 
-      {posts.map((post, i) => (
+      {posts.map((post) => (
         <React.Fragment key={post.slug}>
           <Separator />
           {renderPostRow(post)}
