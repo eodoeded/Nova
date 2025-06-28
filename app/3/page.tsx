@@ -17,18 +17,54 @@ export default function Arm() {
         <div className="flex justify-between">
           <div>
             <h1>Arm</h1>
-            <h2>Visual identity and brand systems</h2>
+            <h2>Visual Identity & Brand</h2>
           </div>
         </div>
       </FadeIn.Item>
       <Spacer />
-      {/* Intro */}
+      {/* Main Summary Section */}
       <FadeIn.Item>
-        <p>
-          Arm is a British semiconductor giant reimagined for the future of AI. This branding pushed clarity and a new premium identity for the AI era of tech.
-        </p>
+        <p>British semiconductor giant reimagined as an AI-first leader.</p>
       </FadeIn.Item>
       <Spacer />
+      {/* Deliverables */}
+      <FadeIn.Item>
+        <div>
+          <h3 className="font-semibold mb-1">Deliverables</h3>
+          <ul className="list-disc list-inside space-y-0.5">
+            <li>Visual Identity System</li>
+            <li>Brand Architecture</li>
+            <li>Brand Guidelines</li>
+            <li>Modular Asset Library</li>
+          </ul>
+        </div>
+      </FadeIn.Item>
+      <Spacer />
+      {/* Outputs */}
+      <FadeIn.Item>
+        <div>
+          <h3 className="font-semibold mb-1">Outputs</h3>
+          <ul className="list-disc list-inside space-y-0.5">
+            <li>AI-First Brand Narrative</li>
+            <li>Premium Aesthetic</li>
+            <li>Data-Driven Transformation</li>
+          </ul>
+        </div>
+      </FadeIn.Item>
+      <Spacer />
+      {/* Impact */}
+      <FadeIn.Item>
+        <div>
+          <h3 className="font-semibold mb-1">Impact</h3>
+          <ul className="list-disc list-inside space-y-0.5">
+            <li>+3.2 pts | Brand Equity Score (↑ 15.9%)</li>
+            <li>+98% | Unprompted Brand Awareness (4.8% → 9.5%)</li>
+            <li>+25% | 'Innovative' Brand Association (28% → 35%)</li>
+          </ul>
+        </div>
+      </FadeIn.Item>
+      <Spacer />
+      {/* Images */}
       {/* Hero Video */}
       <FadeIn.Item>
         <div className="mdx-full-bleed flex justify-center mb-12">
@@ -70,12 +106,6 @@ export default function Arm() {
             </div>
           </div>
         </div>
-      </FadeIn.Item>
-      {/* Modular assets blurb (formerly Brand Strategy) */}
-      <FadeIn.Item>
-        <p>
-         As a leader in semiconductor technology, Arm needed to reposition itself as a driving force in the AI-first world. The challenge was to evolve their brand into something modern, scalable, and premium—without alienating their legacy partners or losing their technical credibility.
-        </p>
       </FadeIn.Item>
       {/* 5th Big Image (5.png) */}
       <FadeIn.Item>
