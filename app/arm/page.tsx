@@ -6,6 +6,7 @@ import { Spacer } from "@/components/spacer";
 import { Breadcrumb } from "@/components/breadcrumb";
 
 function TightSectionSpacer() {
+  // Smaller vertical gap between sections
   return <div className="h-5 md:h-6" />;
 }
 
