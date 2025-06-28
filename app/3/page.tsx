@@ -5,9 +5,9 @@ import * as FadeIn from "@/components/motion/staggers/fade";
 import { Spacer } from "@/components/spacer";
 import { Breadcrumb } from "@/components/breadcrumb";
 
-function SectionSpacer() {
-  // Guarantees a good gap between text/image sections
-  return <div className="h-10 md:h-14" />;
+function TightSectionSpacer() {
+  // Smaller vertical gap between sections
+  return <div className="h-5 md:h-6" />;
 }
 
 export default function Arm() {
@@ -20,7 +20,7 @@ export default function Arm() {
 
       {/* Title and Subtitle */}
       <FadeIn.Item>
-        <div className="flex justify-between mb-8">
+        <div className="flex justify-between mb-4">
           <div>
             <h1>Arm</h1>
             <h2>Visual Identity & Brand</h2>
@@ -28,20 +28,20 @@ export default function Arm() {
         </div>
       </FadeIn.Item>
 
-      <SectionSpacer />
+      <TightSectionSpacer />
 
       {/* Opening statement */}
       <FadeIn.Item>
-        <p className="text-lg md:text-xl max-w-2xl mb-6">
+        <p className="text-lg md:text-xl max-w-2xl mb-2">
           British semiconductor giant reimagined as an AI-first leader.
         </p>
       </FadeIn.Item>
 
-      <SectionSpacer />
+      <TightSectionSpacer />
 
       {/* Hero Video */}
       <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-16">
+        <div className="mdx-full-bleed flex justify-center mb-8">
           <video
             src="/hero-fixed.mp4"
             autoPlay
@@ -55,11 +55,11 @@ export default function Arm() {
         </div>
       </FadeIn.Item>
 
-      <SectionSpacer />
+      <TightSectionSpacer />
 
       {/* Deliverables - before split images */}
       <FadeIn.Item>
-        <div className="mb-8">
+        <div className="mb-4">
           <h3 className="font-semibold mb-1">Deliverables</h3>
           <ul className="list-disc list-inside space-y-0.5">
             <li>Visual Identity System</li>
@@ -70,12 +70,12 @@ export default function Arm() {
         </div>
       </FadeIn.Item>
 
-      <SectionSpacer />
+      <TightSectionSpacer />
 
       {/* Split Images: Neoverse V-Series & Powering the world's tech */}
       <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-16">
-          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+        <div className="mdx-full-bleed flex justify-center mb-8">
+          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-3">
             <div className="relative flex-1">
               <Image
                 src="/neoverse-v-series.png"
@@ -100,11 +100,11 @@ export default function Arm() {
         </div>
       </FadeIn.Item>
 
-      <SectionSpacer />
+      <TightSectionSpacer />
 
       {/* Outputs - before 5.png */}
       <FadeIn.Item>
-        <div className="mb-8">
+        <div className="mb-4">
           <h3 className="font-semibold mb-1">Outputs</h3>
           <ul className="list-disc list-inside space-y-0.5">
             <li>AI-First Brand Narrative</li>
@@ -114,11 +114,11 @@ export default function Arm() {
         </div>
       </FadeIn.Item>
 
-      <SectionSpacer />
+      <TightSectionSpacer />
 
       {/* 5th Big Image (5.png) */}
       <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-16">
+        <div className="mdx-full-bleed flex justify-center mb-8">
           <Image
             src="/5.png"
             alt="Nova showcase 5"
@@ -129,11 +129,11 @@ export default function Arm() {
         </div>
       </FadeIn.Item>
 
-      <SectionSpacer />
+      <TightSectionSpacer />
 
       {/* Arc Fullsize Image */}
       <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-16">
+        <div className="mdx-full-bleed flex justify-center mb-8">
           <Image
             src="/arc.png"
             alt="Arm Arc fullsize"
@@ -145,11 +145,11 @@ export default function Arm() {
         </div>
       </FadeIn.Item>
 
-      <SectionSpacer />
+      <TightSectionSpacer />
 
       {/* Impact - after arc image */}
       <FadeIn.Item>
-        <div className="mb-8">
+        <div className="mb-4">
           <h3 className="font-semibold mb-1">Impact</h3>
           <ul className="list-disc list-inside space-y-0.5">
             <li>+3.2 pts | Brand Equity Score (↑ 15.9%)</li>
@@ -159,12 +159,12 @@ export default function Arm() {
         </div>
       </FadeIn.Item>
 
-      <SectionSpacer />
+      <TightSectionSpacer />
 
       {/* Split Images: 6.png & 7.png */}
       <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-16">
-          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-4">
+        <div className="mdx-full-bleed flex justify-center mb-8">
+          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-3">
             <div className="relative flex-1">
               <Image
                 src="/6.png"
@@ -187,11 +187,11 @@ export default function Arm() {
         </div>
       </FadeIn.Item>
 
-      <SectionSpacer />
+      <TightSectionSpacer />
 
       {/* 8th Big Image */}
       <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-16">
+        <div className="mdx-full-bleed flex justify-center mb-8">
           <Image
             src="/8.png"
             alt="Nova showcase 8"
@@ -202,11 +202,11 @@ export default function Arm() {
         </div>
       </FadeIn.Item>
 
-      <SectionSpacer />
+      <TightSectionSpacer />
 
       {/* 9th Big Image */}
       <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-20">
+        <div className="mdx-full-bleed flex justify-center mb-12">
           <Image
             src="/9.png"
             alt="Nova showcase 9"
