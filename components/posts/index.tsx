@@ -1,5 +1,4 @@
 import { getPosts } from "@/lib/mdx";
-
 import Link from "next/link";
 import React from "react";
 
@@ -49,9 +48,10 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
         <React.Fragment key={post.slug}>
           <Seperator />
           {category === "experience" ? (
-            <div className="flex w-full justify-between py-2">
-              <p className="text-muted">{post.title}</p>
-            </div>
+            // Make experience posts clickable, linking to /slug
+            <Link href={`/${post.slug}`} className="flex w-full justify-between py-2 group no-underline hover:none focus:outline-none active:outline-none">
+              <p className="text-muted transition-opacity group-hover:opacity-50">{post.title}</p>
+            </Link>
           ) : (
             <Link href={`/${category}/${post.slug}`} className="group no-underline hover:none focus:outline-none active:outline-none py-2">
               <span className="transition-opacity group-hover:opacity-50">{post.title}</span>
