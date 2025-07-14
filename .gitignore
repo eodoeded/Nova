@@ -1,9 +1,10 @@
 # See https://help.github.com/posts/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
+node_modules/
+.pnp/
 .pnp.js
+.pnpm-store/
 .yarn/install-state.gz
 
 # testing
