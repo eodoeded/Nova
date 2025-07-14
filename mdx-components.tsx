@@ -48,7 +48,7 @@ export function useMDXComponents(inputComponents: MDXComponents): MDXComponents 
         return null;
       }
       return (
-        <h2 id={id} className="font-semibold text-[#005dc5] text-lg mb-8 mt-16">
+        <h2 id={id} className="mt-16 mb-8 font-semibold text-[#005dc5] text-lg">
           {children}
         </h2>
       );

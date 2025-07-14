@@ -1,9 +1,7 @@
-import { Footer } from "@/components/footer";
-import Image from "next/image";
-import { Contact } from "@/components/contact";
-import * as FadeIn from "@/components/motion/staggers/fade";
-import { Spacer } from "@/components/spacer";
 import { Breadcrumb } from "@/components/breadcrumb";
+import * as FadeIn from "@/components/motion/staggers/fade";
+
+import Image from "next/image";
 
 function TightSectionSpacer() {
   // Smaller vertical gap between sections
@@ -20,7 +18,7 @@ export default function Arm() {
 
       {/* Title and Subtitle */}
       <FadeIn.Item>
-        <div className="flex justify-between mb-4">
+        <div className="mb-4 flex justify-between">
           <div>
             <h1>Arm</h1>
             <h2>Visual Identity & Brand</h2>
@@ -32,16 +30,14 @@ export default function Arm() {
 
       {/* Opening statement */}
       <FadeIn.Item>
-        <p className="text-lg md:text-xl max-w-2xl mb-2">
-          British semiconductor giant reimagined as an AI-first leader.
-        </p>
+        <p className="mb-2 max-w-2xl text-lg md:text-xl">British semiconductor giant reimagined as an AI-first leader.</p>
       </FadeIn.Item>
 
       <TightSectionSpacer />
 
       {/* Hero Video */}
       <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-8">
+        <div className="mdx-full-bleed mb-8 flex justify-center">
           <video
             src="/hero-fixed.mp4"
             autoPlay
@@ -49,7 +45,7 @@ export default function Arm() {
             muted
             playsInline
             poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAABJkM5iAAAAAklEQVR4nO3BMQEAAAgDoJvc5F9F7wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwHuE9AAHjAy6tAAAAAElFTkSuQmCC"
-            className="rounded-lg object-cover w-[85vw] max-w-6xl h-auto"
+            className="h-auto w-[85vw] max-w-6xl rounded-lg object-cover"
             style={{ background: "#111", opacity: 1 }}
           />
         </div>
@@ -60,8 +56,8 @@ export default function Arm() {
       {/* Deliverables - before split images */}
       <FadeIn.Item>
         <div className="mb-4">
-          <h3 className="font-semibold mb-1">Deliverables</h3>
-          <ul className="list-disc list-inside space-y-0.5">
+          <h3 className="mb-1 font-semibold">Deliverables</h3>
+          <ul className="list-inside list-disc space-y-0.5">
             <li>Visual Identity System</li>
             <li>Brand Architecture</li>
             <li>Brand Guidelines</li>
@@ -74,14 +70,14 @@ export default function Arm() {
 
       {/* Split Images: Neoverse V-Series & Powering the world's tech */}
       <FadeIn.Item>
-        <div className="mdx-full-bleed flex justify-center mb-8">
-          <div className="flex w-[85vw] max-w-6xl aspect-[16/9] gap-3">
+        <div className="mdx-full-bleed mb-8 flex justify-center">
+          <div className="flex aspect-[16/9] w-[85vw] max-w-6xl gap-3">
             <div className="relative flex-1">
               <Image
                 src="/neoverse-v-series.png"
                 alt="Neoverse V-Series"
                 fill
-                className="object-cover rounded-lg"
+                className="rounded-lg object-cover"
                 sizes="(max-width: 1536px) 50vw, 768px"
                 priority
               />
@@ -91,7 +87,7 @@ export default function Arm() {
                 src="/powering-the-world-3.png"
                 alt="Powering the world's tech"
                 fill
-                className="object-cover rounded-lg"
+                className="rounded-lg object-cover"
                 sizes="(max-width: 1536px) 50vw, 768px"
                 priority
               />
@@ -103,9 +99,7 @@ export default function Arm() {
       <TightSectionSpacer />
 
       {/* Outputs - before 5.png */}
-      <FadeIn.Item>
-        {/* ...rest of your page... */}
-      </FadeIn.Item>
+      <FadeIn.Item>{/* ...rest of your page... */}</FadeIn.Item>
     </FadeIn.Container>
   );
 }
