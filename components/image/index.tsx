@@ -22,7 +22,7 @@ export default function MDXImage({ caption, alt, variant = "default", fill = fal
       <div
         className={cn("relative w-full overflow-hidden rounded-[12px]", {
           "h-full": fill,
-          "w-screen -mx-4 md:-mx-8": variant === "full",
+          "-mx-4 md:-mx-8 w-screen": variant === "full",
         })}
       >
         <Image

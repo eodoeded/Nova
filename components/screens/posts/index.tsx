@@ -58,7 +58,7 @@ export const Layout = ({ post, route }: Props) => {
       {post.type === "cv" && (
         <div className="flex flex-col">
           <div className="flex items-center gap-4">
-            <h1 className="text-[#005dc5] font-bold text-2xl">{post.title}</h1>
+            <h1 className="font-bold text-2xl text-[#005dc5]">{post.title}</h1>
             <DownloadPdfButton />
           </div>
         </div>
