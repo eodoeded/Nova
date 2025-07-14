@@ -10,7 +10,7 @@ interface PostProps {
 
 export const Posts = ({ category, pathname = "" }: PostProps) => {
   const isExperiencePage = pathname === "/experience";
-  
+
   const posts = getPosts(category)
     .filter((post) => post.slug !== "cv")
     .sort((a, b) => {
@@ -20,20 +20,20 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
     });
 
   // Debug logging
-  console.log('Posts component:', { category, postsCount: posts.length, posts: posts.map(p => p.title) });
+  console.log("Posts component:", {
+    category,
+    postsCount: posts.length,
+    posts: posts.map((p) => p.title),
+  });
 
   const Seperator = () => <div className="border-border border-t" />;
 
   if (posts.length === 0) {
-    console.log('No posts found for category:', category);
+    console.log("No posts found for category:", category);
     return null;
   }
 
-  const CategoryHeader = () => (
-    <h2 className="py-2 text-muted capitalize">
-      {category === "experience" ? "Experience" : category}
-    </h2>
-  );
+  const CategoryHeader = () => <h2 className="py-2 text-muted capitalize">{category === "experience" ? "Experience" : category}</h2>;
 
   return (
     <div className="mt-6 flex flex-col">
@@ -53,7 +53,7 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
               <p className="text-muted">{post.title}</p>
             </div>
           ) : (
-            <Link href={`/${category}/${post.slug}`} className="group no-underline hover:none focus:outline-none active:outline-none py-2">
+            <Link href={`/${category}/${post.slug}`} className="group hover:none py-2 no-underline focus:outline-none active:outline-none">
               <span className="transition-opacity group-hover:opacity-50">{post.title}</span>
             </Link>
           )}

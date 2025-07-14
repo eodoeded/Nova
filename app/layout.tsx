@@ -1,5 +1,4 @@
 import "@/styles/main.css";
-import { ThemeProvider } from "next-themes";
 
 import type { Metadata } from "next";
 
@@ -7,6 +6,7 @@ import { Providers } from "@/components/providers";
 import { OpenGraph } from "@/lib/og";
 
 import clsx from "clsx";
+import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -42,9 +42,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Providers>
             <main className="relative py-24 md:overflow-x-visible">
-              <article className="article mx-auto max-w-screen-sm px-4 md:px-6">
-                {children}
-              </article>
+              <article className="article mx-auto max-w-screen-sm px-4 md:px-6">{children}</article>
             </main>
           </Providers>
         </ThemeProvider>
