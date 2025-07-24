@@ -54,9 +54,9 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
                 href={post.externalUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-border border-b py-2 text-muted transition-opacity hover:opacity-50 block"
+                className="border-border border-b py-2 block"
               >
-                {post.title}
+                <span className="text-white transition-opacity hover:opacity-50">{post.title}</span>
               </a>
             ) : (
               <div className="flex w-full justify-between py-2">
