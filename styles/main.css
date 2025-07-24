@@ -344,7 +344,7 @@
   }
 
   /* Remove transition and hover from separator lines */
-  .separator-transition, .border-t {
+  .separator-transition {
     transition: none !important;
     pointer-events: none;
   }
