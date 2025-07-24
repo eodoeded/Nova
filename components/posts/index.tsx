@@ -48,7 +48,15 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
       {posts.map((post) => (
         <React.Fragment key={post.slug}>
           <Seperator />
-          {category === "experience" ? (
+          {category === "experience" && post.title === "Arm" && post.externalUrl ? (
+            <a
+              href={post.externalUrl}
+              className="border-border border-b py-2 block"
+              style={{ textDecoration: "none" }}
+            >
+              <span className="text-white transition-opacity hover:opacity-50">{post.title}</span>
+            </a>
+          ) : category === "experience" ? (
             <div className="flex w-full justify-between py-2">
               <p className="text-muted">{post.title}</p>
             </div>
