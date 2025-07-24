@@ -49,6 +49,7 @@
     font-variant-ligatures: common-ligatures;
     text-wrap: pretty;
     text-rendering: optimizelegibility;
+    transition: color 0.3s, border-color 0.3s;
   }
 
   *::selection {
@@ -340,6 +341,12 @@
       border: 1px solid var(--border);
       border-radius: var(--radius-base);
     }
+  }
+
+  /* Remove transition and hover from separator lines */
+  .separator-transition, .border-t {
+    transition: none !important;
+    pointer-events: none;
   }
 }
 

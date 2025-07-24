@@ -26,7 +26,7 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
     posts: posts.map((p) => p.title),
   });
 
-  const Seperator = () => <div className="border-border border-t" />;
+  const Seperator = () => <div className="border-border border-t separator-transition" />;
 
   if (posts.length === 0) {
     console.log("No posts found for category:", category);
