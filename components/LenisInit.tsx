@@ -7,7 +7,10 @@ export default function LenisInit() {
     if (typeof window === "undefined") return;
     import("@studio-freight/lenis").then(({ default: Lenis }) => {
       const lenis = new Lenis({
-        duration: 1.2,
+        duration: 0.2, // very low for near-native feel
+        easing: (t: number) => t, // linear easing
+        gestureOrientation: "vertical",
+        smoothWheel: true,
       });
       function raf(time: number) {
         lenis.raf(time);
