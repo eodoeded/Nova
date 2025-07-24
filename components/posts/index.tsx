@@ -50,7 +50,12 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
           <Seperator />
           {category === "experience" ? (
             post.externalUrl ? (
-              <a href={post.externalUrl} target="_blank" rel="noopener noreferrer" className="text-muted underline hover:opacity-70 transition">
+              <a
+                href={post.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-border border-b py-2 text-muted transition-opacity hover:opacity-50 block"
+              >
                 {post.title}
               </a>
             ) : (
