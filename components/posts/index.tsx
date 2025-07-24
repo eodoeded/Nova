@@ -26,7 +26,7 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
     posts: posts.map((p) => p.title),
   });
 
-  const Seperator = () => <div className="border-border border-t separator-transition" />;
+  const Seperator = () => <div className="border-border border-t separator-transition pointer-events-none" />;
 
   if (posts.length === 0) {
     console.log("No posts found for category:", category);
@@ -54,7 +54,7 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
               className="border-border border-b py-2 block"
               style={{ textDecoration: "none" }}
             >
-              <span className="text-white transition-opacity hover:opacity-50">{post.title}</span>
+              <span className="text-white transition-opacity hover:opacity-50 pointer-events-auto">{post.title}</span>
             </a>
           ) : category === "experience" ? (
             <div className="flex w-full justify-between py-2">
