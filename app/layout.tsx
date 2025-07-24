@@ -9,11 +9,30 @@ import clsx from "clsx";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { useEffect } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
+
+function LenisInit() {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    import("@studio-freight/lenis").then(({ default: Lenis }) => {
+      const lenis = new Lenis({
+        duration: 1.2,
+        // 'smooth' is not a valid option in latest Lenis, so removed
+      });
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    });
+  }, []);
+  return null;
+}
 
 // Layout component for the entire application
 export const metadata: Metadata = {
@@ -40,6 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={clsx(inter.className)} suppressHydrationWarning>
       <body>
+        <LenisInit />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Providers>
             <main className="relative py-24 md:overflow-x-visible">
