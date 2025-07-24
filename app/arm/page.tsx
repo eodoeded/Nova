@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer";
 import * as FadeIn from "@/components/motion/staggers/fade";
 import { Spacer } from "@/components/spacer";
 
-import { useRef, useState } from "react";
+import Image from "next/image";
 
 function TightSectionSpacer() {
   // Smaller vertical gap between sections
@@ -14,11 +14,6 @@ function TightSectionSpacer() {
 }
 
 export default function Arm() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [posterVisible, setPosterVisible] = useState(true);
-
-  const handlePlay = () => setPosterVisible(false);
-
   return (
     <FadeIn.Container>
       {/* Breadcrumb at top */}
@@ -48,40 +43,16 @@ export default function Arm() {
       {/* Hero Video */}
       <FadeIn.Item>
         <div className="mdx-full-bleed mb-8 flex justify-center">
-          <div style={{ position: "relative", width: "85vw", maxWidth: "96rem" }}>
-            <video
-              ref={videoRef}
-              src="/hero-fixed.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              poster="/preview.png"
-              className="h-auto w-full rounded-lg object-cover"
-              style={{ background: "#111", opacity: 1, display: "block" }}
-              onPlay={handlePlay}
-            />
-            {posterVisible && (
-              <img
-                src="/preview.png"
-                alt="Preview"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  borderRadius: "inherit",
-                  background: "#111",
-                  zIndex: 2,
-                  pointerEvents: "none",
-                  transition: "opacity 0.3s",
-                  opacity: posterVisible ? 1 : 0,
-                }}
-              />
-            )}
-          </div>
+          <video
+            src="/hero-fixed.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/preview.png"
+            className="h-auto w-[85vw] max-w-6xl rounded-lg object-cover"
+            style={{ background: "#111", opacity: 1 }}
+          />
         </div>
       </FadeIn.Item>
 
@@ -107,19 +78,23 @@ export default function Arm() {
         <div className="mdx-full-bleed mb-8 flex justify-center">
           <div className="flex aspect-[16/9] w-[85vw] max-w-6xl gap-3">
             <div className="relative flex-1">
-              <img
+              <Image
                 src="/neoverse-v-series.png"
                 alt="Neoverse V-Series"
+                fill
                 className="rounded-lg object-cover"
                 sizes="(max-width: 1536px) 50vw, 768px"
+                priority
               />
             </div>
             <div className="relative flex-1">
-              <img
+              <Image
                 src="/powering-the-world-3.png"
                 alt="Powering the world's tech"
+                fill
                 className="rounded-lg object-cover"
                 sizes="(max-width: 1536px) 50vw, 768px"
+                priority
               />
             </div>
           </div>
@@ -145,7 +120,7 @@ export default function Arm() {
       {/* 5th Big Image (5.png) */}
       <FadeIn.Item>
         <div className="mdx-full-bleed mb-8 flex justify-center">
-          <img src="/5.png" alt="Nova showcase 5" width={1920} height={1080} className="h-auto w-[85vw] max-w-6xl rounded-lg object-cover" />
+          <Image src="/5.png" alt="Nova showcase 5" width={1920} height={1080} className="h-auto w-[85vw] max-w-6xl rounded-lg object-cover" />
         </div>
       </FadeIn.Item>
 
@@ -154,7 +129,7 @@ export default function Arm() {
       {/* Arc Fullsize Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed mb-8 flex justify-center">
-          <img src="/arc.png" alt="Arm Arc fullsize" width={1920} height={1080} className="h-auto w-[85vw] max-w-6xl rounded-lg object-cover" />
+          <Image src="/arc.png" alt="Arm Arc fullsize" width={1920} height={1080} className="h-auto w-[85vw] max-w-6xl rounded-lg object-cover" priority />
         </div>
       </FadeIn.Item>
 
@@ -179,10 +154,10 @@ export default function Arm() {
         <div className="mdx-full-bleed mb-8 flex justify-center">
           <div className="flex aspect-[16/9] w-[85vw] max-w-6xl gap-3">
             <div className="relative flex-1">
-              <img src="/6.png" alt="Nova split 6" className="rounded-lg object-cover" sizes="(max-width: 1536px) 50vw, 768px" />
+              <Image src="/6.png" alt="Nova split 6" fill className="rounded-lg object-cover" sizes="(max-width: 1536px) 50vw, 768px" />
             </div>
             <div className="relative flex-1">
-              <img src="/7.png" alt="Nova split 7" className="rounded-lg object-cover" sizes="(max-width: 1536px) 50vw, 768px" />
+              <Image src="/7.png" alt="Nova split 7" fill className="rounded-lg object-cover" sizes="(max-width: 1536px) 50vw, 768px" />
             </div>
           </div>
         </div>
@@ -193,7 +168,7 @@ export default function Arm() {
       {/* 8th Big Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed mb-8 flex justify-center">
-          <img src="/8.png" alt="Nova showcase 8" width={1920} height={1080} className="h-auto w-[85vw] max-w-6xl rounded-lg object-cover" />
+          <Image src="/8.png" alt="Nova showcase 8" width={1920} height={1080} className="h-auto w-[85vw] max-w-6xl rounded-lg object-cover" />
         </div>
       </FadeIn.Item>
 
@@ -202,7 +177,7 @@ export default function Arm() {
       {/* 9th Big Image */}
       <FadeIn.Item>
         <div className="mdx-full-bleed mb-12 flex justify-center">
-          <img src="/9.png" alt="Nova showcase 9" width={1920} height={1080} className="h-auto w-[85vw] max-w-6xl rounded-lg object-cover" />
+          <Image src="/9.png" alt="Nova showcase 9" width={1920} height={1080} className="h-auto w-[85vw] max-w-6xl rounded-lg object-cover" />
         </div>
       </FadeIn.Item>
 
