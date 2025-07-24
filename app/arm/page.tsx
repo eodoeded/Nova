@@ -1,3 +1,5 @@
+"use client";
+
 import { Breadcrumb } from "@/components/breadcrumb";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
