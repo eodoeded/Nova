@@ -49,9 +49,15 @@ export const Posts = ({ category, pathname = "" }: PostProps) => {
         <React.Fragment key={post.slug}>
           <Seperator />
           {category === "experience" ? (
-            <div className="flex w-full justify-between py-2">
-              <p className="text-muted">{post.title}</p>
-            </div>
+            post.externalUrl ? (
+              <a href={post.externalUrl} target="_blank" rel="noopener noreferrer" className="text-muted underline hover:opacity-70 transition">
+                {post.title}
+              </a>
+            ) : (
+              <div className="flex w-full justify-between py-2">
+                <p className="text-muted">{post.title}</p>
+              </div>
+            )
           ) : (
             <Link href={`/${category}/${post.slug}`} className="group hover:none py-2 no-underline focus:outline-none active:outline-none">
               <span className="transition-opacity group-hover:opacity-50">{post.title}</span>

@@ -2,6 +2,7 @@ export type Post = {
   title: string;
   slug: string;
   content: string;
+  externalUrl?: string;
   tags?: string[];
   summary?: string;
   hidden?: boolean;
