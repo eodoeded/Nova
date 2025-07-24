@@ -9,7 +9,6 @@ import clsx from "clsx";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import LenisInit from "@/components/LenisInit";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,7 +40,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={clsx(inter.className)} suppressHydrationWarning>
       <body>
-        <LenisInit />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Providers>
             <main className="relative py-24 md:overflow-x-visible">
