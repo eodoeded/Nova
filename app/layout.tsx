@@ -8,6 +8,7 @@ import { OpenGraph } from "@/lib/og";
 import clsx from "clsx";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,6 +47,7 @@ export default function RootLayout({
             </main>
           </Providers>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
